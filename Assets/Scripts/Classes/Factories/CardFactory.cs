@@ -12,7 +12,7 @@ namespace Factories
 {
     public static class CardFactory
     {
-        private const string SQUARE_SETS = "^base|^ex|^ecard|^neo|^dp|^gym|^si|^pl|^pop";
+        private const string SQUARE_SETS = "^base|^dp|^ecard|^ex|^gym|^neo|^np|^pl|^pop|^si|^smp";
         public static GameObject cardPrefab;
         public static Sprite roundedBack;
         public static Sprite squareBack;
@@ -41,12 +41,13 @@ namespace Factories
             PossibleCardList pcl = cardSets[cardResourceName];
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
-            GameObject cardInstance = UnityEngine.Object.Instantiate(cardPrefab);
+            //GameObject cardInstance = UnityEngine.Object.Instantiate(cardPrefab);
+            GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
             Card cardScript = cardInstance.GetComponent<Card>();
             // cardscript.front = imageFromUrl
             Match matcher = Regex.Match(chosenCard.setCode, SQUARE_SETS, RegexOptions.IgnoreCase);
-            Debug.Log("Id: " + chosenCard.id + " setCode: " + chosenCard.setCode + " - " + matcher.Success);
+            Debug.Log("Id: " + chosenCard.id + " setCode: " + chosenCard.setCode + " - Square=" + matcher.Success);
 
             if (matcher.Success)
             {

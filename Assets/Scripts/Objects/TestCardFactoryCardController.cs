@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using Factories;
+using UnityEngine.SceneManagement;
 
 public class TestCardFactoryCardController : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class TestCardFactoryCardController : MonoBehaviour
     public GameObject cardPrefab;
     public Sprite roundedBack;
     public Sprite squareBack;
-
+    
+    public Canvas cardCanvas;
     private GameObject cardInstance;
 
     private void Awake()
     {
+        // should be set from initialize somewhere
         CardFactory.cardPrefab = cardPrefab;
         CardFactory.roundedBack = roundedBack;
         CardFactory.squareBack = squareBack;
@@ -27,7 +30,8 @@ public class TestCardFactoryCardController : MonoBehaviour
 
     void Start()
     {
-        startButton.onClick.AddListener(OnStartClicked);
+        //cardCanvas = 
+        //startButton.onClick.AddListener(OnStartClicked);
     }
 
     public void OnStartClicked()
@@ -42,10 +46,32 @@ public class TestCardFactoryCardController : MonoBehaviour
             (GameObject newCardInstance) =>
             {
                 cardInstance = newCardInstance;
-                cardInstance.transform.position = new Vector3(0, -7.5f, 60f);
+                cardInstance.transform.SetParent(cardCanvas.transform);
+                cardInstance.transform.localPosition = new Vector3(0f, -75f, 0f);
+                cardInstance.transform.localScale = new Vector3(1f, 1f, 1f);
                 cardInstance.SetActive(true);
                 startButton.interactable = true;
             }));
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Make sure user is on Android platform
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            // Check if Back was pressed this frame
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                // Back to the main menu
+                BackToMainMenu();
+            }
+        }
+    }
+
+    private void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Assets/Scenes/MainMenu.unity");
     }
 
 }
