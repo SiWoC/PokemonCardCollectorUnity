@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestCardFactoryCard.unity
     guid: 8cd44e5acefeb34419bf779a14adbb2c
+  - enabled: 1
+    path: Assets/Scenes/Collection.unity
+    guid: a09fec48e8e654846b2e5927a809b359
   m_configObjects: {}

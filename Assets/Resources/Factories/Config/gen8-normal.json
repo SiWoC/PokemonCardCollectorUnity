@@ -1,0 +1,1677 @@
+{
+  "possibleCard" : [ {
+    "id" : "swshp-SWSH001",
+    "name" : "Grookey",
+    "nationalPokedexNumber" : 810,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH001.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH001_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH002",
+    "name" : "Scorbunny",
+    "nationalPokedexNumber" : 813,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH002.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH002_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH003",
+    "name" : "Sobble",
+    "nationalPokedexNumber" : 816,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH003.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH003_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH006",
+    "name" : "Rillaboom",
+    "nationalPokedexNumber" : 812,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH006.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH006_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH007",
+    "name" : "Frosmoth",
+    "nationalPokedexNumber" : 873,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH007.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH007_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH008",
+    "name" : "Galarian Perrserker",
+    "nationalPokedexNumber" : 863,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH008.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH008_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH010",
+    "name" : "Gossifleur",
+    "nationalPokedexNumber" : 829,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH010.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH010_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH011",
+    "name" : "Wooloo",
+    "nationalPokedexNumber" : 831,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH011.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH011_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH012",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH012.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH012_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH014",
+    "name" : "Rillaboom V",
+    "nationalPokedexNumber" : 812,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH014.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH014_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH015",
+    "name" : "Cinderace V",
+    "nationalPokedexNumber" : 815,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH015.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH015_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH016",
+    "name" : "Inteleon V",
+    "nationalPokedexNumber" : 818,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH016.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH016_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH017",
+    "name" : "Toxtricity V",
+    "nationalPokedexNumber" : 849,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH017.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH017_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH018",
+    "name" : "Zacian V",
+    "nationalPokedexNumber" : 888,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH018.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH018_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH019",
+    "name" : "Zamazenta V",
+    "nationalPokedexNumber" : 889,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH019.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH019_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH021",
+    "name" : "Polteageist V",
+    "nationalPokedexNumber" : 855,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH021.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH021_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH022",
+    "name" : "Flapple",
+    "nationalPokedexNumber" : 841,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH022.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH022_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH024",
+    "name" : "Coalossal",
+    "nationalPokedexNumber" : 839,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH024.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH024_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH028",
+    "name" : "Duraludon",
+    "nationalPokedexNumber" : 884,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH028.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH028_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH030",
+    "name" : "Copperajah V",
+    "nationalPokedexNumber" : 879,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH030.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH030_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH031",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH031.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH031_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH033",
+    "name" : "Zacian",
+    "nationalPokedexNumber" : 888,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH033.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH033_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH034",
+    "name" : "Zamazenta",
+    "nationalPokedexNumber" : 889,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH034.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH034_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH036",
+    "name" : "Arctozolt",
+    "nationalPokedexNumber" : 881,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH036.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH036_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH040",
+    "name" : "Hatenna",
+    "nationalPokedexNumber" : 856,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH040.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH040_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH043",
+    "name" : "Galarian Sirfetch'd V",
+    "nationalPokedexNumber" : 865,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH043.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH043_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH044",
+    "name" : "Eternatus V",
+    "nationalPokedexNumber" : 890,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH044.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH044_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH045",
+    "name" : "Eternatus VMAX",
+    "nationalPokedexNumber" : 890,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH045.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH045_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH046",
+    "name" : "Eldegoss",
+    "nationalPokedexNumber" : 830,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH046.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH046_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH047",
+    "name" : "Drednaw",
+    "nationalPokedexNumber" : 834,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH047.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH047_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH048",
+    "name" : "Centiskorch",
+    "nationalPokedexNumber" : 851,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH048.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH048_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH049",
+    "name" : "Dubwool V",
+    "nationalPokedexNumber" : 832,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH049.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH049_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH054",
+    "name" : "Coalossal",
+    "nationalPokedexNumber" : 839,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH054.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH054_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH055",
+    "name" : "Hatterene V",
+    "nationalPokedexNumber" : 858,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH055.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH055_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH056",
+    "name" : "Morpeko V",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH056.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH056_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH057",
+    "name" : "Grimmsnarl V",
+    "nationalPokedexNumber" : 861,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH057.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH057_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH058",
+    "name" : "Alcremie",
+    "nationalPokedexNumber" : 869,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH058.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH058_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH059",
+    "name" : "Galarian Obstagoon",
+    "nationalPokedexNumber" : 862,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH059.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH059_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH060",
+    "name" : "Duraludon",
+    "nationalPokedexNumber" : 884,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH060.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH060_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH064",
+    "name" : "Eternatus V",
+    "nationalPokedexNumber" : 890,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH064.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH064_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH070",
+    "name" : "Grookey",
+    "nationalPokedexNumber" : 810,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH070.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH070_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH071",
+    "name" : "Scorbunny",
+    "nationalPokedexNumber" : 813,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH071.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH071_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH073",
+    "name" : "Sobble",
+    "nationalPokedexNumber" : 816,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH073.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH073_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH076",
+    "name" : "Zacian V",
+    "nationalPokedexNumber" : 888,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH076.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH076_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH077",
+    "name" : "Zamazenta V",
+    "nationalPokedexNumber" : 889,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH077.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH077_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH078",
+    "name" : "Orbeetle V",
+    "nationalPokedexNumber" : 826,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH078.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH078_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH081",
+    "name" : "Polteageist",
+    "nationalPokedexNumber" : 855,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH081.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH081_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH084",
+    "name" : "Eldegoss V",
+    "nationalPokedexNumber" : 830,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH084.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH084_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH085",
+    "name" : "Boltund V",
+    "nationalPokedexNumber" : 836,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH085.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH085_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH086",
+    "name" : "Cramorant V",
+    "nationalPokedexNumber" : 845,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH086.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH086_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH096",
+    "name" : "Dragapult V",
+    "nationalPokedexNumber" : 887,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH096.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH096_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH097",
+    "name" : "Dragapult VMAX",
+    "nationalPokedexNumber" : 887,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH097.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH097_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH093",
+    "name" : "Arrokuda",
+    "nationalPokedexNumber" : 846,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH093.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH093_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH106",
+    "name" : "Single Strike Urshifu V",
+    "nationalPokedexNumber" : 892,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH106.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH106_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swshp-SWSH107",
+    "name" : "Rapid Strike Urshifu V",
+    "nationalPokedexNumber" : 892,
+    "rarity" : "Promo",
+    "setCode" : "swshp",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swshp/SWSH107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swshp/SWSH107_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-10",
+    "name" : "Grookey",
+    "nationalPokedexNumber" : 810,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/10.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/10_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-11",
+    "name" : "Grookey",
+    "nationalPokedexNumber" : 810,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/11.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/11_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-12",
+    "name" : "Thwackey",
+    "nationalPokedexNumber" : 811,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/12.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/12_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-13",
+    "name" : "Thwackey",
+    "nationalPokedexNumber" : 811,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/13.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/13_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-15",
+    "name" : "Rillaboom",
+    "nationalPokedexNumber" : 812,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/15.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/15_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-16",
+    "name" : "Blipbug",
+    "nationalPokedexNumber" : 824,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/16.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/16_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-17",
+    "name" : "Blipbug",
+    "nationalPokedexNumber" : 824,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/17.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/17_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-18",
+    "name" : "Dottler",
+    "nationalPokedexNumber" : 825,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/18.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/18_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-19",
+    "name" : "Orbeetle",
+    "nationalPokedexNumber" : 826,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/19.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/19_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-20",
+    "name" : "Gossifleur",
+    "nationalPokedexNumber" : 829,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/20.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/20_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-21",
+    "name" : "Eldegoss",
+    "nationalPokedexNumber" : 830,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/21.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/21_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-30",
+    "name" : "Scorbunny",
+    "nationalPokedexNumber" : 813,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/30.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/30_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-31",
+    "name" : "Scorbunny",
+    "nationalPokedexNumber" : 813,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/31.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/31_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-32",
+    "name" : "Raboot",
+    "nationalPokedexNumber" : 814,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/32.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/32_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-33",
+    "name" : "Raboot",
+    "nationalPokedexNumber" : 814,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/33.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/33_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-36",
+    "name" : "Cinderace",
+    "nationalPokedexNumber" : 815,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/36.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/36_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-37",
+    "name" : "Sizzlipede",
+    "nationalPokedexNumber" : 850,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/37.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/37_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-38",
+    "name" : "Sizzlipede",
+    "nationalPokedexNumber" : 850,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/38.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/38_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-39",
+    "name" : "Centiskorch",
+    "nationalPokedexNumber" : 851,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/39.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/39_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-54",
+    "name" : "Sobble",
+    "nationalPokedexNumber" : 816,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/54.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/54_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-55",
+    "name" : "Sobble",
+    "nationalPokedexNumber" : 816,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/55.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/55_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-56",
+    "name" : "Drizzile",
+    "nationalPokedexNumber" : 817,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/56.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/56_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-57",
+    "name" : "Drizzile",
+    "nationalPokedexNumber" : 817,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/57.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/57_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-59",
+    "name" : "Inteleon",
+    "nationalPokedexNumber" : 818,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/59.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/59_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-60",
+    "name" : "Chewtle",
+    "nationalPokedexNumber" : 833,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/60.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/60_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-61",
+    "name" : "Drednaw",
+    "nationalPokedexNumber" : 834,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/61.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/61_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-62",
+    "name" : "Cramorant",
+    "nationalPokedexNumber" : 845,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/62.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/62_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-63",
+    "name" : "Snom",
+    "nationalPokedexNumber" : 872,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/63.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/63_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-73",
+    "name" : "Yamper",
+    "nationalPokedexNumber" : 835,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/73.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/73_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-74",
+    "name" : "Yamper",
+    "nationalPokedexNumber" : 835,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/74.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/74_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-77",
+    "name" : "Pincurchin",
+    "nationalPokedexNumber" : 871,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/77.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/77_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-78",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/78.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/78_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-89",
+    "name" : "Sinistea",
+    "nationalPokedexNumber" : 854,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/89.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/89_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-90",
+    "name" : "Polteageist",
+    "nationalPokedexNumber" : 855,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/90.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/90_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-107",
+    "name" : "Silicobra",
+    "nationalPokedexNumber" : 843,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/107_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-108",
+    "name" : "Silicobra",
+    "nationalPokedexNumber" : 843,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/108.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/108_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-109",
+    "name" : "Sandaconda",
+    "nationalPokedexNumber" : 844,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/109.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/109_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-111",
+    "name" : "Clobbopus",
+    "nationalPokedexNumber" : 852,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/111.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/111_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-112",
+    "name" : "Clobbopus",
+    "nationalPokedexNumber" : 852,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/112.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/112_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-113",
+    "name" : "Grapploct",
+    "nationalPokedexNumber" : 853,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/113.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/113_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-114",
+    "name" : "Stonjourner",
+    "nationalPokedexNumber" : 874,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/114.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/114_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-125",
+    "name" : "Nickit",
+    "nationalPokedexNumber" : 827,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/125.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/125_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-126",
+    "name" : "Thievul",
+    "nationalPokedexNumber" : 828,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/126.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/126_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-135",
+    "name" : "Corviknight",
+    "nationalPokedexNumber" : 823,
+    "rarity" : "Rare",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/135.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/135_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-136",
+    "name" : "Cufant",
+    "nationalPokedexNumber" : 878,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/136.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/136_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-150",
+    "name" : "Rookidee",
+    "nationalPokedexNumber" : 821,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/150.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/150_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-151",
+    "name" : "Corvisquire",
+    "nationalPokedexNumber" : 822,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/151.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/151_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-152",
+    "name" : "Wooloo",
+    "nationalPokedexNumber" : 831,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/152.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/152_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-153",
+    "name" : "Wooloo",
+    "nationalPokedexNumber" : 831,
+    "rarity" : "Common",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/153.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/153_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh1-154",
+    "name" : "Dubwool",
+    "nationalPokedexNumber" : 832,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh1/154.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh1/154_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-20",
+    "name" : "Applin",
+    "nationalPokedexNumber" : 840,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/20.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/20_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-21",
+    "name" : "Applin",
+    "nationalPokedexNumber" : 840,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/21.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/21_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-51",
+    "name" : "Cramorant",
+    "nationalPokedexNumber" : 845,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/51.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/51_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-52",
+    "name" : "Arrokuda",
+    "nationalPokedexNumber" : 846,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/52.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/52_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-53",
+    "name" : "Barraskewda",
+    "nationalPokedexNumber" : 847,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/53.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/53_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-68",
+    "name" : "Toxel",
+    "nationalPokedexNumber" : 848,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/68.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/68_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-69",
+    "name" : "Toxtricity",
+    "nationalPokedexNumber" : 849,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/69.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/69_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-73",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/73.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/73_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-83",
+    "name" : "Hatenna",
+    "nationalPokedexNumber" : 856,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/83.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/83_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-84",
+    "name" : "Hattrem",
+    "nationalPokedexNumber" : 857,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/84.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/84_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-86",
+    "name" : "Milcery",
+    "nationalPokedexNumber" : 868,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/86.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/86_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-87",
+    "name" : "Alcremie",
+    "nationalPokedexNumber" : 869,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/87.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/87_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-88",
+    "name" : "Indeedee",
+    "nationalPokedexNumber" : 876,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/88.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/88_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-89",
+    "name" : "Dreepy",
+    "nationalPokedexNumber" : 885,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/89.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/89_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-90",
+    "name" : "Drakloak",
+    "nationalPokedexNumber" : 886,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/90.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/90_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-102",
+    "name" : "Galarian Runerigus",
+    "nationalPokedexNumber" : 867,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/102.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/102_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-105",
+    "name" : "Rolycoly",
+    "nationalPokedexNumber" : 837,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/105.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/105_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-106",
+    "name" : "Carkol",
+    "nationalPokedexNumber" : 838,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/106.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/106_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-109",
+    "name" : "Falinks",
+    "nationalPokedexNumber" : 870,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/109.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/109_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-123",
+    "name" : "Impidimp",
+    "nationalPokedexNumber" : 859,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/123.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/123_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-124",
+    "name" : "Morgrem",
+    "nationalPokedexNumber" : 860,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/124.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/124_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-127",
+    "name" : "Galarian Perrserker",
+    "nationalPokedexNumber" : 863,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/127.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/127_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-139",
+    "name" : "Zacian",
+    "nationalPokedexNumber" : 888,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/139.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/139_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-140",
+    "name" : "Zamazenta",
+    "nationalPokedexNumber" : 889,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/140.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/140_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-151",
+    "name" : "Skwovet",
+    "nationalPokedexNumber" : 819,
+    "rarity" : "Common",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/151.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/151_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh2-152",
+    "name" : "Greedent",
+    "nationalPokedexNumber" : 820,
+    "rarity" : "Rare",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/152.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/152_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-54",
+    "name" : "Arctovish",
+    "nationalPokedexNumber" : 883,
+    "rarity" : "Rare",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/54.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/54_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-62",
+    "name" : "Toxel",
+    "nationalPokedexNumber" : 848,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/62.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/62_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-65",
+    "name" : "Dracozolt",
+    "nationalPokedexNumber" : 880,
+    "rarity" : "Rare",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/65.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/65_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-82",
+    "name" : "Sinistea",
+    "nationalPokedexNumber" : 854,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/82.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/82_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-83",
+    "name" : "Polteageist",
+    "nationalPokedexNumber" : 855,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/83.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/83_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-98",
+    "name" : "Galarian Sirfetch'd",
+    "nationalPokedexNumber" : 865,
+    "rarity" : "Rare",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/98.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/98_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-112",
+    "name" : "Nickit",
+    "nationalPokedexNumber" : 827,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/112.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/112_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-113",
+    "name" : "Thievul",
+    "nationalPokedexNumber" : 828,
+    "rarity" : "Rare",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/113.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/113_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-131",
+    "name" : "Cufant",
+    "nationalPokedexNumber" : 878,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/131.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/131_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-152",
+    "name" : "Skwovet",
+    "nationalPokedexNumber" : 819,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/152.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/152_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-153",
+    "name" : "Greedent",
+    "nationalPokedexNumber" : 820,
+    "rarity" : "Rare",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/153.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/153_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-154",
+    "name" : "Rookidee",
+    "nationalPokedexNumber" : 821,
+    "rarity" : "Common",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/154.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/154_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh3-155",
+    "name" : "Corvisquire",
+    "nationalPokedexNumber" : 822,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/155.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/155_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh35-9",
+    "name" : "Sizzlipede",
+    "nationalPokedexNumber" : 850,
+    "rarity" : "Common",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/9.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/9_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh35-18",
+    "name" : "Hatenna",
+    "nationalPokedexNumber" : 856,
+    "rarity" : "Common",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/18.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/18_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh35-19",
+    "name" : "Hattrem",
+    "nationalPokedexNumber" : 857,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/19.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/19_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh35-31",
+    "name" : "Rolycoly",
+    "nationalPokedexNumber" : 837,
+    "rarity" : "Common",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/31.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/31_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh35-46",
+    "name" : "Nickit",
+    "nationalPokedexNumber" : 827,
+    "rarity" : "Common",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/46.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/46_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-38",
+    "name" : "Chewtle",
+    "nationalPokedexNumber" : 833,
+    "rarity" : "Common",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/38.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/38_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-39",
+    "name" : "Drednaw",
+    "nationalPokedexNumber" : 834,
+    "rarity" : "Rare",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/39.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/39_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-40",
+    "name" : "Cramorant",
+    "nationalPokedexNumber" : 845,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/40.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/40_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-41",
+    "name" : "Arrokuda",
+    "nationalPokedexNumber" : 846,
+    "rarity" : "Common",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/41.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/41_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-42",
+    "name" : "Barraskewda",
+    "nationalPokedexNumber" : 847,
+    "rarity" : "Rare",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/42.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/42_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-62",
+    "name" : "Pincurchin",
+    "nationalPokedexNumber" : 871,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/62.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/62_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-80",
+    "name" : "Milcery",
+    "nationalPokedexNumber" : 868,
+    "rarity" : "Common",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/80.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/80_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-81",
+    "name" : "Alcremie",
+    "nationalPokedexNumber" : 869,
+    "rarity" : "Rare",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/81.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/81_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-100",
+    "name" : "Clobbopus",
+    "nationalPokedexNumber" : 852,
+    "rarity" : "Common",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/100.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/100_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-101",
+    "name" : "Grapploct",
+    "nationalPokedexNumber" : 853,
+    "rarity" : "Rare",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/101.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/101_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh4-113",
+    "name" : "Galarian Perrserker",
+    "nationalPokedexNumber" : 863,
+    "rarity" : "Rare",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/113.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/113_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-11",
+    "name" : "Grookey",
+    "nationalPokedexNumber" : 810,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/11.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/11_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-12",
+    "name" : "Thwackey",
+    "nationalPokedexNumber" : 811,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/12.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/12_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-14",
+    "name" : "Gossifleur",
+    "nationalPokedexNumber" : 829,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/14.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/14_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-15",
+    "name" : "Eldegoss",
+    "nationalPokedexNumber" : 830,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/15.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/15_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-16",
+    "name" : "Zarude",
+    "nationalPokedexNumber" : 893,
+    "rarity" : "Rare",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/16.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/16_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-26",
+    "name" : "Chewtle",
+    "nationalPokedexNumber" : 833,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/26.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/26_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-27",
+    "name" : "Drednaw",
+    "nationalPokedexNumber" : 834,
+    "rarity" : "Rare",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/27.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/27_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-28",
+    "name" : "Cramorant",
+    "nationalPokedexNumber" : 845,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/28.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/28_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-29",
+    "name" : "Snom",
+    "nationalPokedexNumber" : 872,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/29.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/29_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-35",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/35.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/35_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-36",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/36.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/36_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-47",
+    "name" : "Nickit",
+    "nationalPokedexNumber" : 827,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/47.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/47_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh45-49",
+    "name" : "Cufant",
+    "nationalPokedexNumber" : 878,
+    "rarity" : "Common",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/49.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/49_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-17",
+    "name" : "Blipbug",
+    "nationalPokedexNumber" : 824,
+    "rarity" : "Common",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/17.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/17_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-29",
+    "name" : "Sizzlipede",
+    "nationalPokedexNumber" : 850,
+    "rarity" : "Common",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/29.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/29_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-30",
+    "name" : "Centiskorch",
+    "nationalPokedexNumber" : 851,
+    "rarity" : "Rare",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/30.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/30_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-52",
+    "name" : "Yamper",
+    "nationalPokedexNumber" : 835,
+    "rarity" : "Common",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/52.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/52_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-53",
+    "name" : "Boltund",
+    "nationalPokedexNumber" : 836,
+    "rarity" : "Rare",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/53.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/53_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-64",
+    "name" : "Dottler",
+    "nationalPokedexNumber" : 825,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/64.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/64_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-78",
+    "name" : "Rolycoly",
+    "nationalPokedexNumber" : 837,
+    "rarity" : "Common",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/78.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/78_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-79",
+    "name" : "Carkol",
+    "nationalPokedexNumber" : 838,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/79.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/79_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-81",
+    "name" : "Silicobra",
+    "nationalPokedexNumber" : 843,
+    "rarity" : "Common",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/81.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/81_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-83",
+    "name" : "Falinks",
+    "nationalPokedexNumber" : 870,
+    "rarity" : "Rare",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/83.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/83_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-84",
+    "name" : "Stonjourner",
+    "nationalPokedexNumber" : 874,
+    "rarity" : "Rare",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/84.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/84_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-98",
+    "name" : "Morpeko",
+    "nationalPokedexNumber" : 877,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/98.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/98_hires.png",
+    "generation" : 8
+  }, {
+    "id" : "swsh5-120",
+    "name" : "Indeedee",
+    "nationalPokedexNumber" : 876,
+    "rarity" : "Uncommon",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/120.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/120_hires.png",
+    "generation" : 8
+  } ]
+}

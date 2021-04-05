@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Factories;
-using UnityEngine.SceneManagement;
+using Globals;
 
 public class TestCardFactoryCardController : MonoBehaviour
 {
@@ -13,29 +9,23 @@ public class TestCardFactoryCardController : MonoBehaviour
     public Dropdown generationDropdown;
     public Dropdown rarityDropdown;
     
-    public GameObject cardPrefab;
-    public Sprite roundedBack;
-    public Sprite squareBack;
-    
     public Canvas cardCanvas;
     private GameObject cardInstance;
-
-    private void Awake()
-    {
-        // should be set from initialize somewhere
-        CardFactory.cardPrefab = cardPrefab;
-        CardFactory.roundedBack = roundedBack;
-        CardFactory.squareBack = squareBack;
-    }
 
     void Start()
     {
         //cardCanvas = 
         //startButton.onClick.AddListener(OnStartClicked);
+        generationDropdown.ClearOptions();
+        for (int i=1; i <= CardFactory.numberOfGenerations; i++)
+        {
+            generationDropdown.options.Add(new Dropdown.OptionData("gen" + i));
+        }
     }
 
     public void OnStartClicked()
     {
+        GameManager.AddCoins(1);
         startButton.interactable = false;
         if (cardInstance != null)
         {
@@ -51,27 +41,9 @@ public class TestCardFactoryCardController : MonoBehaviour
                 cardInstance.transform.localScale = new Vector3(1f, 1f, 1f);
                 cardInstance.SetActive(true);
                 startButton.interactable = true;
+                Card card = cardInstance.GetComponent<Card>();
+                GameManager.AddCardToCollection(card.createdFrom);
             }));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Make sure user is on Android platform
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            // Check if Back was pressed this frame
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                // Back to the main menu
-                BackToMainMenu();
-            }
-        }
-    }
-
-    private void BackToMainMenu()
-    {
-        SceneManager.LoadScene("Assets/Scenes/MainMenu.unity");
     }
 
 }

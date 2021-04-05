@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using CardConstants;
+using Factories.Config;
 
 public class Card : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class Card : MonoBehaviour
     public Sprite back;
 
     public string url;
+    public PossibleCard createdFrom;
 
     private void OnMouseDown()
     {

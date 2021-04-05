@@ -9,12 +9,12 @@ namespace Factories.Config
     {
         public string id;
         public string name;
-        public string imageUrl;
-        public string supertype;
-        public int number;
+        public int nationalPokedexNumber;
         public string rarity;
         public string setCode;
-        public string imageUrlHiRes;
-        public int nationalPokedexNumber;
+        public string imageUrlSmall;
+        public string imageUrlLarge;
+        public int generation;
+        public int numberOwned;
     }
 }

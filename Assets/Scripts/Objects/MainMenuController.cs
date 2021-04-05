@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using Globals;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Factories;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -11,15 +10,25 @@ public class MainMenuController : MonoBehaviour
     public Button shopButton;
     public Button openButton;
 
+    public GameObject cardPrefab;
+    public Sprite roundedBack;
+    public Sprite squareBack;
+
     private float buttonAnchorY;
+
+    private void Awake()
+    {
+        // should be set from initialize somewhere
+        CardFactory.cardPrefab = cardPrefab;
+        CardFactory.roundedBack = roundedBack;
+        CardFactory.squareBack = squareBack;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         // recalculate anchors according to screen resolution/ratio
         buttonAnchorY = ((0.5f * Screen.width + 0.5f * Screen.height) / Screen.height) - 0.5f;
-        Debug.Log("Screen : " + Screen.width + "x" + Screen.height);
-        Debug.Log("y: " + buttonAnchorY);
         RectTransform rectTransform;
         // collectionButton
         rectTransform = collectionButton.GetComponent<RectTransform>();
@@ -37,6 +46,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnCollectionClicked()
     {
+        GameManager.Forward("Assets/Scenes/Collection.unity");
     }
 
     public void OnWorkClicked()
@@ -49,23 +59,12 @@ public class MainMenuController : MonoBehaviour
 
     public void OnOpenClicked()
     {
-        SceneManager.LoadScene("Assets/Scenes/TestCardFactoryCard.unity");
+        //SceneManager.LoadScene("Assets/Scenes/TestCardFactoryCard.unity");
+        GameManager.Forward("Assets/Scenes/TestCardFactoryCard.unity");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Make sure user is on Android platform
-        if (Application.platform == RuntimePlatform.Android)
-        {
-
-            // Check if Back was pressed this frame
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-
-                // Quit the application
-                Application.Quit();
-            }
-        }
     }
 }

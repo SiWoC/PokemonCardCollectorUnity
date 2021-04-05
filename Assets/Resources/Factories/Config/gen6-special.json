@@ -1,0 +1,1488 @@
+{
+  "possibleCard" : [ {
+    "id" : "xy1-14",
+    "name" : "Chesnaught",
+    "nationalPokedexNumber" : 652,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/14.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/14_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-17",
+    "name" : "Vivillon",
+    "nationalPokedexNumber" : 666,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/17.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/17_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-19",
+    "name" : "Gogoat",
+    "nationalPokedexNumber" : 673,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/19.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/19_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-26",
+    "name" : "Delphox",
+    "nationalPokedexNumber" : 655,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/26.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/26_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-28",
+    "name" : "Talonflame",
+    "nationalPokedexNumber" : 663,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/28.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/28_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-41",
+    "name" : "Greninja",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/41.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/41_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-55",
+    "name" : "Trevenant",
+    "nationalPokedexNumber" : 709,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/55.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/55_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-57",
+    "name" : "Gourgeist",
+    "nationalPokedexNumber" : 711,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/57.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/57_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-79",
+    "name" : "Yveltal-EX",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/79.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/79_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-86",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/86.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/86_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-93",
+    "name" : "Aromatisse",
+    "nationalPokedexNumber" : 683,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/93.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/93_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-95",
+    "name" : "Slurpuff",
+    "nationalPokedexNumber" : 685,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/95.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/95_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-97",
+    "name" : "Xerneas-EX",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/97.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/97_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-114",
+    "name" : "Furfrou",
+    "nationalPokedexNumber" : 676,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/114.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/114_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-144",
+    "name" : "Yveltal-EX",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/144.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/144_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy1-146",
+    "name" : "Xerneas-EX",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy1/146.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy1/146_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy2-20",
+    "name" : "Pyroar",
+    "nationalPokedexNumber" : 668,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy2/20.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy2/20_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy2-66",
+    "name" : "Florges",
+    "nationalPokedexNumber" : 671,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy2/66.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy2/66_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy2-68",
+    "name" : "Carbink",
+    "nationalPokedexNumber" : 703,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy2/68.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy2/68_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy2-74",
+    "name" : "Goodra",
+    "nationalPokedexNumber" : 706,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy2/74.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy2/74_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy3-24",
+    "name" : "Clawitzer",
+    "nationalPokedexNumber" : 693,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy3/24.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy3/24_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy3-63",
+    "name" : "Hawlucha",
+    "nationalPokedexNumber" : 701,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy3/63.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy3/63_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy3-64",
+    "name" : "Hawlucha-EX",
+    "nationalPokedexNumber" : 701,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy3/64.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy3/64_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy3-77",
+    "name" : "Noivern",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy3/77.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy3/77_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-12",
+    "name" : "Pyroar",
+    "nationalPokedexNumber" : 668,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/12.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/12_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-30",
+    "name" : "Heliolisk",
+    "nationalPokedexNumber" : 695,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/30.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/30_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-45",
+    "name" : "Gourgeist",
+    "nationalPokedexNumber" : 711,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/45.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/45_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-58",
+    "name" : "Malamar-EX",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/58.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/58_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-65",
+    "name" : "Aegislash-EX",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/65.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/65_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-65a",
+    "name" : "Aegislash-EX",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/65a.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/65a_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-67",
+    "name" : "Florges-EX",
+    "nationalPokedexNumber" : 671,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/67.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/67_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-69",
+    "name" : "Slurpuff",
+    "nationalPokedexNumber" : 685,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/69.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/69_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-71",
+    "name" : "Diancie",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/71.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/71_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-77",
+    "name" : "Goodra",
+    "nationalPokedexNumber" : 706,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/77.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/77_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-115",
+    "name" : "Malamar-EX",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/115.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/115_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy4-116",
+    "name" : "Florges-EX",
+    "nationalPokedexNumber" : 671,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy4/116.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy4/116_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy5-19",
+    "name" : "Trevenant-EX",
+    "nationalPokedexNumber" : 709,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy5/19.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy5/19_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy5-100",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy5/100.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy5/100_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy5-145",
+    "name" : "Trevenant-EX",
+    "nationalPokedexNumber" : 709,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy5/145.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy5/145_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy7-36",
+    "name" : "Hoopa-EX",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy7",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy7/36.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy7/36_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy7-60",
+    "name" : "Goodra",
+    "nationalPokedexNumber" : 706,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy7",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy7/60.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy7/60_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy7-89",
+    "name" : "Hoopa-EX",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy7",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy7/89.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy7/89_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-11",
+    "name" : "Chesnaught",
+    "nationalPokedexNumber" : 652,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/11.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/11_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-12",
+    "name" : "Chesnaught BREAK",
+    "nationalPokedexNumber" : 652,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/12.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/12_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-15",
+    "name" : "Vivillon",
+    "nationalPokedexNumber" : 666,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/15.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/15_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-94",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/94.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/94_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-104",
+    "name" : "Florges BREAK",
+    "nationalPokedexNumber" : 671,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/104.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/104_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-107",
+    "name" : "Xerneas",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/107_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy8-113",
+    "name" : "Noivern BREAK",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy8/113.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy8/113_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy9-41",
+    "name" : "Greninja BREAK",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy9/41.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy9/41_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy9-62",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy9/62.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy9/62_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy9-66",
+    "name" : "Trevenant BREAK",
+    "nationalPokedexNumber" : 709,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy9/66.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy9/66_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy9-86",
+    "name" : "Dragalge",
+    "nationalPokedexNumber" : 691,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy9/86.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy9/86_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "g1-37",
+    "name" : "Meowstic-EX",
+    "nationalPokedexNumber" : 678,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "g1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/g1/37.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/g1/37_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "g1-RC21",
+    "name" : "Sylveon-EX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "g1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/g1/RC21.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/g1/RC21_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "g1-RC32",
+    "name" : "Sylveon-EX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Ultra",
+    "setCode" : "g1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/g1/RC32.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/g1/RC32_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-13",
+    "name" : "Delphox",
+    "nationalPokedexNumber" : 655,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/13.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/13_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-14",
+    "name" : "Delphox BREAK",
+    "nationalPokedexNumber" : 655,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/14.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/14_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-51",
+    "name" : "Carbink BREAK",
+    "nationalPokedexNumber" : 703,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/51.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/51_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-54",
+    "name" : "Zygarde-EX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/54.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/54_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-54a",
+    "name" : "Zygarde-EX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/54a.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/54a_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy10-72",
+    "name" : "Diancie-EX",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy10/72.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy10/72_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-21",
+    "name" : "Talonflame BREAK",
+    "nationalPokedexNumber" : 663,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/21.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/21_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-24",
+    "name" : "Pyroar BREAK",
+    "nationalPokedexNumber" : 668,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/24.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/24_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-26",
+    "name" : "Volcanion-EX",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Holo EX",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/26.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/26_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-35",
+    "name" : "Clawitzer BREAK",
+    "nationalPokedexNumber" : 693,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/35.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/35_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-65",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/65.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/65_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-66",
+    "name" : "Yveltal BREAK",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/66.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/66_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-81",
+    "name" : "Xerneas",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/81.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/81_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-82",
+    "name" : "Xerneas BREAK",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare BREAK",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/82.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/82_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-107",
+    "name" : "Volcanion-EX",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Ultra",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/107_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "xy11-115",
+    "name" : "Volcanion-EX",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Secret",
+    "setCode" : "xy11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/xy11/115.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/xy11/115_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm2-92",
+    "name" : "Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm2/92.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm2/92_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm2-92a",
+    "name" : "Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm2/92a.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm2/92a_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm2-96",
+    "name" : "Goodra",
+    "nationalPokedexNumber" : 706,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm2/96.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm2/96_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm2-140",
+    "name" : "Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm2/140.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm2/140_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm2-158",
+    "name" : "Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm2/158.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm2/158_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm3-94",
+    "name" : "Diancie",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm3/94.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm3/94_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm3-99",
+    "name" : "Noivern-GX",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm3/99.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm3/99_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm3-100",
+    "name" : "Zygarde",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm3/100.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm3/100_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm3-141",
+    "name" : "Noivern-GX",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm3/141.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm3/141_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm3-160",
+    "name" : "Noivern-GX",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm3/160.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm3/160_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm35-27",
+    "name" : "Shining Volcanion",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Shining",
+    "setCode" : "sm35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm35/27.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm35/27_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm35-54",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm35/54.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm35/54_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm35-55",
+    "name" : "Hoopa",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm35/55.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm35/55_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm4-11",
+    "name" : "Gogoat",
+    "nationalPokedexNumber" : 673,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm4/11.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm4/11_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm4-73",
+    "name" : "Xerneas",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm4/73.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm4/73_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-17",
+    "name" : "Delphox",
+    "nationalPokedexNumber" : 655,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/17.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/17_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-19",
+    "name" : "Pyroar",
+    "nationalPokedexNumber" : 668,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/19.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/19_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-24",
+    "name" : "Greninja-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/24.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/24_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-28",
+    "name" : "Aurorus",
+    "nationalPokedexNumber" : 699,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/28.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/28_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-31",
+    "name" : "Volcanion ◇",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Prism Star",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/31.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/31_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-69",
+    "name" : "Tyrantrum",
+    "nationalPokedexNumber" : 697,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/69.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/69_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-73",
+    "name" : "Zygarde-GX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/73.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/73_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-74",
+    "name" : "Diancie ◇",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Prism Star",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/74.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/74_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-79",
+    "name" : "Yveltal-GX",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/79.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/79_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-90",
+    "name" : "Xerneas-GX",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/90.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/90_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-94",
+    "name" : "Goodra",
+    "nationalPokedexNumber" : 706,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/94.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/94_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-120",
+    "name" : "Greninja-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/120.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/120_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-123",
+    "name" : "Zygarde-GX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/123.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/123_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-124",
+    "name" : "Yveltal-GX",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/124.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/124_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-126",
+    "name" : "Xerneas-GX",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/126.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/126_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-133",
+    "name" : "Greninja-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/133.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/133_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-136",
+    "name" : "Zygarde-GX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/136.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/136_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-137",
+    "name" : "Yveltal-GX",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/137.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/137_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm6-139",
+    "name" : "Xerneas-GX",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm6",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm6/139.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm6/139_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm8-144",
+    "name" : "Xerneas ◇",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Prism Star",
+    "setCode" : "sm8",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm8/144.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm8/144_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm9-95",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm9/95.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm9/95_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm9-96",
+    "name" : "Hoopa-GX",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm9/96.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm9/96_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm9-109",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm9/109.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm9/109_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm9-166",
+    "name" : "Hoopa-GX",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm9/166.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm9/166_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm9-187",
+    "name" : "Hoopa-GX",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm9",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm9/187.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm9/187_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "det1-9",
+    "name" : "Greninja",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Ultra",
+    "setCode" : "det1",
+    "imageUrlSmall" : "https://images.pokemontcg.io/det1/9.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/det1/9_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-25",
+    "name" : "Volcanion",
+    "nationalPokedexNumber" : 721,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/25.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/25_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-57",
+    "name" : "Dedenne-GX",
+    "nationalPokedexNumber" : 702,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/57.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/57_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-107",
+    "name" : "Greninja & Zoroark-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/107_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-117",
+    "name" : "Greninja",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/117.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/117_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-119",
+    "name" : "Malamar",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/119.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/119_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-130",
+    "name" : "Gardevoir & Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/130.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/130_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-195",
+    "name" : "Dedenne-GX",
+    "nationalPokedexNumber" : 702,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/195.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/195_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-200",
+    "name" : "Greninja & Zoroark-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/200.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/200_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-201",
+    "name" : "Greninja & Zoroark-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/201.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/201_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-204",
+    "name" : "Gardevoir & Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/204.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/204_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-205",
+    "name" : "Gardevoir & Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/205.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/205_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-219",
+    "name" : "Dedenne-GX",
+    "nationalPokedexNumber" : 702,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/219.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/219_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-222",
+    "name" : "Greninja & Zoroark-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/222.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/222_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-225",
+    "name" : "Gardevoir & Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/225.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/225_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm10-195a",
+    "name" : "Dedenne-GX",
+    "nationalPokedexNumber" : 702,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm10",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm10/195a.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm10/195a_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm11-95",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm11/95.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm11/95_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm11-139",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm11/139.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm11/139_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm11-140",
+    "name" : "Hoopa",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm11",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm11/140.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm11/140_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV11",
+    "name" : "Froakie",
+    "nationalPokedexNumber" : 656,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV11.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV11_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV12",
+    "name" : "Frogadier",
+    "nationalPokedexNumber" : 657,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV12.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV12_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV17",
+    "name" : "Inkay",
+    "nationalPokedexNumber" : 686,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV17.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV17_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV18",
+    "name" : "Malamar",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV18.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV18_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV36",
+    "name" : "Diancie",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV36.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV36_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV43",
+    "name" : "Noibat",
+    "nationalPokedexNumber" : 714,
+    "rarity" : "Rare Shiny",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV43.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV43_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV56",
+    "name" : "Greninja-GX",
+    "nationalPokedexNumber" : 658,
+    "rarity" : "Rare Shiny GX",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV56.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV56_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV65",
+    "name" : "Zygarde-GX",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Shiny GX",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV65.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV65_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV76",
+    "name" : "Sylveon-GX",
+    "nationalPokedexNumber" : 700,
+    "rarity" : "Rare Shiny GX",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV76.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV76_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sma-SV78",
+    "name" : "Noivern-GX",
+    "nationalPokedexNumber" : 715,
+    "rarity" : "Rare Shiny GX",
+    "setCode" : "sma",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sma/SV78.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sma/SV78_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm12-22",
+    "name" : "Charizard & Braixen-GX",
+    "nationalPokedexNumber" : 654,
+    "rarity" : "Rare Holo GX",
+    "setCode" : "sm12",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm12/22.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm12/22_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm12-152",
+    "name" : "Florges",
+    "nationalPokedexNumber" : 671,
+    "rarity" : "Rare Holo",
+    "setCode" : "sm12",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm12/152.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm12/152_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm12-212",
+    "name" : "Charizard & Braixen-GX",
+    "nationalPokedexNumber" : 654,
+    "rarity" : "Rare Ultra",
+    "setCode" : "sm12",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm12/212.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm12/212_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "sm12-251",
+    "name" : "Charizard & Braixen-GX",
+    "nationalPokedexNumber" : 654,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "sm12",
+    "imageUrlSmall" : "https://images.pokemontcg.io/sm12/251.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/sm12/251_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh2-121",
+    "name" : "Malamar V",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/121.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/121_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh2-122",
+    "name" : "Malamar VMAX",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Holo VMAX",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/122.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/122_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh2-186",
+    "name" : "Malamar V",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/186.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/186_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh2-198",
+    "name" : "Malamar VMAX",
+    "nationalPokedexNumber" : 687,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "swsh2",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh2/198.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh2/198_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh3-111",
+    "name" : "Hoopa",
+    "nationalPokedexNumber" : 720,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh3",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh3/111.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh3/111_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh35-28",
+    "name" : "Zygarde",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh35",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh35/28.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh35/28_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-29",
+    "name" : "Talonflame V",
+    "nationalPokedexNumber" : 663,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/29.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/29_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-78",
+    "name" : "Xerneas",
+    "nationalPokedexNumber" : 716,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/78.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/78_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-79",
+    "name" : "Diancie",
+    "nationalPokedexNumber" : 719,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/79.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/79_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-93",
+    "name" : "Zygarde",
+    "nationalPokedexNumber" : 718,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/93.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/93_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-126",
+    "name" : "Aegislash V",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/126.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/126_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-127",
+    "name" : "Aegislash VMAX",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo VMAX",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/127.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/127_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-168",
+    "name" : "Talonflame V",
+    "nationalPokedexNumber" : 663,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/168.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/168_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-177",
+    "name" : "Aegislash V",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo V",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/177.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/177_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh4-190",
+    "name" : "Aegislash VMAX",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Rainbow",
+    "setCode" : "swsh4",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh4/190.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh4/190_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh45-46",
+    "name" : "Yveltal",
+    "nationalPokedexNumber" : 717,
+    "rarity" : "Amazing Rare",
+    "setCode" : "swsh45",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45/46.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45/46_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh45sv-SV051",
+    "name" : "Dedenne",
+    "nationalPokedexNumber" : 702,
+    "rarity" : "Rare Shiny",
+    "setCode" : "swsh45sv",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45sv/SV051.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45sv/SV051_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh45sv-SV097",
+    "name" : "Bunnelby",
+    "nationalPokedexNumber" : 659,
+    "rarity" : "Rare Shiny",
+    "setCode" : "swsh45sv",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh45sv/SV097.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh45sv/SV097_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh5-61",
+    "name" : "Meowstic",
+    "nationalPokedexNumber" : 678,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/61.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/61_hires.png",
+    "generation" : 6
+  }, {
+    "id" : "swsh5-107",
+    "name" : "Aegislash",
+    "nationalPokedexNumber" : 681,
+    "rarity" : "Rare Holo",
+    "setCode" : "swsh5",
+    "imageUrlSmall" : "https://images.pokemontcg.io/swsh5/107.png",
+    "imageUrlLarge" : "https://images.pokemontcg.io/swsh5/107_hires.png",
+    "generation" : 6
+  } ]
+}
