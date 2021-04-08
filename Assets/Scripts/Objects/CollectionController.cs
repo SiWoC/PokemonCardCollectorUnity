@@ -10,42 +10,51 @@ using UnityEngine.UI;
 public class CollectionController : MonoBehaviour
 {
     public int selectedGeneration = 1;
-    public int selectedPage = 1;
-    public GameObject cardSpace;
+    public GameObject pageHolder;
+    public GameObject cardSpace1;
+    public GameObject cardSpace2;
 
     private Generation generation;
+    private int numberOfPokemonInGeneration = 151;
     private int fromNationalPokedexNumber = 1;
     private int pageSize = 9;
-    private GameObject cardInstance;
 
     // Start is called before the first frame update
     void Start()
     {
+        pageHolder.GetComponent<PageSwiper>().totalPages = (numberOfPokemonInGeneration + pageSize - 1) / pageSize;
+        Debug.Log("we have " + pageHolder.GetComponent<PageSwiper>().totalPages + " pages");
         generation = GameManager.playerStats.generations[selectedGeneration];
-        for (int i = 1; i < 152; i++)
+        for (int pageNumber = 0; pageNumber <= 1; pageNumber++)
         {
-            if (generation.cards.ContainsKey(i))
+            GameObject cardSpace;
+            if (pageNumber == 0)
             {
-                Debug.Log("All You DO own cards with NationalPokedexNumber: " + i);
+                cardSpace = cardSpace1;
+            } else
+            {
+                cardSpace = cardSpace2;
             }
-        }
-        for (int i = fromNationalPokedexNumber; i < fromNationalPokedexNumber + pageSize; i++)
-        {
-            if (generation.cards.ContainsKey(i))
-            { // we own cards of this NationalPokedexNumber
-                Debug.Log("You DO own cards with NationalPokedexNumber: " + i);
-                Dictionary<string, PossibleCard> cardsOfNumber = generation.cards[i];
-                foreach (PossibleCard ownedCard in cardsOfNumber.Values)
-                {
-                    PlaceCard(ownedCard);
-                    break;
+            for (int i = fromNationalPokedexNumber; i < fromNationalPokedexNumber + pageSize; i++)
+            {
+                int nationalPokedexNumber = i + pageNumber * pageSize;
+                if (generation.cards.ContainsKey(nationalPokedexNumber))
+                { // we own cards of this NationalPokedexNumber
+                    Debug.Log("You DO own cards with NationalPokedexNumber: " + nationalPokedexNumber);
+                    Dictionary<string, PossibleCard> cardsOfNumber = generation.cards[nationalPokedexNumber];
+                    foreach (PossibleCard ownedCard in cardsOfNumber.Values)
+                    {
+                        PlaceCard(ownedCard, cardSpace);
+                        break;
+                    }
                 }
+                else
+                { // leave empty placeholder? show greyed-out back?
+                    Debug.Log("You DONT own cards with NationalPokedexNumber: " + nationalPokedexNumber);
+                    PlaceEmptyPanel(nationalPokedexNumber, cardSpace);
+                }
+                LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)cardSpace.transform);
             }
-            else { // leave empty placeholder? show greyed-out back?
-                Debug.Log("You DONT own cards with NationalPokedexNumber: " + i);
-                PlaceEmptyPanel(i);
-            }
-            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)cardSpace.transform);
         }
     }
 
@@ -55,7 +64,7 @@ public class CollectionController : MonoBehaviour
         
     }
 
-    public void PlaceEmptyPanel(int nationalPokedexNumber)
+    public void PlaceEmptyPanel(int nationalPokedexNumber, GameObject cardSpace)
     {
 
         GameObject panel = new GameObject("noneOwned" + nationalPokedexNumber);
@@ -67,7 +76,7 @@ public class CollectionController : MonoBehaviour
         image.color = color;
     }
 
-    public void PlaceCard(PossibleCard ownedCard)
+    public void PlaceCard(PossibleCard ownedCard, GameObject cardSpace)
     {
 
         GameObject panel = new GameObject(ownedCard.id);
@@ -77,12 +86,12 @@ public class CollectionController : MonoBehaviour
         Image image = panel.AddComponent<Image>();
         Color color = image.color;
         color.a = 0.1f;
+        panel.SetActive(true);
 
         StartCoroutine(CardFactory.CreateCard(ownedCard,
             (GameObject newCardInstance) =>
             {
                 image.sprite = newCardInstance.GetComponent<Card>().front;
-                panel.SetActive(true);
             }));
     }
 
