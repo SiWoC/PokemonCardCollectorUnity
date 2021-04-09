@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
-    private Vector3 panelLocation;
+
+    public UnityEvent pageChangedEvent;
+
     public float percentThreshold = 0.2f;
     public float easing = 0.5f;
     public int totalPages = 1;
-    private int currentPage = 1;
+    public int currentPage = 1;
+
+    private Vector3 panelLocation;
 
     // Start is called before the first frame update
     void Start(){
@@ -24,9 +29,11 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
             Vector3 newLocation = panelLocation;
             if(percentage > 0 && currentPage < totalPages){
                 currentPage++;
+                pageChangedEvent?.Invoke();
                 newLocation += new Vector3(-Screen.width, 0, 0);
             }else if(percentage < 0 && currentPage > 1){
                 currentPage--;
+                pageChangedEvent?.Invoke();
                 newLocation += new Vector3(Screen.width, 0, 0);
             }
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
@@ -42,5 +49,13 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
             transform.position = Vector3.Lerp(startpos, endpos, Mathf.SmoothStep(0f, 1f, t));
             yield return null;
         }
+    }
+
+    public void BackToPage1()
+    {
+        currentPage = 1;
+        pageChangedEvent?.Invoke();
+        transform.position += new Vector3(-transform.position.x, 0, 0);
+        panelLocation = transform.position;
     }
 }

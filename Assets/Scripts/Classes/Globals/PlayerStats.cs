@@ -75,7 +75,7 @@ namespace Globals
         internal void AddCardToCollection(PossibleCard nowOwnedCard)
         {
             Generation generation = generations[nowOwnedCard.generation];
-            Debug.Log("Adding card with id: " + nowOwnedCard.id + " with NPN: " + nowOwnedCard.nationalPokedexNumber);
+            Debug.Log("Adding card with id: " + nowOwnedCard.id + " with NPN: " + nowOwnedCard.nationalPokedexNumber + " from generation " + nowOwnedCard.generation + " to " + generation.generation);
             // anything for this nationalPokedexNumber yet?
             if (!generation.cards.ContainsKey(nowOwnedCard.nationalPokedexNumber))
             {

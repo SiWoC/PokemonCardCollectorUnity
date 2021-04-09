@@ -11,6 +11,8 @@ namespace Factories
     public static class CardFactory
     {
         public const int numberOfGenerations = 8;
+        public static int[] numberOfCardsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
+        public static int[] startNPNOfGeneration = new int[numberOfGenerations + 1] { 0, 1, 152, 252, 387, 494, 650, 722, 810 };
 
         private const string SQUARE_SETS = "^base|^dp|^ecard|^ex|^gym|^neo|^np|^pl|^pop|^si";
 
