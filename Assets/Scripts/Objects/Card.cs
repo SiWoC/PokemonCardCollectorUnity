@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using CardConstants;
 using Factories.Config;
 
 public class Card : MonoBehaviour

@@ -1,6 +1,4 @@
 ﻿using System;
-using UnityEditor;
-using UnityEngine;
 
 namespace Factories.Config
 {
@@ -16,5 +14,6 @@ namespace Factories.Config
         public string imageUrlLarge;
         public int generation;
         public int numberOwned;
+        public DateTime foundOn;
     }
 }

@@ -6,7 +6,6 @@ using System;
 using Factories.Config;
 using System.Text.RegularExpressions;
 using UnityEngine.UI;
-using System.IO;
 using Globals;
 
 namespace Factories

@@ -1,61 +1,17 @@
 ﻿using Factories;
-using Factories.Config;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Globals
 {
     public static class CacheManager
     {
 
-        private static Dictionary<string,Dictionary<string, System.Object>> caches = new Dictionary<string, Dictionary<string, System.Object>>();
-
-        private static Dictionary<string,System.Object> GetCache(string cacheName)
-        {
-            if (!caches.ContainsKey(cacheName))
-            {
-                caches.Add(cacheName, new Dictionary<string, object>());
-            }
-            return caches[cacheName];
-        }
         public static Sprite GetSprite(ImageType type, string url)
         {
-            Sprite returnValue = null;
             string cacheName = "ImagesCache";
             string objectId = BuildObjectIdFromUrl(url);
-            bool useMemory = false;
-            bool useFile = false;
-            switch (type)
-            {
-                case ImageType.Small:
-                    useMemory = true;
-                    useFile = true;
-                    break;
-                case ImageType.Large:
-                    break;
-                default:
-                    break;
-            }
-            if (useMemory)
-            {
-                if (GetCache(cacheName).ContainsKey(objectId))
-                {
-                    return (Sprite)GetCache(cacheName)[objectId];
-                }
-            }
-            if (useFile)
-            {
-                returnValue = LoadSpriteFromFile(Application.persistentDataPath + "/" + cacheName + "/" + objectId);
-                if (returnValue != null && useMemory)
-                { // first time loaded
-                    GetCache(cacheName).Add(objectId, returnValue);
-                }
-            }
-            return returnValue;
+            return LoadSpriteFromFile(Application.persistentDataPath + "/" + cacheName + "/" + objectId);
 
         }
 
@@ -63,27 +19,7 @@ namespace Globals
         {
             string cacheName = "ImagesCache";
             string objectId = BuildObjectIdFromUrl(url);
-            bool useMemory = false;
-            bool useFile = false;
-            switch (type)
-            {
-                case ImageType.Small:
-                    useMemory = true;
-                    useFile = true;
-                    break;
-                case ImageType.Large:
-                    break;
-                default:
-                    break;
-            }
-            if (useMemory)
-            {
-                GetCache(cacheName).Add(objectId, sprite);
-            }
-            if (useFile)
-            {
-                SaveSpriteToFile(sprite, Application.persistentDataPath + "/" + cacheName + "/" + objectId);
-            }
+            SaveSpriteToFile(sprite, Application.persistentDataPath + "/" + cacheName + "/" + objectId);
         }
 
         private static void SaveSpriteToFile(Sprite sprite, string path)
@@ -119,8 +55,6 @@ namespace Globals
                 
             }
             return null;
-
         }
-
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Factories.Config;
-using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +6,8 @@ namespace Globals
 {
     public static class GameManager
     {
+        public static int selectedGeneration = 1;
+        public static int selectedNPN = 1;
         public readonly static PlayerStats playerStats = PlayerStats.GetInstance();
         private static string[] sceneNamesStack = new string[10];
         private static int currentStackIndex = 0;
@@ -19,7 +19,7 @@ namespace Globals
 
         public static void AddCoins(int coins)
         {
-            playerStats.Coins = playerStats.Coins + coins;
+            playerStats.Coins += coins;
         }
 
         public static void AddCardToCollection(PossibleCard possibleCard)

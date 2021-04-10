@@ -2,10 +2,9 @@ using Factories;
 using Factories.Config;
 using Globals;
 using Globals.PlayerStatsSegments;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class CollectionController : MonoBehaviour
@@ -16,7 +15,6 @@ public class CollectionController : MonoBehaviour
     public GameObject pagePrefab;
 
     PageSwiper pageSwiper;
-    private int selectedGeneration = 1;
     private Generation generation;
     private int pageSize = 9;
     private Dictionary<int, GameObject> pages = new Dictionary<int, GameObject>();
@@ -46,11 +44,12 @@ public class CollectionController : MonoBehaviour
         maxPageFilled = 0;
 
         // set up pages for new generation
-        selectedGeneration = generationDropdown.value + 1;
-        int totalPages = (CardFactory.numberOfCardsInGeneration[selectedGeneration] + pageSize - 1) / pageSize;
+        GameManager.selectedGeneration = generationDropdown.value + 1;
+        int totalPages = (CardFactory.numberOfCardsInGeneration[GameManager.selectedGeneration] + pageSize - 1) / pageSize;
         pageSwiper.totalPages = totalPages;
-        pageHolder.GetComponent<RectTransform>().sizeDelta = new Vector2(900 * totalPages, 1200);
-        generation = GameManager.playerStats.generations[selectedGeneration];
+        RectTransform phRectTransform = pageHolder.GetComponent<RectTransform>();
+        phRectTransform.sizeDelta = new Vector2(900 * totalPages, phRectTransform.sizeDelta.y);
+        generation = GameManager.playerStats.generations[GameManager.selectedGeneration];
         for (int pageNumber = 0; pageNumber < totalPages; pageNumber++)
         {
             GameObject page = GameObject.Instantiate(pagePrefab);
@@ -68,17 +67,14 @@ public class CollectionController : MonoBehaviour
     {
         for (int i = 0; i < pageSize; i++)
         {
-            int nationalPokedexNumber = CardFactory.startNPNOfGeneration[selectedGeneration] + i + pageNumber * pageSize;
-            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[selectedGeneration] + CardFactory.numberOfCardsInGeneration[selectedGeneration])
+            int nationalPokedexNumber = CardFactory.startNPNOfGeneration[GameManager.selectedGeneration] + i + pageNumber * pageSize;
+            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[GameManager.selectedGeneration] + CardFactory.numberOfCardsInGeneration[GameManager.selectedGeneration])
             {
                 if (generation.cards.ContainsKey(nationalPokedexNumber))
                 { // we own cards of this NationalPokedexNumber
                     Dictionary<string, PossibleCard> cardsOfNumber = generation.cards[nationalPokedexNumber];
-                    foreach (PossibleCard ownedCard in cardsOfNumber.Values)
-                    {
-                        PlaceCard(ownedCard, page);
-                        break;
-                    }
+                    PossibleCard lastFound = cardsOfNumber.Values.OrderBy(p => p.foundOn).Last();
+                    PlaceCard(lastFound, page);
                 }
                 else
                 { // leave empty placeholder? show greyed-out back?
