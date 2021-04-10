@@ -51,7 +51,6 @@ public class CollectionController : MonoBehaviour
         pageSwiper.totalPages = totalPages;
         pageHolder.GetComponent<RectTransform>().sizeDelta = new Vector2(900 * totalPages, 1200);
         generation = GameManager.playerStats.generations[selectedGeneration];
-        Debug.Log(generation.cards.Keys);
         for (int pageNumber = 0; pageNumber < totalPages; pageNumber++)
         {
             GameObject page = GameObject.Instantiate(pagePrefab);
@@ -90,12 +89,6 @@ public class CollectionController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void PlaceEmptyPanel(int nationalPokedexNumber, GameObject cardSpace)
     {
 
@@ -121,37 +114,7 @@ public class CollectionController : MonoBehaviour
         Color color = image.color;
         color.a = 0.1f;
         panel.SetActive(true);
-        StartCoroutine(DownloadImage(ownedCard.imageUrlSmall, image));
-        /*
-        StartCoroutine(CardFactory.CreateCard(ownedCard,
-            (GameObject newCardInstance) =>
-            {
-                image.sprite = newCardInstance.GetComponent<Card>().front;
-                Destroy(newCardInstance);
-            }));
-        */
-    }
-
-    static IEnumerator DownloadImage(string mediaUrl, Image image)
-    {
-        UnityWebRequest request = UnityWebRequestTexture.GetTexture(mediaUrl);
-        yield return request.SendWebRequest();
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
-        {
-            Debug.Log(request.error);
-        }
-        else
-        {
-            DownloadHandler handle = request.downloadHandler;
-            Texture2D texure = new Texture2D(5, 5);
-            Sprite sprite = null;
-            if (texure.LoadImage(handle.data))
-            {
-                // sprite will be scaled by spriteRenderer.Drawmode = sliced
-                sprite = Sprite.Create(texure, new Rect(0, 0, texure.width, texure.height), new Vector2(0.5f, 0.5f));
-            }
-            image.sprite = sprite;
-        }
+        StartCoroutine(CardFactory.FillImage(ImageType.Small, ownedCard.imageUrlSmall, image));
     }
 
     public void OnPageChanged()
@@ -159,7 +122,6 @@ public class CollectionController : MonoBehaviour
         // pageSwiper pages start at 1, we start at 0
         int currentPage = pageSwiper.currentPage - 1;
         int newMax = Mathf.Min(pageSwiper.totalPages, currentPage + 2);
-        Debug.Log("page changed to " + currentPage + " filling up till" + newMax);
         for (int pageNumber = maxPageFilled; pageNumber < newMax; pageNumber++)
         {
             FillPage(pageNumber, pages[pageNumber]);

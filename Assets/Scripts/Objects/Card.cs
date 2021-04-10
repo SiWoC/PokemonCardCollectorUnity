@@ -9,7 +9,6 @@ public class Card : MonoBehaviour
     private Animator animator;
     private bool showingFront;
 
-    public CardShape cardShape;
     public Sprite front;
     public Sprite back;
 

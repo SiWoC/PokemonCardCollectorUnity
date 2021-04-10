@@ -5,9 +5,18 @@ using UnityEngine.Networking;
 using System;
 using Factories.Config;
 using System.Text.RegularExpressions;
+using UnityEngine.UI;
+using System.IO;
+using Globals;
 
 namespace Factories
 {
+    public enum ImageType
+    {
+        Small,
+        Large
+    }
+    
     public static class CardFactory
     {
         public const int numberOfGenerations = 8;
@@ -101,5 +110,36 @@ namespace Factories
                 returnToCaller(cardInstance);
             }
         }
+
+        public static IEnumerator FillImage(ImageType type, string url, Image image)
+        {
+            Sprite sprite = CacheManager.GetSprite(type, url);
+            if (sprite == null)
+            {
+                UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
+                yield return request.SendWebRequest();
+                if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+                {
+                    Debug.Log(request.error);
+                }
+                else
+                {
+                    DownloadHandler handle = request.downloadHandler;
+                    Texture2D texture = new Texture2D(5, 5);
+                    if (texture.LoadImage(handle.data))
+                    {
+                        // sprite will be scaled by spriteRenderer.Drawmode = sliced
+                        sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    }
+                    image.sprite = sprite;
+                    CacheManager.PutSprite(sprite, type, url);
+                }
+            } else
+            {
+                image.sprite = sprite;
+            }
+        }
+
+
     }
 }
