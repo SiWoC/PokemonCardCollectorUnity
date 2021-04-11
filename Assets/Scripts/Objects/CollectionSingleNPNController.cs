@@ -16,7 +16,7 @@ public class CollectionSingleNPNController : MonoBehaviour
     private Generation generation;
     Dictionary<string, PossibleCard> cardsOfNumber;
     private int pageSize = 9;
-    private Dictionary<int, GameObject> pages = new Dictionary<int, GameObject>();
+    private Dictionary<int, GameObject> zoomPages = new Dictionary<int, GameObject>();
     private int maxPageFilled = 0;
 
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class CollectionSingleNPNController : MonoBehaviour
         for (int pageNumber = 0; pageNumber < totalPages; pageNumber++)
         {
             GameObject page = GameObject.Instantiate(pagePrefab);
-            pages.Add(pageNumber, page);
+            zoomPages.Add(pageNumber, page);
             page.transform.SetParent(pageHolder.transform);
             page.transform.localPosition = new Vector3(900 * pageNumber, 0f, 0f);
             page.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -42,7 +42,7 @@ public class CollectionSingleNPNController : MonoBehaviour
         pageSwiper.BackToPage1();
     }
 
-    private void FillPage(int pageNumber, GameObject page)
+    private void FillZoomPage(int pageNumber, GameObject page)
     {
         IEnumerable<PossibleCard> cards = cardsOfNumber.Values.OrderBy(p => p.foundOn).Skip(pageNumber * pageSize);
         foreach (PossibleCard card in cards)
@@ -66,14 +66,14 @@ public class CollectionSingleNPNController : MonoBehaviour
         StartCoroutine(CardFactory.FillImage(ImageType.Small, ownedCard.imageUrlSmall, image));
     }
 
-    public void OnPageChanged()
+    public void OnZoomPageChanged()
     {
         // pageSwiper pages start at 1, we start at 0
         int currentPage = pageSwiper.currentPage - 1;
         int newMax = Mathf.Min(pageSwiper.totalPages, currentPage + 2);
         for (int pageNumber = maxPageFilled; pageNumber < newMax; pageNumber++)
         {
-            FillPage(pageNumber, pages[pageNumber]);
+            FillZoomPage(pageNumber, zoomPages[pageNumber]);
         }
         maxPageFilled = Mathf.Max(maxPageFilled, newMax);
     }

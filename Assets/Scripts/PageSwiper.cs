@@ -52,6 +52,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
 
     public void BackToPage1()
     {
+        Debug.Log("back to page 1 " + name);
         currentPage = 1;
         pageChangedEvent?.Invoke();
         transform.position += new Vector3(-transform.position.x, 0, 0);

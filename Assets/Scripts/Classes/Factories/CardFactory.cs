@@ -51,6 +51,7 @@ namespace Factories
             PossibleCardList pcl = cardSets[cardResourceName];
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
+            Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
             Card card = cardInstance.GetComponent<Card>();
