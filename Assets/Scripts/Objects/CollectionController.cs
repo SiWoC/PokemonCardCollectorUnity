@@ -11,8 +11,10 @@ using UnityEngine.UI;
 public class CollectionController : MonoBehaviour
 {
     public Dropdown generationDropdown;
+    public GameObject backButton;
     public GameObject pageHolder;
     public GameObject singleNPNPageHolder;
+    public GameObject singleCard;
     public GameObject pagePrefab;
 
     private Generation generation;
@@ -23,6 +25,7 @@ public class CollectionController : MonoBehaviour
     private int maxPageFilled = 0;
 
     PageSwiper singleNPNPageSwiper;
+    private Image singleCardImage;
     private Dictionary<int, GameObject> singleNPNPages = new Dictionary<int, GameObject>();
     Dictionary<string, PossibleCard> cardsOfNumber;
     private int maxSingleNPNPageFilled = 0;
@@ -32,6 +35,7 @@ public class CollectionController : MonoBehaviour
     {
         pageSwiper = pageHolder.GetComponent<PageSwiper>();
         singleNPNPageSwiper = singleNPNPageHolder.GetComponent<PageSwiper>();
+        singleCardImage = singleCard.GetComponent<Image>();
         generationDropdown.ClearOptions();
         for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
         {
@@ -124,7 +128,7 @@ public class CollectionController : MonoBehaviour
         panel.transform.localScale = new Vector3(1f, 1f, 1f);
         Button button = panel.AddComponent<Button>();
         button.image = panel.AddComponent<Image>();
-        button.onClick.AddListener(() => { OnPointerClick(ownedCard); });
+        button.onClick.AddListener(() => { OnPointerClick(ownedCard, button.image); });
         panel.SetActive(true);
         string url = null;
         switch (imageType)
@@ -186,7 +190,7 @@ public class CollectionController : MonoBehaviour
         }
         maxPageFilled = Mathf.Max(maxPageFilled, newMax);
     }
-    
+
     public void OnSingleNPNPageChanged()
     {
         // pageSwiper pages start at 1, we start at 0
@@ -200,11 +204,15 @@ public class CollectionController : MonoBehaviour
         maxSingleNPNPageFilled = Mathf.Max(maxSingleNPNPageFilled, newMax);
     }
 
-    public void OnPointerClick(PossibleCard ownedCard)
+    public void OnPointerClick(PossibleCard ownedCard, Image image)
     {
         if (singleNPNPageHolder.activeSelf)
         {
-            Debug.Log("already single NPN, so zoom large card");
+            //Debug.Log("already single NPN, so zoom large card");
+            singleCardImage.sprite = image.sprite;
+            singleCard.SetActive(true);
+            backButton.SetActive(false);
+            singleNPNPageHolder.SetActive(false);
         }
         else
         {
@@ -233,5 +241,12 @@ public class CollectionController : MonoBehaviour
         {
             GameManager.Back();
         }
+    }
+
+    public void OnSingleCardClick()
+    {
+        singleCard.SetActive(false);
+        singleNPNPageHolder.SetActive(true);
+        backButton.SetActive(true);
     }
 }
