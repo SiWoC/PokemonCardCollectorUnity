@@ -1,13 +1,23 @@
 ﻿using Factories.Config;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Globals
 {
+
+    public enum EarnType
+    {
+        Coins,
+        Packs
+    }
+
     public static class GameManager
     {
         public static int selectedGeneration = 1;
         public static int selectedNPN = 1;
+        public static EarnType earnType = EarnType.Coins;
+
         public readonly static PlayerStats playerStats = PlayerStats.GetInstance();
         private static string[] sceneNamesStack = new string[10];
         private static int currentStackIndex = 0;

@@ -49,6 +49,15 @@ namespace Factories
         {
             string cardResourceName = (generation + "-" + rarity).Replace(" ", "").ToLower();
             PossibleCardList pcl = cardSets[cardResourceName];
+            /* debugging, give me all 97 normal or 17 special Pikachu cards
+            foreach (PossibleCard pc in pcl.possibleCard)
+            {
+                if (pc.nationalPokedexNumber == 25)
+                {
+                    GameManager.AddCardToCollection(pc);
+                }
+            }
+            */
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
             Debug.Log("NPN " + chosenCard.nationalPokedexNumber);

@@ -27,6 +27,7 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         // recalculate anchors according to screen resolution/ratio
         buttonAnchorY = ((0.5f * Screen.width + 0.5f * Screen.height) / Screen.height) - 0.5f;
         RectTransform rectTransform;
@@ -42,6 +43,7 @@ public class MainMenuController : MonoBehaviour
         // openButton
         rectTransform = openButton.GetComponent<RectTransform>();
         rectTransform.anchorMin = new Vector2(0.5f, 0.5f - buttonAnchorY);
+        */
     }
 
     public void OnCollectionClicked()
@@ -51,6 +53,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnWorkClicked()
     {
+        GameManager.Forward("Assets/Scenes/WorkCoinPack.unity");
     }
 
     public void OnShopClicked()

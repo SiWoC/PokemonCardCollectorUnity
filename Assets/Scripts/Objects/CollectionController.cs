@@ -16,6 +16,7 @@ public class CollectionController : MonoBehaviour
     public GameObject singleNPNPageHolder;
     public GameObject singleCard;
     public GameObject pagePrefab;
+    public GameObject unknownCardPrefab;
 
     private Generation generation;
     private int pageSize = 9;
@@ -98,14 +99,16 @@ public class CollectionController : MonoBehaviour
     public void PlaceEmptyPanel(int nationalPokedexNumber, GameObject page)
     {
 
-        GameObject panel = new GameObject("noneOwned" + nationalPokedexNumber);
-        //panel.tag = DESTROYABLE_TAG;
+        GameObject panel = GameObject.Instantiate(unknownCardPrefab);
+        panel.name = "noneOwned" + nationalPokedexNumber;
+        /*
+        Image image = panel.GetComponent<Image>();
+        Color color = image.color;
+        color.a = 0.5f;
+        image.color = color;
+        */
         panel.transform.SetParent(page.transform);
         panel.transform.localScale = new Vector3(1f, 1f, 1f);
-        Image image = panel.AddComponent<Image>();
-        Color color = image.color;
-        color.a = 0.1f;
-        image.color = color;
     }
 
     public void PlaceSmallCard(PossibleCard ownedCard, GameObject page)
@@ -120,16 +123,20 @@ public class CollectionController : MonoBehaviour
 
     public void PlaceCard(PossibleCard ownedCard, ImageType imageType, GameObject page)
     {
-        GameObject panel = new GameObject(ownedCard.id);
-        // child of page will be destroyed with page otherwise 2 versions of tag normal/singleNPN
-        //panel.tag = DESTROYABLE_TAG;
-        panel.SetActive(false);
+        GameObject panel = GameObject.Instantiate(unknownCardPrefab);
+        panel.name = ownedCard.id;
+
+        Image image = panel.GetComponent<Image>();
+        Color color = image.color;
+        color.a = 1.0f;
+        image.color = color;
+
         panel.transform.SetParent(page.transform);
         panel.transform.localScale = new Vector3(1f, 1f, 1f);
+
         Button button = panel.AddComponent<Button>();
-        button.image = panel.AddComponent<Image>();
+        button.image = panel.GetComponent<Image>();
         button.onClick.AddListener(() => { OnPointerClick(ownedCard, button.image); });
-        panel.SetActive(true);
         string url = null;
         switch (imageType)
         {
@@ -171,7 +178,7 @@ public class CollectionController : MonoBehaviour
 
     private void FillSingleNPNPage(int pageNumber, GameObject page)
     {
-        IEnumerable<PossibleCard> cards = cardsOfNumber.Values.OrderBy(p => p.foundOn).Skip(pageNumber * pageSize);
+        IEnumerable<PossibleCard> cards = cardsOfNumber.Values.OrderBy(p => p.foundOn).Skip(pageNumber * pageSize).Take(9);
         foreach (PossibleCard card in cards)
         {
             PlaceLargeCard(card, page);
@@ -196,7 +203,6 @@ public class CollectionController : MonoBehaviour
         // pageSwiper pages start at 1, we start at 0
         int currentPage = singleNPNPageSwiper.currentPage - 1;
         int newMax = Mathf.Min(singleNPNPageSwiper.totalPages, currentPage + 2);
-        Debug.Log("SingleNPNpage changed " + currentPage + "-" + newMax);
         for (int pageNumber = maxSingleNPNPageFilled; pageNumber < newMax; pageNumber++)
         {
             FillSingleNPNPage(pageNumber, singleNPNPages[pageNumber]);
@@ -211,7 +217,6 @@ public class CollectionController : MonoBehaviour
             //Debug.Log("already single NPN, so zoom large card");
             singleCardImage.sprite = image.sprite;
             singleCard.SetActive(true);
-            backButton.SetActive(false);
             singleNPNPageHolder.SetActive(false);
         }
         else
@@ -223,7 +228,12 @@ public class CollectionController : MonoBehaviour
 
     public void OnBack()
     {
-        if (singleNPNPageHolder.activeSelf)
+        if (singleCard.activeSelf)
+        {
+            singleCard.SetActive(false);
+            singleNPNPageHolder.SetActive(true);
+        }
+        else if (singleNPNPageHolder.activeSelf)
         {
             // Destroy stuff of this NPN
             foreach (GameObject page in singleNPNPages.Values)
@@ -247,6 +257,5 @@ public class CollectionController : MonoBehaviour
     {
         singleCard.SetActive(false);
         singleNPNPageHolder.SetActive(true);
-        backButton.SetActive(true);
     }
 }

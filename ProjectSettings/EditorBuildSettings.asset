@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Collection.unity
     guid: a09fec48e8e654846b2e5927a809b359
+  - enabled: 1
+    path: Assets/Scenes/WorkCoinPack.unity
+    guid: b6203284add34b34eb7573d3f9796075
+  - enabled: 1
+    path: Assets/Scenes/WorkPickChore.unity
+    guid: fcbb056e4feb74d469b4e4be96b4a10b
   m_configObjects: {}
