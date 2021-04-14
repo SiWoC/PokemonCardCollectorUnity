@@ -12,6 +12,11 @@ public class TestCardFactoryCardController : MonoBehaviour
     public Canvas cardCanvas;
     private GameObject cardInstance;
 
+    private void Awake()
+    {
+        GameManager.Initialize();
+    }
+
     void Start()
     {
         //cardCanvas = 

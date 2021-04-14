@@ -31,6 +31,11 @@ public class CollectionController : MonoBehaviour
     Dictionary<string, PossibleCard> cardsOfNumber;
     private int maxSingleNPNPageFilled = 0;
 
+    private void Awake()
+    {
+        GameManager.Initialize();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

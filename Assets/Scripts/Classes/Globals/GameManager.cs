@@ -21,7 +21,17 @@ namespace Globals
         public readonly static PlayerStats playerStats = PlayerStats.GetInstance();
         private static string[] sceneNamesStack = new string[10];
         private static int currentStackIndex = 0;
+        private static bool initialized = false;
 
+        public static void Initialize()
+        {
+            if (!initialized)
+            {
+                UnityEngine.Object initializerPrefab = Resources.Load("Initializer");
+                GameObject.Instantiate(initializerPrefab);
+                initialized = true;
+            }
+        }
         public static int GetCoins()
         {
             return playerStats.Coins;
