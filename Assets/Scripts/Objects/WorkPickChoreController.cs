@@ -21,6 +21,6 @@ public class WorkPickChoreController : MonoBehaviour
 
     public void OnRotomClicked()
     {
-        Debug.Log("You picked Rotom");
+        GameManager.Forward("Assets/Scenes/WorkChargingRotom.unity");
     }
 }

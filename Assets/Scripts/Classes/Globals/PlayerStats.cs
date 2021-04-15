@@ -18,7 +18,7 @@ namespace Globals
 
         public int version;
         private int coins = 0;
-        public float randomPackagePercentage = 0.0f;
+        private int randomPackagePercentage = 0;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
 
         private static PlayerStats theInstance;
@@ -27,9 +27,20 @@ namespace Globals
 
         public int Coins
         {
-            get => coins; set
+            get => coins; 
+            set
             {
                 coins = value;
+                SaveData();
+            }
+        }
+
+        public int RandomPackagePercentage
+        {
+            get => randomPackagePercentage;
+            set
+            {
+                randomPackagePercentage = value;
                 SaveData();
             }
         }

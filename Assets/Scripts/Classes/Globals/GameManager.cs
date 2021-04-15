@@ -37,9 +37,36 @@ namespace Globals
             return playerStats.Coins;
         }
 
+        public static float GetRandomPackPercentage()
+        {
+            return playerStats.RandomPackagePercentage;
+        }
+
+        internal static void AddRandomPack()
+        {
+            // TODO add randomPack
+            playerStats.RandomPackagePercentage = 0;
+        }
+
+        public static void ChoreClick()
+        {
+            if (earnType == EarnType.Coins)
+            {
+                AddCoins(1);
+            } else
+            {
+                AddRandomPackPercentage(1);
+            }
+        }
+
         public static void AddCoins(int coins)
         {
             playerStats.Coins += coins;
+        }
+
+        public static void AddRandomPackPercentage(int percentage)
+        {
+            playerStats.RandomPackagePercentage += percentage;
         }
 
         public static void AddCardToCollection(PossibleCard possibleCard)
