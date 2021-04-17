@@ -1,0 +1,1548 @@
+fileFormatVersion: 2
+guid: 7990bea59e3deab439ace8116ff8dc9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5108944696077811177
+    second: Rotom_105x70x59_0
+  - first:
+      213: 3392058266102856526
+    second: Rotom_105x70x59_1
+  - first:
+      213: -3554965392851440568
+    second: Rotom_105x70x59_2
+  - first:
+      213: 7448836559276456336
+    second: Rotom_105x70x59_3
+  - first:
+      213: 585770038584440455
+    second: Rotom_105x70x59_4
+  - first:
+      213: -2869682807826157277
+    second: Rotom_105x70x59_5
+  - first:
+      213: 880835656281500603
+    second: Rotom_105x70x59_6
+  - first:
+      213: 3023715876713144007
+    second: Rotom_105x70x59_7
+  - first:
+      213: -6897880592405748713
+    second: Rotom_105x70x59_8
+  - first:
+      213: 7206704461611489767
+    second: Rotom_105x70x59_9
+  - first:
+      213: 8174995290626116678
+    second: Rotom_105x70x59_10
+  - first:
+      213: -6039695950708791919
+    second: Rotom_105x70x59_11
+  - first:
+      213: 5377290459638965316
+    second: Rotom_105x70x59_12
+  - first:
+      213: -1650727941582064982
+    second: Rotom_105x70x59_13
+  - first:
+      213: 890828759383304692
+    second: Rotom_105x70x59_14
+  - first:
+      213: -1884052731350063067
+    second: Rotom_105x70x59_15
+  - first:
+      213: -8540718060973520446
+    second: Rotom_105x70x59_16
+  - first:
+      213: 5836076147007510953
+    second: Rotom_105x70x59_17
+  - first:
+      213: 7676562317995289429
+    second: Rotom_105x70x59_18
+  - first:
+      213: -9041078503034318649
+    second: Rotom_105x70x59_19
+  - first:
+      213: -8833567089458101783
+    second: Rotom_105x70x59_20
+  - first:
+      213: -6518924934310085775
+    second: Rotom_105x70x59_21
+  - first:
+      213: -1789807508765202557
+    second: Rotom_105x70x59_22
+  - first:
+      213: -5900885818173408024
+    second: Rotom_105x70x59_23
+  - first:
+      213: -6063852632334280666
+    second: Rotom_105x70x59_24
+  - first:
+      213: -2779202904205456439
+    second: Rotom_105x70x59_25
+  - first:
+      213: -8815408034290471881
+    second: Rotom_105x70x59_26
+  - first:
+      213: 105587557603885575
+    second: Rotom_105x70x59_27
+  - first:
+      213: 3180751733049777256
+    second: Rotom_105x70x59_28
+  - first:
+      213: -7696498632004334023
+    second: Rotom_105x70x59_29
+  - first:
+      213: -4311988739884509139
+    second: Rotom_105x70x59_30
+  - first:
+      213: -5434694495610204571
+    second: Rotom_105x70x59_31
+  - first:
+      213: -4111364265440383564
+    second: Rotom_105x70x59_32
+  - first:
+      213: -7185195984246136090
+    second: Rotom_105x70x59_33
+  - first:
+      213: -2556900246306631104
+    second: Rotom_105x70x59_34
+  - first:
+      213: 5932819760204868644
+    second: Rotom_105x70x59_35
+  - first:
+      213: -6915990286910650489
+    second: Rotom_105x70x59_36
+  - first:
+      213: 1124091034040459980
+    second: Rotom_105x70x59_37
+  - first:
+      213: -724807106806411326
+    second: Rotom_105x70x59_38
+  - first:
+      213: 878537233136338226
+    second: Rotom_105x70x59_39
+  - first:
+      213: 589759584929421698
+    second: Rotom_105x70x59_40
+  - first:
+      213: 733986384977167599
+    second: Rotom_105x70x59_41
+  - first:
+      213: -8327890590025843685
+    second: Rotom_105x70x59_42
+  - first:
+      213: 956945614188189637
+    second: Rotom_105x70x59_43
+  - first:
+      213: 6649441363082021759
+    second: Rotom_105x70x59_44
+  - first:
+      213: -5569100543154575361
+    second: Rotom_105x70x59_45
+  - first:
+      213: 3405662716633130331
+    second: Rotom_105x70x59_46
+  - first:
+      213: -5828562092300947682
+    second: Rotom_105x70x59_47
+  - first:
+      213: 1893806204096342840
+    second: Rotom_105x70x59_48
+  - first:
+      213: 7212573364652110383
+    second: Rotom_105x70x59_49
+  - first:
+      213: 2198903099031942832
+    second: Rotom_105x70x59_50
+  - first:
+      213: 775206337789478681
+    second: Rotom_105x70x59_51
+  - first:
+      213: -2114198904818170775
+    second: Rotom_105x70x59_52
+  - first:
+      213: 2050398981422726076
+    second: Rotom_105x70x59_53
+  - first:
+      213: 6919550969614186097
+    second: Rotom_105x70x59_54
+  - first:
+      213: 2127254928783529289
+    second: Rotom_105x70x59_55
+  - first:
+      213: 7019673296930621968
+    second: Rotom_105x70x59_56
+  - first:
+      213: 8609119851608000910
+    second: Rotom_105x70x59_57
+  - first:
+      213: 738627315852727623
+    second: Rotom_105x70x59_58
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rotom_105x70x59_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7128a250ed16919b0800000000000000
+      internalID: -5108944696077811177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bfc786503031f20800000000000000
+      internalID: 3392058266102856526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c684a6fc93aaec0800000000000000
+      internalID: -3554965392851440568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099bd9192659f5760800000000000000
+      internalID: 7448836559276456336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78674ed1fb2112800800000000000000
+      internalID: 585770038584440455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321f975c0b6dc28d0800000000000000
+      internalID: -2869682807826157277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb282ecc5b593c00800000000000000
+      internalID: 880835656281500603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_7
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce123dc19566f920800000000000000
+      internalID: 3023715876713144007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7142892d52ec540a0800000000000000
+      internalID: -6897880592405748713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_9
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 350
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9539b668b530460800000000000000
+      internalID: 7206704461611489767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cc24267ea637170800000000000000
+      internalID: 8174995290626116678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19523a25880be2ca0800000000000000
+      internalID: -6039695950708791919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a0e4de29ff9a40800000000000000
+      internalID: 5377290459638965316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_13
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2703ddeaf6719e0800000000000000
+      internalID: -1650727941582064982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f96ebe690cdc5c00800000000000000
+      internalID: 890828759383304692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_15
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52866c1e5008ad5e0800000000000000
+      internalID: -1884052731350063067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_16
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c909e89c26497980800000000000000
+      internalID: -8540718060973520446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a95388b558edf050800000000000000
+      internalID: 5836076147007510953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_18
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b224c81c0a88a60800000000000000
+      internalID: 7676562317995289429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_19
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 280
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c01830d003a78280800000000000000
+      internalID: -9041078503034318649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1c44dc88dd86580800000000000000
+      internalID: -8833567089458101783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bb20d9f402885a0800000000000000
+      internalID: -6518924934310085775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38729b7bd835927e0800000000000000
+      internalID: -1789807508765202557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_23
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec32a3dc97db1ea0800000000000000
+      internalID: -5900885818173408024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_24
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628d567982ed8dba0800000000000000
+      internalID: -6063852632334280666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_25
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb8918fea94e69d0800000000000000
+      internalID: -2779202904205456439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_26
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cedfd491169a580800000000000000
+      internalID: -8815408034290471881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_27
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7024eaff25f177100800000000000000
+      internalID: 105587557603885575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_28
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cd32f49dc442c20800000000000000
+      internalID: 3180751733049777256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_29
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 210
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e0a11a54b803590800000000000000
+      internalID: -7696498632004334023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2813b3461db824c0800000000000000
+      internalID: -4311988739884509139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_31
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e026686261494b0800000000000000
+      internalID: -5434694495610204571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_32
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bde038cbff71f6c0800000000000000
+      internalID: -4111364265440383564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_33
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e22275325e094c90800000000000000
+      internalID: -7185195984246136090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_34
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042d8c4e5c0148cd0800000000000000
+      internalID: -2556900246306631104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_35
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ced63732c955250800000000000000
+      internalID: 5932819760204868644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_36
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78783aef9777500a0800000000000000
+      internalID: -6915990286910650489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_37
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2ee2bf6d2999f00800000000000000
+      internalID: 1124091034040459980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_38
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf002cc6c7f0f5f0800000000000000
+      internalID: -724807106806411326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_39
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 140
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235cb0775f0313c00800000000000000
+      internalID: 878537233136338226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2899992c73f3f2800800000000000000
+      internalID: 589759584929421698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_41
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe489827ab4af2a00800000000000000
+      internalID: 733986384977167599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_42
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cf035a1a36d6c80800000000000000
+      internalID: -8327890590025843685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_43
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c71e0b47f0c74d00800000000000000
+      internalID: 956945614188189637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_44
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b0b4180bf874c50800000000000000
+      internalID: 6649441363082021759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_45
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff726d6ff8496b2b0800000000000000
+      internalID: -5569100543154575361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_46
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55a5b16238534f20800000000000000
+      internalID: 3405662716633130331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_47
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f281978a9cc1fa0800000000000000
+      internalID: -5828562092300947682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_48
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83be79475b6284a10800000000000000
+      internalID: 1893806204096342840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_49
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 70
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f227884e245381460800000000000000
+      internalID: 7212573364652110383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6fd41e7b2148e10800000000000000
+      internalID: 2198903099031942832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_51
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917c2979e0612ca00800000000000000
+      internalID: 775206337789478681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_52
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9640bcd2c4bd8a2e0800000000000000
+      internalID: -2114198904818170775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_53
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb3687920b747c10800000000000000
+      internalID: 2050398981422726076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_54
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176301d02fe270060800000000000000
+      internalID: 6919550969614186097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_55
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94557d84617858d10800000000000000
+      internalID: 2127254928783529289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_56
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a48d6fba3ea6160800000000000000
+      internalID: 7019673296930621968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_57
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89cbd754ecb97770800000000000000
+      internalID: 8609119851608000910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rotom_105x70x59_58
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 105
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7455dce51a1204a00800000000000000
+      internalID: 738627315852727623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

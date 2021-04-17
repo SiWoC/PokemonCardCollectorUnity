@@ -19,6 +19,7 @@ namespace Globals
         public int version;
         private int coins = 0;
         private int randomPackagePercentage = 0;
+        private static DateTime lastSave = DateTime.UtcNow;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
 
         private static PlayerStats theInstance;
@@ -31,7 +32,7 @@ namespace Globals
             set
             {
                 coins = value;
-                SaveData();
+                SaveDataTimed();
             }
         }
 
@@ -41,7 +42,7 @@ namespace Globals
             set
             {
                 randomPackagePercentage = value;
-                SaveData();
+                SaveDataTimed();
             }
         }
 
@@ -66,6 +67,15 @@ namespace Globals
             }
             theInstance.InitGenerations();
             return theInstance;
+        }
+
+        public static void SaveDataTimed()
+        {
+            if (lastSave.AddSeconds(5) < DateTime.UtcNow)
+            {
+                SaveData();
+                lastSave = DateTime.UtcNow;
+            }
         }
 
         public static void SaveData()

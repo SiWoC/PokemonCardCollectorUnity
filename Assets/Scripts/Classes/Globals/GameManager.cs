@@ -77,6 +77,7 @@ namespace Globals
         public static void Back()
         {
 
+            PlayerStats.SaveData();
             if (currentStackIndex == 0)
             {
                 Debug.Log("Quitting");
