@@ -9,6 +9,8 @@ public class Counter : MonoBehaviour
     public Text text;
     public GameObject coinsImage;
     public GameObject packsImage;
+    public bool useFixedEarntype = false;
+    public EarnType fixedEarnType;
 
     private Color coinsColor = new Color(1f, 0.8352f,0f,1f);
     private Color packsColor = new Color(1f, 0.1725f, 0.2705f, 1f);
@@ -16,7 +18,7 @@ public class Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameManager.earnType == EarnType.Coins)
+        if ((useFixedEarntype && fixedEarnType == EarnType.Coins) || (!useFixedEarntype && GameManager.earnType == EarnType.Coins))
         {
             coinsImage.SetActive(true);
             packsImage.SetActive(false);
@@ -32,7 +34,7 @@ public class Counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.earnType == EarnType.Coins)
+        if ((useFixedEarntype && fixedEarnType == EarnType.Coins) || (!useFixedEarntype && GameManager.earnType == EarnType.Coins))
         {
             text.text = GameManager.GetCoins().ToString("D8");
         }
