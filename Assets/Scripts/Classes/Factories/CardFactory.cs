@@ -29,19 +29,30 @@ namespace Factories
         public static Sprite squareBack;
 
         private static Dictionary<string, PossibleCardList> cardSets = new Dictionary<string, PossibleCardList>();
+        private static Dictionary<int, Dictionary<int, int>> availableNPNs = new Dictionary<int, Dictionary<int,int>>();
 
         static CardFactory()
         {
-            for (int i = 1; i <= numberOfGenerations; i++)
+            for (int generation = 1; generation <= numberOfGenerations; generation++)
             {
-                AddCardsFromFile("gen" + i + "-special");
-                AddCardsFromFile("gen" + i + "-normal");
+                availableNPNs.Add(generation, new Dictionary<int, int>());
+                AddCardsFromFile("gen" + generation + "-special", generation);
+                AddCardsFromFile("gen" + generation + "-normal", generation);
             }
         }
 
-        public static void AddCardsFromFile(string cardResourceName) {
+        public static void AddCardsFromFile(string cardResourceName, int generation) {
             TextAsset jsonTextFile = Resources.Load<TextAsset>("Factories/Config/" + cardResourceName);
             PossibleCardList pcl = JsonUtility.FromJson<PossibleCardList>(jsonTextFile.text);
+            foreach (PossibleCard pc in pcl.possibleCard)
+            {
+                if (!availableNPNs[generation].ContainsKey(pc.nationalPokedexNumber))
+                {
+                    availableNPNs[generation].Add(pc.nationalPokedexNumber,0);
+                }
+                availableNPNs[generation][pc.nationalPokedexNumber] += 1;
+                //GameManager.AddCardToCollection(pc);
+            }
             cardSets.Add(cardResourceName, pcl);
         }
 
@@ -76,6 +87,19 @@ namespace Factories
                 card.back = roundedBack;
             }
             return DownloadImage(chosenCard.imageUrlLarge, cardInstance, returnToCaller);
+        }
+
+        internal static int GetNumberOfAvailableCards(int generation, int nationalPokedexNumber)
+        {
+            if (nationalPokedexNumber >= CardFactory.startNPNOfGeneration[generation] + CardFactory.numberOfCardsInGeneration[generation])
+            {
+                return 0;
+            }
+            if (!availableNPNs[generation].ContainsKey(nationalPokedexNumber))
+            {
+                return 0;
+            }
+            return availableNPNs[generation][nationalPokedexNumber];
         }
 
         public static IEnumerator CreateCard(PossibleCard someCard, Action<GameObject> returnToCaller)

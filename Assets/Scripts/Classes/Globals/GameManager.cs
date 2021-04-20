@@ -14,7 +14,7 @@ namespace Globals
 
     public static class GameManager
     {
-        public static int selectedGeneration = 1;
+        private static int selectedGeneration = 1;
         public static int selectedNPN = 1;
         public static EarnType earnType = EarnType.Coins;
 
@@ -23,12 +23,24 @@ namespace Globals
         private static int currentStackIndex = 0;
         private static bool initialized = false;
 
+        public static int SelectedGeneration
+        {
+            get => selectedGeneration;
+            set
+            {
+                selectedGeneration = value;
+                PlayerPrefs.SetInt("SelectedGeneration", value);
+                PlayerPrefs.Save();
+            }
+        }
+
         public static void Initialize()
         {
             if (!initialized)
             {
                 UnityEngine.Object initializerPrefab = Resources.Load("Initializer");
                 GameObject.Instantiate(initializerPrefab);
+                selectedGeneration = PlayerPrefs.GetInt("SelectedGeneration");
                 initialized = true;
             }
         }

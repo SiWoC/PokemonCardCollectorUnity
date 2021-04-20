@@ -17,6 +17,7 @@ public class CollectionController : MonoBehaviour
     public GameObject singleCard;
     public GameObject pagePrefab;
     public GameObject unknownCardPrefab;
+    public GameObject unavailableCardPrefab;
 
     private Generation generation;
     private int pageSize = 9;
@@ -47,6 +48,7 @@ public class CollectionController : MonoBehaviour
         {
             generationDropdown.options.Add(new Dropdown.OptionData("gen" + i));
         }
+        generationDropdown.value = GameManager.SelectedGeneration - 1;
         OnGenerationChanged(generationDropdown);
     }
 
@@ -61,12 +63,12 @@ public class CollectionController : MonoBehaviour
         maxPageFilled = 0;
 
         // set up pages for new generation
-        GameManager.selectedGeneration = generationDropdown.value + 1;
-        int totalPages = (CardFactory.numberOfCardsInGeneration[GameManager.selectedGeneration] + pageSize - 1) / pageSize;
+        GameManager.SelectedGeneration = generationDropdown.value + 1;
+        int totalPages = (CardFactory.numberOfCardsInGeneration[GameManager.SelectedGeneration] + pageSize - 1) / pageSize;
         pageSwiper.totalPages = totalPages;
         RectTransform phRectTransform = pageHolder.GetComponent<RectTransform>();
         phRectTransform.sizeDelta = new Vector2(900 * totalPages, phRectTransform.sizeDelta.y);
-        generation = GameManager.playerStats.generations[GameManager.selectedGeneration];
+        generation = GameManager.playerStats.generations[GameManager.SelectedGeneration];
         for (int pageNumber = 0; pageNumber < totalPages; pageNumber++)
         {
             GameObject page = GameObject.Instantiate(pagePrefab);
@@ -83,8 +85,8 @@ public class CollectionController : MonoBehaviour
     {
         for (int i = 0; i < pageSize; i++)
         {
-            int nationalPokedexNumber = CardFactory.startNPNOfGeneration[GameManager.selectedGeneration] + i + pageNumber * pageSize;
-            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[GameManager.selectedGeneration] + CardFactory.numberOfCardsInGeneration[GameManager.selectedGeneration])
+            int nationalPokedexNumber = CardFactory.startNPNOfGeneration[GameManager.SelectedGeneration] + i + pageNumber * pageSize;
+            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[GameManager.SelectedGeneration] + CardFactory.numberOfCardsInGeneration[GameManager.SelectedGeneration])
             {
                 if (generation.cards.ContainsKey(nationalPokedexNumber))
                 { // we own cards of this NationalPokedexNumber
@@ -92,10 +94,14 @@ public class CollectionController : MonoBehaviour
                     PossibleCard lastFound = cardsOfNumber.Values.OrderBy(p => p.foundOn).Last();
                     PlaceSmallCard(lastFound, page);
                 }
-                else
+                else if (CardFactory.GetNumberOfAvailableCards(GameManager.SelectedGeneration, nationalPokedexNumber) > 0)
                 { // leave empty placeholder? show greyed-out back?
                     PlaceEmptyPanel(nationalPokedexNumber, page);
+                } else
+                {
+                    PlaceUnavailablePanel(nationalPokedexNumber, page);
                 }
+
                 LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)page.transform);
             }
         }
@@ -106,6 +112,22 @@ public class CollectionController : MonoBehaviour
 
         GameObject panel = GameObject.Instantiate(unknownCardPrefab);
         panel.name = "noneOwned" + nationalPokedexNumber;
+        /*
+        Image image = panel.GetComponent<Image>();
+        Color color = image.color;
+        color.a = 0.5f;
+        image.color = color;
+        */
+        panel.transform.SetParent(page.transform);
+        panel.transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+
+    public void PlaceUnavailablePanel(int nationalPokedexNumber, GameObject page)
+    {
+
+        GameObject panel = GameObject.Instantiate(unavailableCardPrefab);
+        panel.GetComponentInChildren<Text>().text += nationalPokedexNumber;
+        panel.name = "unavailable" + nationalPokedexNumber;
         /*
         Image image = panel.GetComponent<Image>();
         Color color = image.color;
@@ -157,7 +179,7 @@ public class CollectionController : MonoBehaviour
 
     private void SingleNPNStart()
     {
-        generation = GameManager.playerStats.generations[GameManager.selectedGeneration];
+        generation = GameManager.playerStats.generations[GameManager.SelectedGeneration];
         cardsOfNumber = generation.cards[GameManager.selectedNPN];
         Debug.Log("count: " + cardsOfNumber.Count);
         // set up pages for new NPN

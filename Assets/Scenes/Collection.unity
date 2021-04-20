@@ -201,6 +201,8 @@ MonoBehaviour:
     type: 3}
   unknownCardPrefab: {fileID: 4652982319601642583, guid: 64b8d9dc30f78f041a21fe9d5e6be6da,
     type: 3}
+  unavailableCardPrefab: {fileID: 4652982319601642583, guid: 3e77bf470692d714fb0aec5a194fcc8f,
+    type: 3}
 --- !u!4 &373644392
 Transform:
   m_ObjectHideFlags: 0

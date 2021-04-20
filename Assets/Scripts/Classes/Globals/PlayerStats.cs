@@ -108,7 +108,7 @@ namespace Globals
                 generation.cards[nowOwnedCard.nationalPokedexNumber].Add(nowOwnedCard.id, nowOwnedCard);
             }
             generation.cards[nowOwnedCard.nationalPokedexNumber][nowOwnedCard.id].numberOwned += 1;
-            SaveData();
+            //SaveData();
 
         }
 
