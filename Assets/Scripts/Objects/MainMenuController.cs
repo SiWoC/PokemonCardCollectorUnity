@@ -27,6 +27,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnShopClicked()
     {
+        GameManager.Forward("Assets/Scenes/Shop.unity");
     }
 
     public void OnOpenClicked()
