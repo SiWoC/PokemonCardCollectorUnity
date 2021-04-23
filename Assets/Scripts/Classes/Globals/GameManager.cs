@@ -19,6 +19,10 @@ namespace Globals
         public static EarnType earnType = EarnType.Coins;
 
         public readonly static PlayerStats playerStats = PlayerStats.GetInstance();
+
+        private static int selectedMultiplier = 1;
+        public readonly static int[] price = { 0, 370, 740, 1110, 1480, 1850, 2220, 2590, 2960 };
+
         private static string[] sceneNamesStack = new string[10];
         private static int currentStackIndex = 0;
         private static bool initialized = false;
@@ -34,13 +38,25 @@ namespace Globals
             }
         }
 
+        public static int SelectedMultiplier
+        {
+            get => selectedMultiplier;
+            set
+            {
+                selectedMultiplier = value;
+                PlayerPrefs.SetInt("SelectedMultiplier", value);
+                PlayerPrefs.Save();
+            }
+        }
+
         public static void Initialize()
         {
             if (!initialized)
             {
                 UnityEngine.Object initializerPrefab = Resources.Load("Initializer");
                 GameObject.Instantiate(initializerPrefab);
-                selectedGeneration = PlayerPrefs.GetInt("SelectedGeneration");
+                selectedGeneration = Math.Max(1,PlayerPrefs.GetInt("SelectedGeneration"));
+                selectedMultiplier = Math.Max(1, PlayerPrefs.GetInt("SelectedMultiplier"));
                 initialized = true;
             }
         }
@@ -79,6 +95,13 @@ namespace Globals
         public static void AddRandomPackPercentage(int percentage)
         {
             playerStats.RandomPackagePercentage += percentage;
+        }
+
+        public static void BuyPack(int generation)
+        {
+            if (playerStats.Coins < (selectedMultiplier * price[generation])) return; // not enough money?? Bug? Hack?
+            playerStats.Coins -= (selectedMultiplier * price[generation]);  // Coins setter saves timed
+            playerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
         }
 
         public static void AddCardToCollection(PossibleCard possibleCard)

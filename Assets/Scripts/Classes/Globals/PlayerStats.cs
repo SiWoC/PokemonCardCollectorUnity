@@ -112,6 +112,13 @@ namespace Globals
 
         }
 
+        internal void SetPacks(int generation, int numberOfPacks)
+        {
+            generations[generation].numberOfPacks += numberOfPacks;
+            Debug.Log("You now own " + generations[generation].numberOfPacks + " of generation " + generation);
+            SaveData();
+        }
+
         private void InitGenerations()
         {
             for (int i = 1; i <= CardFactory.numberOfGenerations; i++)

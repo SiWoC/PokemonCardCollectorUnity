@@ -1,18 +1,20 @@
+using Globals;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
-        
+        GameManager.Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Buy(int generation)
     {
-        
+        Debug.Log("buying " + GameManager.SelectedMultiplier + "x gen " + generation + " for " + GameManager.price[generation] * GameManager.SelectedMultiplier + " pokedollars");
+        GameManager.BuyPack(generation);
     }
+
 }
