@@ -2,7 +2,7 @@
 using Factories.Config;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IPointerClickHandler
+public class Card1 : MonoBehaviour, IPointerClickHandler
 {
 
     private SpriteRenderer spriteRenderer;
@@ -65,5 +65,4 @@ public class Card : MonoBehaviour, IPointerClickHandler
         }
 
     }
-
 }

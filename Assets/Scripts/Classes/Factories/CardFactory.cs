@@ -74,7 +74,7 @@ namespace Factories
             Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
-            Card card = cardInstance.GetComponent<Card>();
+            Card1 card = cardInstance.GetComponent<Card1>();
             card.createdFrom = chosenCard;
             Match matcher = Regex.Match(chosenCard.setCode, SQUARE_SETS, RegexOptions.IgnoreCase);
 
@@ -102,7 +102,7 @@ namespace Factories
             return availableNPNs[generation][nationalPokedexNumber];
         }
 
-        public static IEnumerator CreateCard(PossibleCard someCard, Action<GameObject> returnToCaller)
+        public static IEnumerator CreateCard111(PossibleCard someCard, Action<GameObject> returnToCaller)
         {
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
@@ -130,7 +130,7 @@ namespace Factories
             }
             else
             {
-                Card card = cardInstance.GetComponent<Card>();
+                Card1 card = cardInstance.GetComponent<Card1>();
                 DownloadHandler handle = request.downloadHandler;
                 Texture2D texure = new Texture2D(5, 5);
                 Sprite sprite = null;

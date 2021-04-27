@@ -46,7 +46,7 @@ public class TestCardFactoryCardController : MonoBehaviour
                 cardInstance.transform.localScale = new Vector3(1f, 1f, 1f);
                 cardInstance.SetActive(true);
                 startButton.interactable = true;
-                Card card = cardInstance.GetComponent<Card>();
+                Card1 card = cardInstance.GetComponent<Card1>();
                 GameManager.AddCardToCollection(card.createdFrom);
             }));
     }

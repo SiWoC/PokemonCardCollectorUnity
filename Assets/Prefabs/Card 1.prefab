@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5389270405919426016}
   - component: {fileID: 5389270405919426017}
   - component: {fileID: 5389270405919425823}
-  - component: {fileID: 5389270405919425822}
+  - component: {fileID: 2692334153868454626}
   - component: {fileID: 5389270405919425821}
   m_Layer: 0
-  m_Name: Card
+  m_Name: Card 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 734, y: 1024}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389270405919426018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 7.34, y: 10.24}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 734, y: 1024}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 734, y: 1024}
   m_EdgeRadius: 0
---- !u!114 &5389270405919425822
+--- !u!114 &2692334153868454626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5389270405919426018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ae56531f947e44eb572a67eed68093, type: 3}
+  m_Script: {fileID: 11500000, guid: 56b7c04d78415124896c2f38df26c335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: 3e41f1337e4602241a1662b527db240b, type: 3}
@@ -146,7 +146,7 @@ Animator:
   m_GameObject: {fileID: 5389270405919426018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3221c38c83fa8484bbc9ec7f14662803, type: 2}
+  m_Controller: {fileID: 9100000, guid: c1a7503a2a4d53443a5f3cf5d2159f80, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

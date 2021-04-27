@@ -32,7 +32,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnOpenClicked()
     {
-        GameManager.Forward("Assets/Scenes/TestCardFactoryCard.unity");
+        GameManager.Forward("Assets/Scenes/Opening.unity");
     }
 
 }
