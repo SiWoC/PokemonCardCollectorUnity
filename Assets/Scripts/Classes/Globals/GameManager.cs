@@ -54,10 +54,12 @@ namespace Globals
             if (!initialized)
             {
                 UnityEngine.Object initializerPrefab = Resources.Load("Initializer");
-                GameObject.Instantiate(initializerPrefab);
+                //GameObject initializer = (GameObject)
+                    GameObject.Instantiate(initializerPrefab);
                 selectedGeneration = Math.Max(1,PlayerPrefs.GetInt("SelectedGeneration"));
                 selectedMultiplier = Math.Max(1, PlayerPrefs.GetInt("SelectedMultiplier"));
                 initialized = true;
+                //GameObject.Destroy(initializer);
             }
         }
         public static int GetCoins()

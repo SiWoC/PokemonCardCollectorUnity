@@ -1,37 +1,33 @@
 ﻿using UnityEngine;
 using Factories.Config;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using Factories;
 
-public class Card : MonoBehaviour, IPointerClickHandler
+public class Card : MonoBehaviour
 {
 
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
     private bool showingFront;
 
     public Sprite front;
     public Sprite back;
 
-    public string url;
-    public PossibleCard createdFrom;
+    private PossibleCard createdFrom;
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        animator.SetTrigger("Click");
-        /*
-        if (showingFront)
-        {
-            AnimatorStateInfo asi = animator.GetCurrentAnimatorStateInfo(0);
-            asi.speed = -1f;
-            animator.speed = -1f;
+    public PossibleCard CreatedFrom 
+    { 
+        get => createdFrom;
+        set {
+            createdFrom = value;
+            StartCoroutine(CardFactory.FillSprite(ImageType.Large, createdFrom.imageUrlLarge, this));
         }
-        */
+
     }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
     }
 
     void Start()

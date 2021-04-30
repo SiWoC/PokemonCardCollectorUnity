@@ -24,6 +24,7 @@ namespace Factories
 
         private const string SQUARE_SETS = "^base|^dp|^ecard|^ex|^gym|^neo|^np|^pl|^pop|^si";
 
+        public static GameObject packPrefab;
         public static GameObject cardPrefab;
         public static Sprite roundedBack;
         public static Sprite squareBack;
@@ -51,9 +52,61 @@ namespace Factories
                     availableNPNs[generation].Add(pc.nationalPokedexNumber,0);
                 }
                 availableNPNs[generation][pc.nationalPokedexNumber] += 1;
-                //GameManager.AddCardToCollection(pc);
             }
             cardSets.Add(cardResourceName, pcl);
+        }
+
+        public static GameObject GetPack(int generation)
+        {
+            GameObject pack = GameObject.Instantiate(packPrefab);
+            GameObject wrapper = pack.transform.Find("PackWrapper").gameObject;
+            Transform normalCardsHolder = pack.transform.Find("PackContent").Find("NormalCards");
+            for (int i = 1; i < 9; i++)
+            {
+                GameObject cardInstance = CreateCard(generation, normalCardsHolder, "normal");
+                cardInstance.transform.localPosition = new Vector3(0f, 0f, (10.0f + i) / 50.0f);
+                SpriteRenderer sr = cardInstance.GetComponent<SpriteRenderer>();
+                sr.sortingOrder = 10 + i;
+
+            }
+
+
+            Transform specialCardsHolder = pack.transform.Find("PackContent").Find("SpecialCards");
+            for (int i = 1; i < 3; i++)
+            {
+                GameObject cardInstance = CreateCard(generation, specialCardsHolder, "special");
+                cardInstance.transform.localPosition = new Vector3(0f, 0f, (10.0f + i) / 50.0f);
+                SpriteRenderer sr = cardInstance.GetComponent<SpriteRenderer>();
+                sr.sortingOrder = i;
+
+            }
+            return pack;
+        }
+
+        private static GameObject CreateCard(int generation, Transform normalCardsHolder, string rarity)
+        {
+            string cardResourceName = ("gen" + generation + "-" + rarity).Replace(" ", "").ToLower();
+            PossibleCardList pcl = cardSets[cardResourceName];
+            int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
+            PossibleCard chosenCard = pcl.possibleCard[index];
+            Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
+            GameObject cardInstance = GameObject.Instantiate(cardPrefab);
+            Card card = cardInstance.GetComponent<Card>();
+            card.CreatedFrom = chosenCard; // this will start downloading the image maybe set unknown rounded/square to front before starting the download
+                                           //cardInstance.SetActive(false);
+            cardInstance.transform.SetParent(normalCardsHolder);
+            cardInstance.transform.localScale = new Vector3(1f, 1f, 1f);
+            Match matcher = Regex.Match(chosenCard.setCode, SQUARE_SETS, RegexOptions.IgnoreCase);
+            if (matcher.Success)
+            {
+                card.back = squareBack;
+            }
+            else
+            {
+                card.back = roundedBack;
+            }
+
+            return cardInstance;
         }
 
         public static IEnumerator GetCard(string generation, string rarity, Action<GameObject> returnToCaller)
@@ -107,7 +160,7 @@ namespace Factories
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
             Card card = cardInstance.GetComponent<Card>();
-            card.createdFrom = someCard;
+            card.CreatedFrom = someCard;
             Match matcher = Regex.Match(someCard.setCode, SQUARE_SETS, RegexOptions.IgnoreCase);
             if (matcher.Success)
             {
@@ -173,6 +226,35 @@ namespace Factories
             }
         }
 
+        public static IEnumerator FillSprite(ImageType type, string url, Card card)
+        {
+            Sprite sprite = CacheManager.GetSprite(type, url);
+            if (sprite == null)
+            {
+                UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
+                yield return request.SendWebRequest();
+                if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+                {
+                    Debug.Log(request.error);
+                }
+                else
+                {
+                    DownloadHandler handle = request.downloadHandler;
+                    Texture2D texture = new Texture2D(5, 5);
+                    if (texture.LoadImage(handle.data))
+                    {
+                        // sprite will be scaled by spriteRenderer.Drawmode = sliced
+                        sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    }
+                    card.front = sprite;
+                    CacheManager.PutSprite(sprite, type, url);
+                }
+            }
+            else
+            {
+                card.front = sprite;
+            }
+        }
 
     }
 }
