@@ -11,7 +11,6 @@ using UnityEngine.UI;
 public class CollectionController : MonoBehaviour
 {
     public Dropdown generationDropdown;
-    public GameObject backButton;
     public GameObject pageHolder;
     public GameObject singleNPNPageHolder;
     public GameObject singleCard;

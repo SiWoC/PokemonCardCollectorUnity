@@ -14,6 +14,12 @@ public class OpeningController : MonoBehaviour
     private void Awake()
     {
         GameManager.Initialize();
+        CardFactory.packReadyEvent += OnPackReady;
+    }
+
+    private void OnDestroy()
+    {
+        CardFactory.packReadyEvent -= OnPackReady;
     }
 
     // Start is called before the first frame update
@@ -29,9 +35,12 @@ public class OpeningController : MonoBehaviour
         packInstance.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPackReady()
     {
-        
+        Debug.Log("enableing wrapper");
+        GameObject stillLoading = packInstance.transform.Find("StillLoading").gameObject;
+        stillLoading.SetActive(false);
+        GameObject wrapper = packInstance.transform.Find("PackWrapper").gameObject;
+        wrapper.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

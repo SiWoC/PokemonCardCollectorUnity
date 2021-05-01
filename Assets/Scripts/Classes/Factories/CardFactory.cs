@@ -7,6 +7,7 @@ using Factories.Config;
 using System.Text.RegularExpressions;
 using UnityEngine.UI;
 using Globals;
+using UnityEngine.Events;
 
 namespace Factories
 {
@@ -18,6 +19,8 @@ namespace Factories
     
     public static class CardFactory
     {
+        public static event Action packReadyEvent;
+
         public const int numberOfGenerations = 8;
         public static int[] numberOfCardsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
         public static int[] startNPNOfGeneration = new int[numberOfGenerations + 1] { 0, 1, 152, 252, 387, 494, 650, 722, 810 };
@@ -28,6 +31,8 @@ namespace Factories
         public static GameObject cardPrefab;
         public static Sprite roundedBack;
         public static Sprite squareBack;
+
+        private static int cardsInPackStillLoading = 10;
 
         private static Dictionary<string, PossibleCardList> cardSets = new Dictionary<string, PossibleCardList>();
         private static Dictionary<int, Dictionary<int, int>> availableNPNs = new Dictionary<int, Dictionary<int,int>>();
@@ -58,8 +63,10 @@ namespace Factories
 
         public static GameObject GetPack(int generation)
         {
+            cardsInPackStillLoading = 10;
             GameObject pack = GameObject.Instantiate(packPrefab);
             GameObject wrapper = pack.transform.Find("PackWrapper").gameObject;
+            wrapper.GetComponent<BoxCollider2D>().enabled = false;
             Transform normalCardsHolder = pack.transform.Find("PackContent").Find("NormalCards");
             for (int i = 1; i < 9; i++)
             {
@@ -247,12 +254,20 @@ namespace Factories
                         sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     }
                     card.front = sprite;
+                    cardsInPackStillLoading--;
+                    Debug.Log("WWW front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
                     CacheManager.PutSprite(sprite, type, url);
                 }
             }
             else
             {
+                cardsInPackStillLoading--;
+                Debug.Log("Cache front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
                 card.front = sprite;
+            }
+            if (cardsInPackStillLoading == 0)
+            {
+                packReadyEvent?.Invoke();
             }
         }
 
