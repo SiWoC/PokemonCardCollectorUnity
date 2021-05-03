@@ -26,21 +26,20 @@ public class PackContent : MonoBehaviour
     // Update is called once per frame
     public void Opened()
     {
-        Debug.Log("PackContent Opened");
         int i = 1;
-        // normal cards to the back during swap
+        // normal cards fanning out before swap
         foreach (Transform tf in normalCardsTF)
         {
             StartCoroutine(SmoothMove(tf, tf.position, new Vector3(i, i, 0f)));
-
-            //tf.position = new Vector3(i/2f, i/2f, 0f);
             i++;
         }
         animator.SetTrigger("Opened");
     }
 
+    //Animation Event
     public void NormalCardsToZero()
     {
+        // normal cards fanning back before rotate
         foreach (Transform tf in normalCardsTF)
         {
             StartCoroutine(SmoothMove(tf, tf.position, new Vector3(0f, 0f, 0f)));
@@ -48,6 +47,7 @@ public class PackContent : MonoBehaviour
         }
     }
 
+    //Animation Event
     public void NormalCardsToBack()
     {
         int i = 1;
@@ -66,6 +66,7 @@ public class PackContent : MonoBehaviour
         }
     }
 
+    //Animation Event
     public void NormalCardsToFront()
     {
         int i = 11;

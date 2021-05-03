@@ -100,7 +100,6 @@ namespace Factories
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
             pack.cardInThisPack.Add(chosenCard);
-            Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             Card card = cardInstance.GetComponent<Card>();
             card.CreatedFrom = chosenCard; // this will start downloading the image maybe set unknown rounded/square to front before starting the download
@@ -135,7 +134,6 @@ namespace Factories
             */
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
-            Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             cardInstance.SetActive(false);
             Card1 card = cardInstance.GetComponent<Card1>();

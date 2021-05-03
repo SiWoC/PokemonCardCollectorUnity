@@ -79,9 +79,9 @@ namespace Globals
 
         }
 
-        internal static Generation GetGeneration(int selectedGeneration)
+        internal static Generation GetGeneration(int generation)
         {
-            return theInstance.generations[GameManager.SelectedGeneration];
+            return theInstance.generations[generation];
         }
 
         public static void SetPacks(int generation, int numberOfPacks)
@@ -99,6 +99,11 @@ namespace Globals
         public static int GetAvailablePacks(int generation)
         {
             return theInstance.generations[generation].numberOfPacks;
+        }
+
+        public static bool IsGenerationUnlocked(int generation)
+        {
+            return theInstance.generations[generation].unlocked;
         }
 
     }

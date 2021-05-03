@@ -78,7 +78,7 @@ namespace Globals
             }
         }
 
-        public static void BuyPack(int generation)
+        public static void BuyPacks(int generation)
         {
             if (PlayerStats.GetCoins() < (selectedMultiplier * price[generation])) return; // not enough money?? Bug? Hack?
             PlayerStats.AddCoins(-1 * selectedMultiplier * price[generation]);  // Coins setter saves timed

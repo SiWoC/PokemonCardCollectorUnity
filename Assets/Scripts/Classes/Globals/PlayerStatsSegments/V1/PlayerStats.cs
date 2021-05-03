@@ -72,6 +72,7 @@ namespace Globals.PlayerStatsSegments.V1
             FileStream saveFile = File.Open(Application.persistentDataPath + SAVE_FILE, FileMode.Open);
             PlayerStats playerStats = (PlayerStats)formatter.Deserialize(saveFile);
             saveFile.Close();
+            playerStats.InitGenerations();
             return playerStats;
         }
 
@@ -84,6 +85,7 @@ namespace Globals.PlayerStatsSegments.V1
                     generations.Add(i, new Generation(i));
                 }
             }
+            generations[1].unlocked = true;
         }
 
     }

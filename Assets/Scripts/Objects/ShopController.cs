@@ -13,8 +13,7 @@ public class ShopController : MonoBehaviour
 
     public void Buy(int generation)
     {
-        Debug.Log("buying " + GameManager.SelectedMultiplier + "x gen " + generation + " for " + GameManager.price[generation] * GameManager.SelectedMultiplier + " pokedollars");
-        GameManager.BuyPack(generation);
+        GameManager.BuyPacks(generation);
     }
 
 }

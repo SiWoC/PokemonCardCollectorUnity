@@ -9,6 +9,7 @@ namespace Globals.PlayerStatsSegments.V1
     public class Generation
     {
         public int generation;
+        public bool unlocked;
         public int numberOfPacks;
         public Dictionary<int, Dictionary<string, PossibleCard>> cards = new Dictionary<int, Dictionary<string, PossibleCard>>();
 

@@ -46,7 +46,10 @@ public class CollectionController : MonoBehaviour
         generationDropdown.ClearOptions();
         for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
         {
-            generationDropdown.options.Add(new Dropdown.OptionData("gen" + i));
+            if (PlayerStats.IsGenerationUnlocked(i))
+            {
+                generationDropdown.options.Add(new Dropdown.OptionData("gen" + i));
+            }
         }
         generationDropdown.value = GameManager.SelectedGeneration - 1;
         OnGenerationChanged(generationDropdown);

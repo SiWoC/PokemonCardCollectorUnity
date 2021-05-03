@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generationDropdown: {fileID: 630532893}
-  backButton: {fileID: 0}
   pageHolder: {fileID: 1767333388}
   singleNPNPageHolder: {fileID: 1276800153}
   singleCard: {fileID: 1301426812}
