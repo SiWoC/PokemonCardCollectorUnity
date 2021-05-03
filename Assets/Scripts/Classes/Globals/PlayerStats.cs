@@ -1,6 +1,6 @@
 ﻿using Factories;
 using Factories.Config;
-using Globals.PlayerStatsSegments;
+using Globals.PlayerStatsSegments.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,89 +13,56 @@ namespace Globals
     public class PlayerStats
     {
 
-        const int CURRENT_VERSION = 1;
-        private const string SAVE_FILE = "/save.binary";
+        private static PlayerStatsSegments.V1.PlayerStats theInstance;
 
-        public int version;
-        private int coins = 0;
-        private int randomPackagePercentage = 0;
-        private static DateTime lastSave = DateTime.UtcNow;
-        public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
-
-        private static PlayerStats theInstance;
-
-        static BinaryFormatter formatter = new BinaryFormatter();
-
-        public int Coins
+        public static void AddCoins(int coins)
         {
-            get => coins; 
-            set
-            {
-                coins = value;
-                SaveDataTimed();
-            }
+            theInstance.Coins += coins;
+        }
+
+        public static void AddRandomPackPercentage(int percentage)
+        {
+            theInstance.RandomPackagePercentage += percentage;
+        }
+
+        public static int GetCoins()
+        {
+            return theInstance.Coins; 
         }
 
         public int RandomPackagePercentage
         {
-            get => randomPackagePercentage;
+            get => theInstance.RandomPackagePercentage;
             set
             {
-                randomPackagePercentage = value;
-                SaveDataTimed();
+                theInstance.RandomPackagePercentage = value;
             }
         }
 
-        private PlayerStats()
+        public static int GetRandomPackPercentage()
         {
-            version = CURRENT_VERSION;
+            return theInstance.RandomPackagePercentage;
         }
 
-        public static PlayerStats GetInstance()
+        static PlayerStats()
         {
-
+            // try load current version
             try
             {
-                LoadDataV1();
+                theInstance = PlayerStatsSegments.V1.PlayerStats.LoadData();
             }
             catch (System.Exception)
             {
             }
             if (theInstance == null)
             {
-                theInstance = new PlayerStats();
-            }
-            theInstance.InitGenerations();
-            return theInstance;
-        }
-
-        public static void SaveDataTimed()
-        {
-            if (lastSave.AddSeconds(5) < DateTime.UtcNow)
-            {
-                SaveData();
-                lastSave = DateTime.UtcNow;
+                theInstance = new PlayerStatsSegments.V1.PlayerStats();
             }
         }
 
-        public static void SaveData()
+        public static void AddCardToCollection(PossibleCard nowOwnedCard)
         {
-            FileStream saveFile = File.Create(Application.persistentDataPath + SAVE_FILE);
-            formatter.Serialize(saveFile, theInstance);
-            saveFile.Close();
-
-        }
-
-        public static void LoadDataV1()
-        {
-            FileStream saveFile = File.Open(Application.persistentDataPath + SAVE_FILE, FileMode.Open);
-            theInstance = (PlayerStats)formatter.Deserialize(saveFile);
-            saveFile.Close();
-        }
-
-        internal void AddCardToCollection(PossibleCard nowOwnedCard)
-        {
-            Generation generation = generations[nowOwnedCard.generation];
+            Generation generation = theInstance.generations[nowOwnedCard.generation];
             // anything for this nationalPokedexNumber yet?
             if (!generation.cards.ContainsKey(nowOwnedCard.nationalPokedexNumber))
             {
@@ -112,22 +79,26 @@ namespace Globals
 
         }
 
-        internal void SetPacks(int generation, int numberOfPacks)
+        internal static Generation GetGeneration(int selectedGeneration)
         {
-            generations[generation].numberOfPacks += numberOfPacks;
-            Debug.Log("You now own " + generations[generation].numberOfPacks + " of generation " + generation);
+            return theInstance.generations[GameManager.SelectedGeneration];
+        }
+
+        public static void SetPacks(int generation, int numberOfPacks)
+        {
+            theInstance.generations[generation].numberOfPacks += numberOfPacks;
+            Debug.Log("You now own " + theInstance.generations[generation].numberOfPacks + " of generation " + generation);
             SaveData();
         }
 
-        private void InitGenerations()
+        public static void SaveData()
         {
-            for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
-            {
-                if (!generations.ContainsKey(i))
-                {
-                    generations.Add(i, new Generation(i));
-                }
-            }
+            PlayerStatsSegments.V1.PlayerStats.SaveData(theInstance);
+        }
+
+        public static int GetAvailablePacks(int generation)
+        {
+            return theInstance.generations[generation].numberOfPacks;
         }
 
     }

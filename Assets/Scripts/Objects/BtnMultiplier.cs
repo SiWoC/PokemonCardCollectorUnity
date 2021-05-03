@@ -37,6 +37,6 @@ public class BtnMultiplier : MonoBehaviour
             index = 0;
         }
         GameManager.SelectedMultiplier = values[index];
-        GameManager.AddCoins(369);
+        PlayerStats.AddCoins(369);
     }
 }

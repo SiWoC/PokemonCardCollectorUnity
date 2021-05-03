@@ -19,7 +19,7 @@ namespace Factories
     
     public static class CardFactory
     {
-        public static event Action packReadyEvent;
+        public static event Action PackReadyEvent;
 
         public const int numberOfGenerations = 8;
         public static int[] numberOfCardsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
@@ -64,13 +64,16 @@ namespace Factories
         public static GameObject GetPack(int generation)
         {
             cardsInPackStillLoading = 10;
-            GameObject pack = GameObject.Instantiate(packPrefab);
-            GameObject wrapper = pack.transform.Find("PackWrapper").gameObject;
+            GameObject packInstance = GameObject.Instantiate(packPrefab);
+            Pack pack = packInstance.GetComponent<Pack>();
+            pack.generation = generation;
+            GameObject wrapper = packInstance.transform.Find("PackWrapper").gameObject;
+            wrapper.GetComponent<PackWrapper>().generation = generation;
             wrapper.GetComponent<BoxCollider2D>().enabled = false;
-            Transform normalCardsHolder = pack.transform.Find("PackContent").Find("NormalCards");
+            Transform normalCardsHolder = packInstance.transform.Find("PackContent").Find("NormalCards");
             for (int i = 1; i < 9; i++)
             {
-                GameObject cardInstance = CreateCard(generation, normalCardsHolder, "normal");
+                GameObject cardInstance = CreateCard(generation, pack, normalCardsHolder, "normal");
                 cardInstance.transform.localPosition = new Vector3(0f, 0f, (10.0f + i) / 50.0f);
                 SpriteRenderer sr = cardInstance.GetComponent<SpriteRenderer>();
                 sr.sortingOrder = 10 + i;
@@ -78,24 +81,25 @@ namespace Factories
             }
 
 
-            Transform specialCardsHolder = pack.transform.Find("PackContent").Find("SpecialCards");
+            Transform specialCardsHolder = packInstance.transform.Find("PackContent").Find("SpecialCards");
             for (int i = 1; i < 3; i++)
             {
-                GameObject cardInstance = CreateCard(generation, specialCardsHolder, "special");
+                GameObject cardInstance = CreateCard(generation, pack, specialCardsHolder, "special");
                 cardInstance.transform.localPosition = new Vector3(0f, 0f, (10.0f + i) / 50.0f);
                 SpriteRenderer sr = cardInstance.GetComponent<SpriteRenderer>();
                 sr.sortingOrder = i;
 
             }
-            return pack;
+            return packInstance;
         }
 
-        private static GameObject CreateCard(int generation, Transform normalCardsHolder, string rarity)
+        private static GameObject CreateCard(int generation, Pack pack, Transform normalCardsHolder, string rarity)
         {
             string cardResourceName = ("gen" + generation + "-" + rarity).Replace(" ", "").ToLower();
             PossibleCardList pcl = cardSets[cardResourceName];
             int index = UnityEngine.Random.Range(0, pcl.possibleCard.Length);
             PossibleCard chosenCard = pcl.possibleCard[index];
+            pack.cardInThisPack.Add(chosenCard);
             Debug.Log("NPN " + chosenCard.nationalPokedexNumber);
             GameObject cardInstance = GameObject.Instantiate(cardPrefab);
             Card card = cardInstance.GetComponent<Card>();
@@ -267,7 +271,7 @@ namespace Factories
             }
             if (cardsInPackStillLoading == 0)
             {
-                packReadyEvent?.Invoke();
+                PackReadyEvent?.Invoke();
             }
         }
 

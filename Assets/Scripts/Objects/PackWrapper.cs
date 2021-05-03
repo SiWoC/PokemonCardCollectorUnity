@@ -1,3 +1,4 @@
+using Globals;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
     public Sprite[] sprites;
+    public int generation;
     
     private float easing = 2f;
     private SpriteRenderer spriteRenderer;
@@ -49,6 +51,7 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             opened = true;
             StartCoroutine(SmoothMove(transform.position, new Vector3(transform.position.x, -100, transform.position.z), easing));
+            GetComponentInParent<Pack>().Opened();
         }
         framesHandled = 0;
     }

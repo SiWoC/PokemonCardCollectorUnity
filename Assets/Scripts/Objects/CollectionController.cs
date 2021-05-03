@@ -1,12 +1,13 @@
 using Factories;
 using Factories.Config;
 using Globals;
-using Globals.PlayerStatsSegments;
+using Globals.PlayerStatsSegments.V1;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using PlayerStats = Globals.PlayerStats;
 
 public class CollectionController : MonoBehaviour
 {
@@ -67,7 +68,7 @@ public class CollectionController : MonoBehaviour
         pageSwiper.totalPages = totalPages;
         RectTransform phRectTransform = pageHolder.GetComponent<RectTransform>();
         phRectTransform.sizeDelta = new Vector2(900 * totalPages, phRectTransform.sizeDelta.y);
-        generation = GameManager.playerStats.generations[GameManager.SelectedGeneration];
+        generation = PlayerStats.GetGeneration(GameManager.SelectedGeneration);
         for (int pageNumber = 0; pageNumber < totalPages; pageNumber++)
         {
             GameObject page = GameObject.Instantiate(pagePrefab);
@@ -178,7 +179,7 @@ public class CollectionController : MonoBehaviour
 
     private void SingleNPNStart()
     {
-        generation = GameManager.playerStats.generations[GameManager.SelectedGeneration];
+        generation = PlayerStats.GetGeneration(GameManager.SelectedGeneration);
         cardsOfNumber = generation.cards[GameManager.selectedNPN];
         Debug.Log("count: " + cardsOfNumber.Count);
         // set up pages for new NPN

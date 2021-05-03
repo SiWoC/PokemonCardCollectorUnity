@@ -36,11 +36,11 @@ public class Counter : MonoBehaviour
     {
         if ((useFixedEarntype && fixedEarnType == EarnType.Coins) || (!useFixedEarntype && GameManager.earnType == EarnType.Coins))
         {
-            text.text = GameManager.GetCoins().ToString("D8");
+            text.text = PlayerStats.GetCoins().ToString("D8");
         }
         else
         {
-            text.text = string.Format("{0:000.00000}",GameManager.GetRandomPackPercentage() / 100000f);
+            text.text = string.Format("{0:000.00000}",PlayerStats.GetRandomPackPercentage() / 100000f);
         }
     }
 }

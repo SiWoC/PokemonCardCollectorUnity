@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites: []
+  generation: 0
   stepWidthCoverage: 0.75
 --- !u!1 &1799863892388366161
 GameObject:
@@ -449,7 +450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalCardsHolder: {fileID: 1799863892388366161}
   specialCardsHolder: {fileID: 1799863892853888300}
-  wrapper: {fileID: 1799863892254217058}
 --- !u!1 &1799863893537903742
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799863893537903743}
   - component: {fileID: 1799863893537903738}
+  - component: {fileID: 8986491302661117853}
   m_Layer: 5
   m_Name: Pack
   m_TagString: Untagged
@@ -497,6 +498,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799863893537903742}
   m_CullTransparentMesh: 1
+--- !u!114 &8986491302661117853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799863893537903742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffc13dafeabce42bb45015d302f96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stillLoading: {fileID: 4084299867528942943}
+  wrapper: {fileID: 1799863892254217058}
+  content: {fileID: 1799863893090601235}
 --- !u!1 &4084299867528942943
 GameObject:
   m_ObjectHideFlags: 0

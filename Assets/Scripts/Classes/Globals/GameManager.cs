@@ -18,8 +18,6 @@ namespace Globals
         public static int selectedNPN = 1;
         public static EarnType earnType = EarnType.Coins;
 
-        public readonly static PlayerStats playerStats = PlayerStats.GetInstance();
-
         private static int selectedMultiplier = 1;
         public readonly static int[] price = { 0, 370, 740, 1110, 1480, 1850, 2220, 2590, 2960 };
 
@@ -49,6 +47,12 @@ namespace Globals
             }
         }
 
+        internal static void AddRandomPack()
+        {
+            // TODO add random pack
+            PlayerStats.SaveData();
+        }
+
         public static void Initialize()
         {
             if (!initialized)
@@ -62,53 +66,33 @@ namespace Globals
                 //GameObject.Destroy(initializer);
             }
         }
-        public static int GetCoins()
-        {
-            return playerStats.Coins;
-        }
-
-        public static float GetRandomPackPercentage()
-        {
-            return playerStats.RandomPackagePercentage;
-        }
-
-        internal static void AddRandomPack()
-        {
-            // TODO add randomPack
-            playerStats.RandomPackagePercentage = 0;
-        }
 
         public static void ChoreClick()
         {
             if (earnType == EarnType.Coins)
             {
-                AddCoins(1);
+                PlayerStats.AddCoins(1);
             } else
             {
-                AddRandomPackPercentage(1);
+                PlayerStats.AddRandomPackPercentage(1);
             }
-        }
-
-        public static void AddCoins(int coins)
-        {
-            playerStats.Coins += coins;
-        }
-
-        public static void AddRandomPackPercentage(int percentage)
-        {
-            playerStats.RandomPackagePercentage += percentage;
         }
 
         public static void BuyPack(int generation)
         {
-            if (playerStats.Coins < (selectedMultiplier * price[generation])) return; // not enough money?? Bug? Hack?
-            playerStats.Coins -= (selectedMultiplier * price[generation]);  // Coins setter saves timed
-            playerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
+            if (PlayerStats.GetCoins() < (selectedMultiplier * price[generation])) return; // not enough money?? Bug? Hack?
+            PlayerStats.AddCoins(-1 * selectedMultiplier * price[generation]);  // Coins setter saves timed
+            PlayerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
+        }
+
+        public static void OpenedPack(int generation)
+        {
+            PlayerStats.SetPacks(generation, -1); // SetPacks saves always
         }
 
         public static void AddCardToCollection(PossibleCard possibleCard)
         {
-            playerStats.AddCardToCollection(possibleCard);
+            PlayerStats.AddCardToCollection(possibleCard);
         }
 
         public static void Back()

@@ -30,7 +30,7 @@ public class TestCardFactoryCardController : MonoBehaviour
 
     public void OnStartClicked()
     {
-        GameManager.AddCoins(1);
+        PlayerStats.AddCoins(1);
         startButton.interactable = false;
         if (cardInstance != null)
         {

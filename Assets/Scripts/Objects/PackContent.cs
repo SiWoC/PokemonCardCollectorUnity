@@ -7,10 +7,8 @@ public class PackContent : MonoBehaviour
 {
     public GameObject normalCardsHolder;
     public GameObject specialCardsHolder;
-    public GameObject wrapper;
 
     private Animator animator;
-    private bool openedFired = false;
     private SpriteRenderer[] normalCardsSR;
     private Transform[] normalCardsTF;
     private SpriteRenderer[] specialCardsSR;
@@ -26,23 +24,19 @@ public class PackContent : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Opened()
     {
-        if (!openedFired && wrapper.transform.position.y < -70)
+        Debug.Log("PackContent Opened");
+        int i = 1;
+        // normal cards to the back during swap
+        foreach (Transform tf in normalCardsTF)
         {
-            Debug.Log("firing");
-            int i = 1;
-            // normal cards to the back during swap
-            foreach (Transform tf in normalCardsTF)
-            {
-                StartCoroutine(SmoothMove(tf, tf.position, new Vector3(i, i, 0f)));
+            StartCoroutine(SmoothMove(tf, tf.position, new Vector3(i, i, 0f)));
 
-                //tf.position = new Vector3(i/2f, i/2f, 0f);
-                i++;
-            }
-            animator.SetTrigger("Opened");
-            openedFired = true;
+            //tf.position = new Vector3(i/2f, i/2f, 0f);
+            i++;
         }
+        animator.SetTrigger("Opened");
     }
 
     public void NormalCardsToZero()

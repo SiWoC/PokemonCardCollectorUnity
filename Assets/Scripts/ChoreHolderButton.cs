@@ -33,7 +33,7 @@ public class ChoreHolderButton : MonoBehaviour
         frameNumber += direction;
         animatedSprite.sprite = frames[frameNumber];
         GameManager.ChoreClick();
-        if (GameManager.earnType == EarnType.Packs && GameManager.GetRandomPackPercentage() >= 10000000)
+        if (GameManager.earnType == EarnType.Packs && PlayerStats.GetRandomPackPercentage() >= 10000000)
         {
             Debug.Log("You earned a Random Pack");
             GameManager.AddRandomPack();
