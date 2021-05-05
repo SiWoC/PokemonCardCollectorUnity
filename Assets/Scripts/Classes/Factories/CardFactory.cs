@@ -257,14 +257,14 @@ namespace Factories
                     }
                     card.front = sprite;
                     cardsInPackStillLoading--;
-                    Debug.Log("WWW front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
+                    //Debug.Log("WWW front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
                     CacheManager.PutSprite(sprite, type, url);
                 }
             }
             else
             {
                 cardsInPackStillLoading--;
-                Debug.Log("Cache front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
+                //Debug.Log("Cache front filled of " + card.CreatedFrom.id + " still loading " + cardsInPackStillLoading);
                 card.front = sprite;
             }
             if (cardsInPackStillLoading == 0)

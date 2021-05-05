@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class PackContent : MonoBehaviour
 {
+
+    public static event Action AllCardsSwipedEvent;
+
     public GameObject normalCardsHolder;
     public GameObject specialCardsHolder;
 
@@ -12,7 +16,28 @@ public class PackContent : MonoBehaviour
     private SpriteRenderer[] normalCardsSR;
     private Transform[] normalCardsTF;
     private SpriteRenderer[] specialCardsSR;
-    private float shiftDelay = 0.35f;
+    private BoxCollider2D[] cardsColliders;
+    private float swapDelay = 0.25f;
+    private int numberOfCards = 10;
+
+    private void Awake()
+    {
+        Card.CardDestroyEvent += CardDeletedFromContent;
+    }
+
+    private void OnDestroy()
+    {
+        Card.CardDestroyEvent -= CardDeletedFromContent;
+    }
+
+    private void CardDeletedFromContent()
+    {
+        numberOfCards--;
+        if (numberOfCards == 0)
+        {
+            AllCardsSwipedEvent?.Invoke();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +46,10 @@ public class PackContent : MonoBehaviour
         normalCardsSR = normalCardsHolder.GetComponentsInChildren<SpriteRenderer>(true);
         normalCardsTF = normalCardsHolder.GetComponentsInChildren<Transform>(true);
         specialCardsSR = specialCardsHolder.GetComponentsInChildren<SpriteRenderer>(true);
+        cardsColliders = GetComponentsInChildren<BoxCollider2D>(true);
+        Debug.Log("cc.length: " + cardsColliders.Length);
     }
 
-    // Update is called once per frame
     public void Opened()
     {
         int i = 1;
@@ -34,6 +60,16 @@ public class PackContent : MonoBehaviour
             i++;
         }
         animator.SetTrigger("Opened");
+    }
+
+    //Animation Event
+    public void EnableCards()
+    {
+        // normal cards fanning back before rotate
+        foreach (BoxCollider2D bc in cardsColliders)
+        {
+            bc.enabled = true;
+        }
     }
 
     //Animation Event
@@ -90,7 +126,7 @@ public class PackContent : MonoBehaviour
         float t = 0f;
         while (t <= 1.0)
         {
-            t += Time.deltaTime / shiftDelay;
+            t += Time.deltaTime / swapDelay;
             tf.position = Vector3.Lerp(startpos, endpos, Mathf.SmoothStep(0f, 1f, t));
             yield return null;
         }

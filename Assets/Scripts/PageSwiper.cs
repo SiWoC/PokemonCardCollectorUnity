@@ -3,9 +3,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
+public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
+{
 
-    public UnityEvent pageChangedEvent;
+    public UnityEvent PageChangedEvent;
 
     public float percentThreshold = 0.2f;
     public float easing = 0.5f;
@@ -18,21 +19,23 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
     void Start(){
         panelLocation = transform.position;
     }
-    public void OnDrag(PointerEventData data){
-        float difference = data.pressPosition.x - data.position.x;
+
+    public void OnDrag(PointerEventData eventData){
+        float difference = eventData.pressPosition.x - eventData.position.x;
         transform.position = panelLocation - new Vector3(difference, 0, 0);
     }
-    public void OnEndDrag(PointerEventData data){
-        float percentage = (data.pressPosition.x - data.position.x) / Screen.width;
+
+    public void OnEndDrag(PointerEventData eventData){
+        float percentage = (eventData.pressPosition.x - eventData.position.x) / Screen.width;
         if(Mathf.Abs(percentage) >= percentThreshold){
             Vector3 newLocation = panelLocation;
             if(percentage > 0 && currentPage < totalPages){
                 currentPage++;
-                pageChangedEvent?.Invoke();
+                PageChangedEvent?.Invoke();
                 newLocation += new Vector3(-Screen.width, 0, 0);
             }else if(percentage < 0 && currentPage > 1){
                 currentPage--;
-                pageChangedEvent?.Invoke();
+                PageChangedEvent?.Invoke();
                 newLocation += new Vector3(Screen.width, 0, 0);
             }
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
@@ -41,6 +44,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
             StartCoroutine(SmoothMove(transform.position, panelLocation, easing));
         }
     }
+
     IEnumerator SmoothMove(Vector3 startpos, Vector3 endpos, float seconds){
         float t = 0f;
         while(t <= 1.0){
@@ -53,7 +57,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler{
     public void BackToPage1()
     {
         currentPage = 1;
-        pageChangedEvent?.Invoke();
+        PageChangedEvent?.Invoke();
         transform.position += new Vector3(-transform.position.x, 0, 0);
         panelLocation = transform.position;
     }

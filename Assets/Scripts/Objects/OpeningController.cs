@@ -16,6 +16,12 @@ public class OpeningController : MonoBehaviour
     private void Awake()
     {
         GameManager.Initialize();
+        PackContent.AllCardsSwipedEvent += OnBack;
+    }
+
+    private void OnDestroy()
+    {
+        PackContent.AllCardsSwipedEvent -= OnBack;
     }
 
     // Start is called before the first frame update

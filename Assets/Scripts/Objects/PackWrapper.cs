@@ -10,7 +10,7 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
     public Sprite[] sprites;
     public int generation;
     
-    private float easing = 2f;
+    private float easing = 1.5f;
     private SpriteRenderer spriteRenderer;
     private bool opened = false;
     private int frame = 0;
@@ -50,18 +50,18 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
         if (frame == sprites.Length - 1)
         {
             opened = true;
-            StartCoroutine(SmoothMove(transform.position, new Vector3(transform.position.x, -100, transform.position.z), easing));
+            StartCoroutine(SmoothMove(transform.position, new Vector3(transform.position.x, -100, transform.position.z)));
             GetComponentInParent<Pack>().Opened();
         }
         framesHandled = 0;
     }
 
-    IEnumerator SmoothMove(Vector3 startpos, Vector3 endpos, float seconds)
+    IEnumerator SmoothMove(Vector3 startpos, Vector3 endpos)
     {
         float t = 0f;
         while (t <= 1.0)
         {
-            t += Time.deltaTime / seconds;
+            t += Time.deltaTime / easing;
             transform.position = Vector3.Lerp(startpos, endpos, Mathf.SmoothStep(0f, 1f, t));
             yield return null;
         }

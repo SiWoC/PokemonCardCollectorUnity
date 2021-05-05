@@ -91,7 +91,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389270405919426018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 734, y: 1024}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5389270405919425822
 MonoBehaviour:
@@ -124,14 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: 3e41f1337e4602241a1662b527db240b, type: 3}
   back: {fileID: 21300000, guid: 8b284ee626ea374438be552d9bfcb2ad, type: 3}
-  url: 
-  createdFrom:
-    id: 
-    name: 
-    nationalPokedexNumber: 0
-    rarity: 
-    setCode: 
-    imageUrlSmall: 
-    imageUrlLarge: 
-    generation: 0
-    numberOwned: 0
+  endPosition: {x: -14, y: 28, z: 0}

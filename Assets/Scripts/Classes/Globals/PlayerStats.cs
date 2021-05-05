@@ -87,7 +87,6 @@ namespace Globals
         public static void SetPacks(int generation, int numberOfPacks)
         {
             theInstance.generations[generation].numberOfPacks += numberOfPacks;
-            Debug.Log("You now own " + theInstance.generations[generation].numberOfPacks + " of generation " + generation);
             SaveData();
         }
 

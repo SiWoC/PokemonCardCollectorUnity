@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ddc2c5c63c566489627d35fe9ecc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageChangedEvent:
+  PageChangedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 373644391}
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ddc2c5c63c566489627d35fe9ecc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageChangedEvent:
+  PageChangedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 373644391}
