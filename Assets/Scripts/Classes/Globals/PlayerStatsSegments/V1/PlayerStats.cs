@@ -20,6 +20,7 @@ namespace Globals.PlayerStatsSegments.V1
         private int randomPackagePercentage = 0;
         private static DateTime lastSave = DateTime.UtcNow;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
+        public int highestUnlockedGeneration = 1;
 
         static BinaryFormatter formatter = new BinaryFormatter();
 
@@ -83,6 +84,14 @@ namespace Globals.PlayerStatsSegments.V1
                 if (!generations.ContainsKey(i))
                 {
                     generations.Add(i, new Generation(i));
+                }
+                if (i > highestUnlockedGeneration && generations[i].unlocked)
+                {
+                    highestUnlockedGeneration = i;
+                }
+                if (!generations[i].unlocked)
+                {
+                    generations[i].numberOfPacks = 0;
                 }
             }
             generations[1].unlocked = true;

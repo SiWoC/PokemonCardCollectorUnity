@@ -22,7 +22,7 @@ namespace Factories
         public static event Action PackReadyEvent;
 
         public const int numberOfGenerations = 8;
-        public static int[] numberOfCardsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
+        public static int[] numberOfNPNsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
         public static int[] startNPNOfGeneration = new int[numberOfGenerations + 1] { 0, 1, 152, 252, 387, 494, 650, 722, 810 };
 
         private const string SQUARE_SETS = "^base|^dp|^ecard|^ex|^gym|^neo|^np|^pl|^pop|^si";
@@ -153,7 +153,7 @@ namespace Factories
 
         internal static int GetNumberOfAvailableCards(int generation, int nationalPokedexNumber)
         {
-            if (nationalPokedexNumber >= CardFactory.startNPNOfGeneration[generation] + CardFactory.numberOfCardsInGeneration[generation])
+            if (nationalPokedexNumber >= CardFactory.startNPNOfGeneration[generation] + CardFactory.numberOfNPNsInGeneration[generation])
             {
                 return 0;
             }
@@ -226,7 +226,10 @@ namespace Factories
                         // sprite will be scaled by spriteRenderer.Drawmode = sliced
                         sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     }
-                    image.sprite = sprite;
+                    if (!image.IsDestroyed())
+                    {
+                        image.sprite = sprite;
+                    }
                     CacheManager.PutSprite(sprite, type, url);
                 }
             } else

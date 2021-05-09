@@ -15,7 +15,7 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
     private bool opened = false;
     private int frame = 0;
     private int framesHandled = 0;
-    public float stepWidthCoverage = 0.8f;
+    private float stepWidthCoverage = 0.6f;
     private int stepWidth;
 
     // Start is called before the first frame update

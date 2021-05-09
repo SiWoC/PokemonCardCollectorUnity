@@ -1,4 +1,5 @@
-﻿using Factories.Config;
+﻿using Factories;
+using Factories.Config;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -85,9 +86,20 @@ namespace Globals
             PlayerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
         }
 
-        public static void OpenedPack(int generation)
+        public static void OpenedPack(int generation, System.Collections.Generic.List<PossibleCard> cardInThisPack)
         {
             PlayerStats.SetPacks(generation, -1); // SetPacks saves always
+            foreach (PossibleCard card in cardInThisPack)
+            {
+                AddCardToCollection(card);
+            }
+            if (generation == PlayerStats.GetHighestUnlockedGeneration())
+            {
+                if (PlayerStats.GetGeneration(generation).cards.Count > (CardFactory.numberOfNPNsInGeneration[generation] * 2/3))
+                {
+                    PlayerStats.UnlockNextGeneration();
+                }
+            }
         }
 
         public static void AddCardToCollection(PossibleCard possibleCard)

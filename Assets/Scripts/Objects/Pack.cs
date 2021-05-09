@@ -45,10 +45,6 @@ public class Pack : MonoBehaviour
 
     internal void Opened()
     {
-        GameManager.OpenedPack(generation);
-        foreach (PossibleCard card in cardInThisPack)
-        {
-            PlayerStats.AddCardToCollection(card);
-        }
+        GameManager.OpenedPack(generation, cardInThisPack);
     }
 }

@@ -67,7 +67,7 @@ public class CollectionController : MonoBehaviour
 
         // set up pages for new generation
         GameManager.SelectedGeneration = generationDropdown.value + 1;
-        int totalPages = (CardFactory.numberOfCardsInGeneration[GameManager.SelectedGeneration] + pageSize - 1) / pageSize;
+        int totalPages = (CardFactory.numberOfNPNsInGeneration[GameManager.SelectedGeneration] + pageSize - 1) / pageSize;
         pageSwiper.totalPages = totalPages;
         RectTransform phRectTransform = pageHolder.GetComponent<RectTransform>();
         phRectTransform.sizeDelta = new Vector2(900 * totalPages, phRectTransform.sizeDelta.y);
@@ -89,7 +89,7 @@ public class CollectionController : MonoBehaviour
         for (int i = 0; i < pageSize; i++)
         {
             int nationalPokedexNumber = CardFactory.startNPNOfGeneration[GameManager.SelectedGeneration] + i + pageNumber * pageSize;
-            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[GameManager.SelectedGeneration] + CardFactory.numberOfCardsInGeneration[GameManager.SelectedGeneration])
+            if (nationalPokedexNumber < CardFactory.startNPNOfGeneration[GameManager.SelectedGeneration] + CardFactory.numberOfNPNsInGeneration[GameManager.SelectedGeneration])
             {
                 if (generation.cards.ContainsKey(nationalPokedexNumber))
                 { // we own cards of this NationalPokedexNumber

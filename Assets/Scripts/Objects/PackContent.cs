@@ -47,7 +47,6 @@ public class PackContent : MonoBehaviour
         normalCardsTF = normalCardsHolder.GetComponentsInChildren<Transform>(true);
         specialCardsSR = specialCardsHolder.GetComponentsInChildren<SpriteRenderer>(true);
         cardsColliders = GetComponentsInChildren<BoxCollider2D>(true);
-        Debug.Log("cc.length: " + cardsColliders.Length);
     }
 
     public void Opened()

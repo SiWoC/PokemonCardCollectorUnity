@@ -70,7 +70,7 @@ public class Card : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position += (Vector3)eventData.delta / 10;
+        transform.position += (Vector3)eventData.delta / 10; // deze 10 moet iets met         Screen.currentResolution.height
     }
 
     public void OnEndDrag(PointerEventData data)

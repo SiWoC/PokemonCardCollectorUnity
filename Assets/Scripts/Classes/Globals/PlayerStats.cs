@@ -105,5 +105,15 @@ namespace Globals
             return theInstance.generations[generation].unlocked;
         }
 
+        public static int GetHighestUnlockedGeneration()
+        {
+            return theInstance.highestUnlockedGeneration;
+        }
+
+        internal static void UnlockNextGeneration()
+        {
+            theInstance.highestUnlockedGeneration++;
+            theInstance.generations[theInstance.highestUnlockedGeneration].unlocked = true;
+        }
     }
 }
