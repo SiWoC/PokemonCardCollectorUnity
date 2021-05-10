@@ -12,9 +12,13 @@ namespace Globals
         Coins,
         Packs
     }
-
+    
+    
     public static class GameManager
     {
+       
+        public static event Action GenerationUnlockedEvent;
+
         private static int selectedGeneration = 1;
         public static int selectedNPN = 1;
         public static EarnType earnType = EarnType.Coins;
@@ -98,6 +102,7 @@ namespace Globals
                 if (PlayerStats.GetGeneration(generation).cards.Count > (CardFactory.numberOfNPNsInGeneration[generation] * 2/3))
                 {
                     PlayerStats.UnlockNextGeneration();
+                    GenerationUnlockedEvent?.Invoke();
                 }
             }
         }

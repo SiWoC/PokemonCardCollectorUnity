@@ -3,25 +3,32 @@ using Globals;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OpeningController : MonoBehaviour
 {
     public GameObject generationsHolder;
     public GameObject openPackButtonPrefab;
     public Canvas packCanvas;
+    public GameObject generationUnlockedPanel;
+    public TextMeshProUGUI generationUnlockedText;
 
     private GameObject packInstance;
+    private bool showGenerationUnlockedOnBack = false;
 
     private void Awake()
     {
         GameManager.Initialize();
         PackContent.AllCardsSwipedEvent += OnBack;
+        GameManager.GenerationUnlockedEvent += GenerationUnlocked;
     }
 
     private void OnDestroy()
     {
         PackContent.AllCardsSwipedEvent -= OnBack;
+        GameManager.GenerationUnlockedEvent -= GenerationUnlocked;
     }
 
     // Start is called before the first frame update
@@ -58,11 +65,32 @@ public class OpeningController : MonoBehaviour
         packInstance.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
+    private void GenerationUnlocked()
+    {
+        showGenerationUnlockedOnBack = true;
+    }
+
+    IEnumerator ShowGenerationUnlocked()
+    {
+        generationUnlockedText.text = "You unlocked\r\ngeneration " + PlayerStats.GetHighestUnlockedGeneration() + "!!!";
+        generationUnlockedPanel.SetActive(true);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        generationUnlockedPanel.SetActive(false);
+        showGenerationUnlockedOnBack = false;
+    }
+
     public void OnBack()
     {
         if (packCanvas.gameObject.activeSelf)
         {
             packCanvas.gameObject.SetActive(false);
+            if (showGenerationUnlockedOnBack)
+            {
+                StartCoroutine(ShowGenerationUnlocked());
+            }
             generationsHolder.SetActive(true);
         }
         else

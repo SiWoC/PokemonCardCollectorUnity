@@ -18,6 +18,8 @@ public class CollectionController : MonoBehaviour
     public GameObject pagePrefab;
     public GameObject unknownCardPrefab;
     public GameObject unavailableCardPrefab;
+    public Text generationProgressText;
+    public Text npnProgressText;
 
     private Generation generation;
     private int pageSize = 9;
@@ -65,8 +67,10 @@ public class CollectionController : MonoBehaviour
         pages.Clear();
         maxPageFilled = 0;
 
-        // set up pages for new generation
         GameManager.SelectedGeneration = generationDropdown.value + 1;
+        generationProgressText.text = "You own cards for " + PlayerStats.GetGeneration(GameManager.SelectedGeneration).cards.Count + " out of " + CardFactory.numberOfNPNsInGeneration[GameManager.SelectedGeneration]
+                                        + "\r\nNational Pokedex Numbers of this generation";
+        // set up pages for new generation
         int totalPages = (CardFactory.numberOfNPNsInGeneration[GameManager.SelectedGeneration] + pageSize - 1) / pageSize;
         pageSwiper.totalPages = totalPages;
         RectTransform phRectTransform = pageHolder.GetComponent<RectTransform>();
@@ -180,11 +184,13 @@ public class CollectionController : MonoBehaviour
         StartCoroutine(CardFactory.FillImage(imageType, url, button.image));
     }
 
-    private void SingleNPNStart()
+    private void SingleNPNStart(int nationalPokedexNumber)
     {
+        GameManager.selectedNPN = nationalPokedexNumber;
         generation = PlayerStats.GetGeneration(GameManager.SelectedGeneration);
-        cardsOfNumber = generation.cards[GameManager.selectedNPN];
-        Debug.Log("count: " + cardsOfNumber.Count);
+        cardsOfNumber = generation.cards[nationalPokedexNumber];
+        npnProgressText.text = "You own " + cardsOfNumber.Count + " out of " + CardFactory.GetNumberOfAvailableCards(GameManager.SelectedGeneration, nationalPokedexNumber)
+                                        + "\r\ncards of this National Pokedex Number " + nationalPokedexNumber;
         // set up pages for new NPN
         int totalPages = (cardsOfNumber.Count + pageSize - 1) / pageSize;
         singleNPNPageSwiper = singleNPNPageHolder.GetComponent<PageSwiper>();
@@ -202,7 +208,9 @@ public class CollectionController : MonoBehaviour
         // pageSwiper will publish event pageChanged which will fill some pages
         pageHolder.SetActive(false);
         generationDropdown.gameObject.SetActive(false);
+        generationProgressText.gameObject.SetActive(false);
         singleNPNPageHolder.SetActive(true);
+        npnProgressText.gameObject.SetActive(true);
         singleNPNPageSwiper.BackToPage1();
     }
 
@@ -244,15 +252,16 @@ public class CollectionController : MonoBehaviour
     {
         if (singleNPNPageHolder.activeSelf)
         {
-            //Debug.Log("already single NPN, so zoom large card");
+            // from NPN to singleCard
             singleCardImage.sprite = image.sprite;
             singleCard.SetActive(true);
             singleNPNPageHolder.SetActive(false);
+            npnProgressText.gameObject.SetActive(false);
         }
         else
         {
-            GameManager.selectedNPN = ownedCard.nationalPokedexNumber;
-            SingleNPNStart();
+            // from generation to NPN
+            SingleNPNStart(ownedCard.nationalPokedexNumber);
         }
     }
 
@@ -260,11 +269,14 @@ public class CollectionController : MonoBehaviour
     {
         if (singleCard.activeSelf)
         {
+            // from singleCard to NPN
             singleCard.SetActive(false);
             singleNPNPageHolder.SetActive(true);
+            npnProgressText.gameObject.SetActive(true);
         }
         else if (singleNPNPageHolder.activeSelf)
         {
+            // from NPN to generation
             // Destroy stuff of this NPN
             foreach (GameObject page in singleNPNPages.Values)
             {
@@ -272,10 +284,12 @@ public class CollectionController : MonoBehaviour
             }
             singleNPNPages.Clear();
             maxSingleNPNPageFilled = 0;
+            npnProgressText.gameObject.SetActive(false);
 
             singleNPNPageHolder.SetActive(false);
             pageHolder.SetActive(true);
             generationDropdown.gameObject.SetActive(true);
+            generationProgressText.gameObject.SetActive(true);
         }
         else
         {
@@ -287,5 +301,6 @@ public class CollectionController : MonoBehaviour
     {
         singleCard.SetActive(false);
         singleNPNPageHolder.SetActive(true);
+        npnProgressText.gameObject.SetActive(true);
     }
 }

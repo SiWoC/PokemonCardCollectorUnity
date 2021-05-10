@@ -1,0 +1,1236 @@
+fileFormatVersion: 2
+guid: 7daa45e004543c347a8bdecf29e2e438
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2848604671506524960
+    second: GenerationUnlocked_133x200x46_0
+  - first:
+      213: 5048651589554639091
+    second: GenerationUnlocked_133x200x46_1
+  - first:
+      213: -5057465519163032097
+    second: GenerationUnlocked_133x200x46_2
+  - first:
+      213: 542009552905906875
+    second: GenerationUnlocked_133x200x46_3
+  - first:
+      213: -1844083227161034424
+    second: GenerationUnlocked_133x200x46_4
+  - first:
+      213: 1143275018143059745
+    second: GenerationUnlocked_133x200x46_5
+  - first:
+      213: 4204482570172541549
+    second: GenerationUnlocked_133x200x46_6
+  - first:
+      213: 6540622962501681923
+    second: GenerationUnlocked_133x200x46_7
+  - first:
+      213: -927642611314837980
+    second: GenerationUnlocked_133x200x46_8
+  - first:
+      213: 7791866717133090721
+    second: GenerationUnlocked_133x200x46_9
+  - first:
+      213: 8360186358751191162
+    second: GenerationUnlocked_133x200x46_10
+  - first:
+      213: 6789822381926891098
+    second: GenerationUnlocked_133x200x46_11
+  - first:
+      213: 792904670298874472
+    second: GenerationUnlocked_133x200x46_12
+  - first:
+      213: -5028457393130624455
+    second: GenerationUnlocked_133x200x46_13
+  - first:
+      213: 7810109143294458848
+    second: GenerationUnlocked_133x200x46_14
+  - first:
+      213: -5187542761604275945
+    second: GenerationUnlocked_133x200x46_15
+  - first:
+      213: 2826082851972131570
+    second: GenerationUnlocked_133x200x46_16
+  - first:
+      213: -6045394442585491461
+    second: GenerationUnlocked_133x200x46_17
+  - first:
+      213: 8780229192844756337
+    second: GenerationUnlocked_133x200x46_18
+  - first:
+      213: 8580925649642362305
+    second: GenerationUnlocked_133x200x46_19
+  - first:
+      213: -8031198009274846879
+    second: GenerationUnlocked_133x200x46_20
+  - first:
+      213: 2438459455970296068
+    second: GenerationUnlocked_133x200x46_21
+  - first:
+      213: -1415334203181147284
+    second: GenerationUnlocked_133x200x46_22
+  - first:
+      213: -1861756007644142245
+    second: GenerationUnlocked_133x200x46_23
+  - first:
+      213: -8903423503048416271
+    second: GenerationUnlocked_133x200x46_24
+  - first:
+      213: 5479726667442215136
+    second: GenerationUnlocked_133x200x46_25
+  - first:
+      213: -3151439269210211871
+    second: GenerationUnlocked_133x200x46_26
+  - first:
+      213: 3131845532631027446
+    second: GenerationUnlocked_133x200x46_27
+  - first:
+      213: -5485681040970342411
+    second: GenerationUnlocked_133x200x46_28
+  - first:
+      213: 7351082886031997697
+    second: GenerationUnlocked_133x200x46_29
+  - first:
+      213: 2203673590074153015
+    second: GenerationUnlocked_133x200x46_30
+  - first:
+      213: -5035191033699600344
+    second: GenerationUnlocked_133x200x46_31
+  - first:
+      213: -4084454824033960314
+    second: GenerationUnlocked_133x200x46_32
+  - first:
+      213: -6584723482980172932
+    second: GenerationUnlocked_133x200x46_33
+  - first:
+      213: -6793494963209434923
+    second: GenerationUnlocked_133x200x46_34
+  - first:
+      213: 5247504297480654183
+    second: GenerationUnlocked_133x200x46_35
+  - first:
+      213: 9055312358990397320
+    second: GenerationUnlocked_133x200x46_36
+  - first:
+      213: -753371607682801401
+    second: GenerationUnlocked_133x200x46_37
+  - first:
+      213: -6971321137799196489
+    second: GenerationUnlocked_133x200x46_38
+  - first:
+      213: -8670744896637722659
+    second: GenerationUnlocked_133x200x46_39
+  - first:
+      213: 2157435336370446114
+    second: GenerationUnlocked_133x200x46_40
+  - first:
+      213: 3704336175640202650
+    second: GenerationUnlocked_133x200x46_41
+  - first:
+      213: -3597229653987672330
+    second: GenerationUnlocked_133x200x46_42
+  - first:
+      213: 1590567513627491447
+    second: GenerationUnlocked_133x200x46_43
+  - first:
+      213: -2500883526158056779
+    second: GenerationUnlocked_133x200x46_44
+  - first:
+      213: -8771122179618151840
+    second: GenerationUnlocked_133x200x46_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4d551d429b778d0800000000000000
+      internalID: -2848604671506524960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f09d1e2fd9601640800000000000000
+      internalID: 5048651589554639091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd308ae7e540d9b0800000000000000
+      internalID: -5057465519163032097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba23d111da958700800000000000000
+      internalID: 542009552905906875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8418fc443108866e0800000000000000
+      internalID: -1844083227161034424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fcef8529abddf00800000000000000
+      internalID: 1143275018143059745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6aa47b0f92595a30800000000000000
+      internalID: 4204482570172541549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3030da14ee5f4ca50800000000000000
+      internalID: 6540622962501681923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_8
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426301ab5f95023f0800000000000000
+      internalID: -927642611314837980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af28e30f75422c60800000000000000
+      internalID: 7791866717133090721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_10
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a706e69f239550470800000000000000
+      internalID: 8360186358751191162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_11
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ebfba7b7b4a3e50800000000000000
+      internalID: 6789822381926891098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_12
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862a9edb896f00b00800000000000000
+      internalID: 792904670298874472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_13
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1000
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a234294a4573ab0800000000000000
+      internalID: -5028457393130624455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ebb817d2e4136c60800000000000000
+      internalID: 7810109143294458848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711ad65d7552208b0800000000000000
+      internalID: -5187542761604275945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa2f917163483720800000000000000
+      internalID: 2826082851972131570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_17
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7329ac8c17a1ca0800000000000000
+      internalID: -6045394442585491461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_18
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175c6066ee3a9d970800000000000000
+      internalID: 8780229192844756337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c598f62a62951770800000000000000
+      internalID: 8580925649642362305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 800
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161395036f37b8090800000000000000
+      internalID: -8031198009274846879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4014d48a4f527d120800000000000000
+      internalID: 2438459455970296068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b5dec7a09bb5ce0800000000000000
+      internalID: -1415334203181147284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_23
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55ebe966c6b926e0800000000000000
+      internalID: -1861756007644142245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f36fef0f7fa07480800000000000000
+      internalID: -8903423503048416271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_25
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8d0270f56eb0c40800000000000000
+      internalID: 5479726667442215136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_26
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e932838ea6d344d0800000000000000
+      internalID: -3151439269210211871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_27
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 600
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fecddf2bec867b20800000000000000
+      internalID: 3131845532631027446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff1ed95822fed3b0800000000000000
+      internalID: -5485681040970342411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bf368efea440660800000000000000
+      internalID: 7351082886031997697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_30
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73897416475059e10800000000000000
+      internalID: 2203673590074153015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8287a14be686f1ab0800000000000000
+      internalID: -5035191033699600344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_32
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e33585af91157c0800000000000000
+      internalID: -4084454824033960314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_33
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b3bcc21ec5e94a0800000000000000
+      internalID: -6584723482980172932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_34
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 400
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d80f7e0358a8b1a0800000000000000
+      internalID: -6793494963209434923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d8ba82b51e2d840800000000000000
+      internalID: 5247504297480654183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_36
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fb3d70d9eeaad70800000000000000
+      internalID: 9055312358990397320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_37
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701a33ca38c7b85f0800000000000000
+      internalID: -753371607682801401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_38
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b09e4e5c54e04f90800000000000000
+      internalID: -6971321137799196489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_39
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf90e1c4735ba780800000000000000
+      internalID: -8670744896637722659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_40
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f5c320200c0fd10800000000000000
+      internalID: 2157435336370446114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_41
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 200
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dc9a51022786330800000000000000
+      internalID: 3704336175640202650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe309a40b2141ec0800000000000000
+      internalID: -3597229653987672330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_43
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cfa09f9b4d21610800000000000000
+      internalID: 1590567513627491447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_44
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b209b6eea31b4dd0800000000000000
+      internalID: -2500883526158056779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GenerationUnlocked_133x200x46_45
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 133
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0626f4a59d6b64680800000000000000
+      internalID: -8771122179618151840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
