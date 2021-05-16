@@ -332,6 +332,7 @@ MonoBehaviour:
   packCanvas: {fileID: 628824341}
   generationUnlockedPanel: {fileID: 1674236179}
   generationUnlockedText: {fileID: 179796255}
+  backButton: {fileID: 1678201670}
 --- !u!4 &373644392
 Transform:
   m_ObjectHideFlags: 0
@@ -964,6 +965,12 @@ PrefabInstance:
 --- !u!224 &1678201669 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3211052664154337840, guid: 70a4a5414fd395043ab3c42ce23d20f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1678201668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1678201670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3211052664154337843, guid: 70a4a5414fd395043ab3c42ce23d20f3,
     type: 3}
   m_PrefabInstance: {fileID: 1678201668}
   m_PrefabAsset: {fileID: 0}

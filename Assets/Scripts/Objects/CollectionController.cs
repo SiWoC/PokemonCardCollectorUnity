@@ -54,7 +54,11 @@ public class CollectionController : MonoBehaviour
             }
         }
         generationDropdown.value = GameManager.SelectedGeneration - 1;
-        OnGenerationChanged(generationDropdown);
+        // if GameManager.SelectedGeneration != 1, then line above will have triggered OnGenerationChanged
+        if (GameManager.SelectedGeneration == 1)
+        {
+            OnGenerationChanged(generationDropdown);
+        }
     }
 
     public void OnGenerationChanged(Dropdown dd)
@@ -84,6 +88,7 @@ public class CollectionController : MonoBehaviour
             page.transform.localPosition = new Vector3(900 * pageNumber, 0f, 0f);
             page.transform.localScale = new Vector3(1f, 1f, 1f);
         }
+        CheckDoubles();
         // pageSwiper will publish event pageChanged which will fill some pages
         pageSwiper.BackToPage1();
     }
@@ -302,5 +307,19 @@ public class CollectionController : MonoBehaviour
         singleCard.SetActive(false);
         singleNPNPageHolder.SetActive(true);
         npnProgressText.gameObject.SetActive(true);
+    }
+
+    private void CheckDoubles()
+    {
+        int numberOfDoubles = 0;
+        Dictionary<int, Dictionary<string,PossibleCard>> ownedNPNs = PlayerStats.GetGeneration(GameManager.SelectedGeneration).cards;
+        foreach (Dictionary<string,PossibleCard> ownedCardsOfNpn in ownedNPNs.Values) 
+        { 
+            foreach(PossibleCard ownedCard in ownedCardsOfNpn.Values)
+            {
+                numberOfDoubles += (ownedCard.numberOwned - 1);
+            }
+        }
+        Debug.Log("you have " + numberOfDoubles + " double cards for this generation");
     }
 }

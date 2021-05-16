@@ -95,8 +95,10 @@ namespace Globals.PlayerStatsSegments.V1
                 }
             }
             generations[1].unlocked = true;
+            /*
             generations[2].unlocked = false;
             highestUnlockedGeneration = 1;
+            */
         }
 
     }

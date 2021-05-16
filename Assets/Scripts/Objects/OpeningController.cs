@@ -14,6 +14,7 @@ public class OpeningController : MonoBehaviour
     public Canvas packCanvas;
     public GameObject generationUnlockedPanel;
     public TextMeshProUGUI generationUnlockedText;
+    public GameObject backButton;
 
     private GameObject packInstance;
     private bool showGenerationUnlockedOnBack = false;
@@ -21,13 +22,15 @@ public class OpeningController : MonoBehaviour
     private void Awake()
     {
         GameManager.Initialize();
-        PackContent.AllCardsSwipedEvent += OnBack;
+        PackContent.AllCardsSwipedEvent += AllCardsSwipedEvent;
+        Pack.OpenedEvent += PackOpened;
         GameManager.GenerationUnlockedEvent += GenerationUnlocked;
     }
 
     private void OnDestroy()
     {
-        PackContent.AllCardsSwipedEvent -= OnBack;
+        PackContent.AllCardsSwipedEvent -= AllCardsSwipedEvent;
+        Pack.OpenedEvent -= PackOpened;
         GameManager.GenerationUnlockedEvent -= GenerationUnlocked;
     }
 
@@ -80,6 +83,17 @@ public class OpeningController : MonoBehaviour
 
         generationUnlockedPanel.SetActive(false);
         showGenerationUnlockedOnBack = false;
+    }
+
+    private void PackOpened()
+    {
+        backButton.SetActive(false);
+    }
+
+    private void AllCardsSwipedEvent()
+    {
+        backButton.SetActive(true);
+        OnBack();
     }
 
     public void OnBack()
