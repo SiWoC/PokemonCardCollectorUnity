@@ -21,6 +21,9 @@ namespace Globals.PlayerStatsSegments.V1
         private static DateTime lastSave = DateTime.UtcNow;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
         public int highestUnlockedGeneration = 1;
+        public int clickPower = GameManager.coinFactor;
+        public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
+        private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
         static BinaryFormatter formatter = new BinaryFormatter();
 
@@ -44,10 +47,41 @@ namespace Globals.PlayerStatsSegments.V1
             }
         }
 
+        public void PushPack(int generation)
+        {
+            packStacks[generation][currentStackIndex[generation]] = CardFactory.GeneratePackArtName(generation);
+            currentStackIndex[generation]++;
+        }
+
+        public string GetNextPack(int generation)
+        {
+            CheckPackStack(generation);
+            return packStacks[generation][currentStackIndex[generation] - 1];
+        }
+
+        public void PopPack(int generation)
+        {
+            CheckPackStack(generation);
+            currentStackIndex[generation]--;
+            packStacks[generation][currentStackIndex[generation]] = null;
+        }
+
+        private void CheckPackStack(int generation)
+        {
+            if (currentStackIndex[generation] == 0)
+            {
+                PushPack(generation);
+            }
+            else if (packStacks[generation][currentStackIndex[generation] - 1] == null)
+            {
+                packStacks[generation][currentStackIndex[generation] - 1] = CardFactory.GeneratePackArtName(generation);
+            }
+        }
+
         public PlayerStats()
         {
             version = CURRENT_VERSION;
-            InitGenerations();
+            Initialize();
         }
 
         public static void SaveDataTimed(PlayerStats playerStats)
@@ -73,12 +107,13 @@ namespace Globals.PlayerStatsSegments.V1
             FileStream saveFile = File.Open(Application.persistentDataPath + SAVE_FILE, FileMode.Open);
             PlayerStats playerStats = (PlayerStats)formatter.Deserialize(saveFile);
             saveFile.Close();
-            playerStats.InitGenerations();
+            playerStats.Initialize();
             return playerStats;
         }
 
-        private void InitGenerations()
+        private void Initialize()
         {
+
             for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
             {
                 if (!generations.ContainsKey(i))
@@ -93,13 +128,41 @@ namespace Globals.PlayerStatsSegments.V1
                 {
                     generations[i].numberOfPacks = 0;
                 }
+
+                currentStackIndex[i] = 0;
+                if (packStacks.ContainsKey(i))
+                {
+                    bool nullFound = false;
+                    for (int j = 0; j < 100; j++)
+                    {
+                        // already found null, make sure rest of stack is null too
+                        if (nullFound)
+                        {
+                            packStacks[i][j] = null;
+                        }
+                        else
+                        {
+                            if (packStacks[i][j] == null)
+                            {
+                                nullFound = true;
+                            } else
+                            {
+                                currentStackIndex[i] = j + 1;
+                            }
+                        }
+                    }
+                } else
+                {
+                    packStacks.Add(i, new string[100]);
+                }
             }
             generations[1].unlocked = true;
-            /*
-            generations[2].unlocked = false;
-            highestUnlockedGeneration = 1;
-            */
+
+            if (clickPower < GameManager.coinFactor)
+            {
+                clickPower = GameManager.coinFactor;
+            }
         }
 
-    }
-}
+    } // playerStats
+} // namespace

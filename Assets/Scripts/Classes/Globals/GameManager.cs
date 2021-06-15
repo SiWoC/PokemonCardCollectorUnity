@@ -18,13 +18,18 @@ namespace Globals
     {
        
         public static event Action GenerationUnlockedEvent;
+        public delegate void RandomPackEarnedHandler(int generation);
+        public static event RandomPackEarnedHandler RandomPackEarnedEvent;
 
         private static int selectedGeneration = 1;
         public static int selectedNPN = 1;
         public static EarnType earnType = EarnType.Coins;
 
         private static int selectedMultiplier = 1;
-        public readonly static int[] price = { 0, 370, 740, 1110, 1480, 1850, 2220, 2590, 2960 };
+        public static readonly float basePrice = 370f;
+        public static readonly int percentageFactor = 100000; // 100.000
+        public static readonly int coinFactor = 100; // 1.00
+        private static readonly float priceIncreaseFactor = 1.8f;
 
         private static string[] sceneNamesStack = new string[10];
         private static int currentStackIndex = 0;
@@ -52,10 +57,18 @@ namespace Globals
             }
         }
 
-        internal static void AddRandomPack()
+        public static int GetPriceInCents(int generation)
+        {
+            // rounded down to whole Pokedollar then to cents
+            return (int)(basePrice * Math.Pow(priceIncreaseFactor, generation - 1)) * coinFactor;
+        }
+
+        internal static int AddRandomPack()
         {
             // TODO add random pack
-            PlayerStats.SaveData();
+            int generation = UnityEngine.Random.Range(1,PlayerStats.GetHighestUnlockedGeneration() + 1);
+            PlayerStats.SetPacks(generation, 1); // SetPacks saves always
+            return generation;
         }
 
         public static void Initialize()
@@ -76,17 +89,43 @@ namespace Globals
         {
             if (earnType == EarnType.Coins)
             {
-                PlayerStats.AddCoins(1);
+                PlayerStats.AddClick();
             } else
             {
-                PlayerStats.AddRandomPackPercentage(1);
+                PlayerStats.AddRandomPackPercentage(CalculateRandomPackclick());
+                if (PlayerStats.GetRandomPackPercentage() >= percentageFactor)
+                {
+                    int generation = AddRandomPack();
+                    RandomPackEarnedEvent?.Invoke(generation);
+                }
             }
+        }
+
+        private static int CalculateRandomPackclick()
+        {
+            // for a random package you need the same clicks as for the average of the unlocked packages
+            // gen1 unlocked > 370 clicks for 100% > randomPackClick = 270 = 0.270%
+            // gen2 unlocked > (370 + 665) / 2 = 517 clicks for 100% > randomPackClick = 193 = 0.193%
+            int totalPrice = 0;
+            for (int generation = 1; generation <= PlayerStats.GetHighestUnlockedGeneration(); generation++)
+            {
+                totalPrice += GetPriceInCents(generation) / coinFactor;
+            }
+            int average = totalPrice / PlayerStats.GetHighestUnlockedGeneration();
+            /*
+             *  click = 1 /370
+             *  click = click * percentageFactor
+             *  same as
+             *  click = percentageFactor / 370
+             */
+            //Debug.Log("randomPackClick: " + percentageFactor / average);
+            return percentageFactor / average;
         }
 
         public static void BuyPacks(int generation)
         {
-            if (PlayerStats.GetCoins() < (selectedMultiplier * price[generation])) return; // not enough money?? Bug? Hack?
-            PlayerStats.AddCoins(-1 * selectedMultiplier * price[generation]);  // Coins setter saves timed
+            if (PlayerStats.GetCoins() < (selectedMultiplier * GetPriceInCents(generation))) return; // not enough money?? Bug? Hack?
+            PlayerStats.AddCoins(-1 * selectedMultiplier * GetPriceInCents(generation));  // Coins setter saves timed
             PlayerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
         }
 

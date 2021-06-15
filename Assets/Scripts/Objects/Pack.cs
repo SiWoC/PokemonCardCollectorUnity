@@ -9,7 +9,8 @@ using UnityEngine;
 public class Pack : MonoBehaviour
 {
 
-    public static event Action OpenedEvent;
+    public delegate void OpenedEventHandler(int generation);
+    public static event OpenedEventHandler OpenedEvent;
 
     public int generation;
     public GameObject stillLoading;
@@ -49,6 +50,6 @@ public class Pack : MonoBehaviour
     internal void Opened()
     {
         GameManager.OpenedPack(generation, cardInThisPack);
-        OpenedEvent?.Invoke();
+        OpenedEvent?.Invoke(generation);
     }
 }

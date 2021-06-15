@@ -24,9 +24,11 @@ namespace Factories
         public const int numberOfGenerations = 8;
         public static int[] numberOfNPNsInGeneration = new int[numberOfGenerations + 1] { 0, 151, 100, 135, 107, 156, 72, 88, 89 };
         public static int[] startNPNOfGeneration = new int[numberOfGenerations + 1] { 0, 1, 152, 252, 387, 494, 650, 722, 810 };
+        private static string[] packArtTypes = {"fire","grass","water"};
+        private static string[] packArtSizes = { "big", "small" };
+        private const string PackArtFormatstring = "{0}_gen{1}_{2}_pack";
 
         private const string SQUARE_SETS = "^base|^dp|^ecard|^ex|^gym|^neo|^np|^pl|^pop|^si";
-
         public static GameObject packPrefab;
         public static GameObject cardPrefab;
         public static Sprite roundedBack;
@@ -117,6 +119,12 @@ namespace Factories
             }
 
             return cardInstance;
+        }
+
+        public static string GeneratePackArtName(int generation)
+        {
+            // fire_gen1_big_pack
+            return string.Format(PackArtFormatstring, packArtTypes[UnityEngine.Random.Range(0, packArtTypes.Length)], generation, packArtSizes[UnityEngine.Random.Range(0, packArtSizes.Length)]);
         }
 
         public static IEnumerator GetCard(string generation, string rarity, Action<GameObject> returnToCaller)

@@ -19,7 +19,7 @@ public class BuyPackGroup : MonoBehaviour
     void Awake()
     {
         generationText.text = "Generation " + generation;
-        priceText.text = GameManager.price[generation].ToString();
+        priceText.text = (GameManager.GetPriceInCents(generation) / GameManager.coinFactor).ToString();
         button = buyButton.GetComponent<Button>();
         lockImage.SetActive(!PlayerStats.IsGenerationUnlocked(generation));
     }
@@ -27,8 +27,8 @@ public class BuyPackGroup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        totalPrice = GameManager.price[generation] * GameManager.SelectedMultiplier;
-        buttonText.text = "Buy " + GameManager.SelectedMultiplier + " for\r\n" + totalPrice;
+        totalPrice = GameManager.GetPriceInCents(generation) * GameManager.SelectedMultiplier;
+        buttonText.text = "Buy " + GameManager.SelectedMultiplier + " for\r\n" + totalPrice / GameManager.coinFactor;
         // you must have enough coins and you cannot own more than 100 packs
         button.interactable = (PlayerStats.IsGenerationUnlocked(generation) &&
                                (PlayerStats.GetCoins() >= totalPrice) && 

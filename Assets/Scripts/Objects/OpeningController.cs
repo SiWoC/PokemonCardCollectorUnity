@@ -85,7 +85,7 @@ public class OpeningController : MonoBehaviour
         showGenerationUnlockedOnBack = false;
     }
 
-    private void PackOpened()
+    private void PackOpened(int generation)
     {
         backButton.SetActive(false);
     }

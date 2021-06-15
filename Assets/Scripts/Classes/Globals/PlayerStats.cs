@@ -20,6 +20,11 @@ namespace Globals
             theInstance.Coins += coins;
         }
 
+        public static void AddClick()
+        {
+            theInstance.Coins += theInstance.clickPower;
+        }
+
         public static void AddRandomPackPercentage(int percentage)
         {
             theInstance.RandomPackagePercentage += percentage;
@@ -28,6 +33,11 @@ namespace Globals
         public static int GetCoins()
         {
             return theInstance.Coins; 
+        }
+
+        internal static string GetNextPack(int generation)
+        {
+            return theInstance.GetNextPack(generation);
         }
 
         public int RandomPackagePercentage
@@ -87,6 +97,16 @@ namespace Globals
         public static void SetPacks(int generation, int numberOfPacks)
         {
             theInstance.generations[generation].numberOfPacks += numberOfPacks;
+            for (int i = 0; i < Math.Abs(numberOfPacks); i++)
+            {
+                if (numberOfPacks > 0)
+                {
+                    theInstance.PushPack(generation);
+                } else
+                {
+                    theInstance.PopPack(generation);
+                }
+            }
             SaveData();
         }
 
