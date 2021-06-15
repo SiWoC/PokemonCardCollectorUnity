@@ -63,11 +63,12 @@ namespace Globals
             return (int)(basePrice * Math.Pow(priceIncreaseFactor, generation - 1)) * coinFactor;
         }
 
-        internal static int AddRandomPack()
+        private static int AddRandomPack()
         {
             // TODO add random pack
             int generation = UnityEngine.Random.Range(1,PlayerStats.GetHighestUnlockedGeneration() + 1);
             PlayerStats.SetPacks(generation, 1); // SetPacks saves always
+            PlayerStats.ResetRandomPackPercentage();
             return generation;
         }
 

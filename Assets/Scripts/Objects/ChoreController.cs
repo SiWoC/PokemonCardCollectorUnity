@@ -34,18 +34,6 @@ public class ChoreController : MonoBehaviour, IDragHandler, IEndDragHandler
         randomPackEarnedPanel.SetActive(true);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnDrag(PointerEventData eventData)
     {
         randomPackImage.transform.position += (Vector3)eventData.delta / 10; // deze 10 moet iets met         Screen.currentResolution.height

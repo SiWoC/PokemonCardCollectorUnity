@@ -18,7 +18,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     private bool showingFront;
     private float easing = 0.7f;
     private PossibleCard createdFrom;
-    private Canvas parentCanvasOfImageToMove;
+    private Canvas parentCanvas;
     private Vector3 moveOffset;
 
     public PossibleCard CreatedFrom 
@@ -41,7 +41,7 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         spriteRenderer.sprite = back;
         endPosition += new Vector3(0, 0, transform.position.z);
         GetComponent<BoxCollider2D>().enabled = false;
-        parentCanvasOfImageToMove = GameObject.Find("/PackCanvas").GetComponent<Canvas>(); ;
+        parentCanvas = GetComponentsInParent<Canvas>()[0];
     }
 
     // Update is called once per frame
@@ -76,15 +76,15 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     {
 
         //For Offset Position
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvasOfImageToMove.transform as RectTransform, eventData.position, parentCanvasOfImageToMove.worldCamera, out Vector2 pos);
-        moveOffset = transform.position - parentCanvasOfImageToMove.transform.TransformPoint(pos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, eventData.position, parentCanvas.worldCamera, out Vector2 pos);
+        moveOffset = transform.position - parentCanvas.transform.TransformPoint(pos);
 
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvasOfImageToMove.transform as RectTransform, eventData.position, parentCanvasOfImageToMove.worldCamera, out Vector2 pos);
-        transform.position = parentCanvasOfImageToMove.transform.TransformPoint(pos) + moveOffset;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvas.transform as RectTransform, eventData.position, parentCanvas.worldCamera, out Vector2 pos);
+        transform.position = parentCanvas.transform.TransformPoint(pos) + moveOffset;
     }
 
     public void OnEndDrag(PointerEventData data)

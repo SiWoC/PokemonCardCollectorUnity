@@ -4,6 +4,7 @@ using Globals;
 using Globals.PlayerStatsSegments.V1;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -20,9 +21,14 @@ public class CollectionController : MonoBehaviour
     public GameObject unavailableCardPrefab;
     public Text generationProgressText;
     public Text npnProgressText;
+    public GameObject doublesButton;
+    public GameObject turnInDoublesPanel;
+    public TextMeshProUGUI doublesText;
+    public TextMeshProUGUI finalClickPowerText;
 
     private Generation generation;
     private int pageSize = 9;
+    private int numberOfDoubles = 0;
 
     PageSwiper pageSwiper;
     private Dictionary<int, GameObject> pages = new Dictionary<int, GameObject>();
@@ -88,7 +94,8 @@ public class CollectionController : MonoBehaviour
             page.transform.localPosition = new Vector3(900 * pageNumber, 0f, 0f);
             page.transform.localScale = new Vector3(1f, 1f, 1f);
         }
-        CheckDoubles();
+        numberOfDoubles = PlayerStats.CheckDoubles(GameManager.SelectedGeneration);
+        doublesButton.SetActive(numberOfDoubles > 0);
         // pageSwiper will publish event pageChanged which will fill some pages
         pageSwiper.BackToPage1();
     }
@@ -309,17 +316,27 @@ public class CollectionController : MonoBehaviour
         npnProgressText.gameObject.SetActive(true);
     }
 
-    private void CheckDoubles()
+    public void OnDoublesClick()
     {
-        int numberOfDoubles = 0;
-        Dictionary<int, Dictionary<string,PossibleCard>> ownedNPNs = PlayerStats.GetGeneration(GameManager.SelectedGeneration).cards;
-        foreach (Dictionary<string,PossibleCard> ownedCardsOfNpn in ownedNPNs.Values) 
-        { 
-            foreach(PossibleCard ownedCard in ownedCardsOfNpn.Values)
-            {
-                numberOfDoubles += (ownedCard.numberOwned - 1);
-            }
-        }
-        Debug.Log("you have " + numberOfDoubles + " double cards for this generation");
+        doublesText.text = string.Format("You have\r\n{0} double card(s)\r\nof this generation.\r\n\r\nDo you want to\r\ntrade them for\r\nClick - Power?", numberOfDoubles);
+
+        finalClickPowerText.text = string.Format("Your Click-Power\r\nwill go from\r\n{0:0.00} to {1:0.00}",
+            PlayerStats.GetClickPower() / (float)GameManager.coinFactor,
+            (PlayerStats.GetClickPower() + numberOfDoubles) / (float)GameManager.coinFactor);
+        turnInDoublesPanel.SetActive(true);
     }
+
+    public void OnYesTradeClick()
+    {
+        PlayerStats.TradeInDoubles(GameManager.SelectedGeneration);
+        numberOfDoubles = 0;
+        doublesButton.SetActive(false);
+        turnInDoublesPanel.SetActive(false);
+    }
+
+    public void OnNoTradeClick()
+    {
+        turnInDoublesPanel.SetActive(false);
+    }
+
 }

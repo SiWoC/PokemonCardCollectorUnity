@@ -40,15 +40,6 @@ namespace Globals
             return theInstance.GetNextPack(generation);
         }
 
-        public int RandomPackagePercentage
-        {
-            get => theInstance.RandomPackagePercentage;
-            set
-            {
-                theInstance.RandomPackagePercentage = value;
-            }
-        }
-
         public static int GetRandomPackPercentage()
         {
             return theInstance.RandomPackagePercentage;
@@ -89,7 +80,13 @@ namespace Globals
 
         }
 
-        internal static Generation GetGeneration(int generation)
+        public static void ResetRandomPackPercentage()
+        {
+            theInstance.RandomPackagePercentage = 0;
+            SaveData();
+        }
+
+        public static Generation GetGeneration(int generation)
         {
             return theInstance.generations[generation];
         }
@@ -130,10 +127,49 @@ namespace Globals
             return theInstance.highestUnlockedGeneration;
         }
 
-        internal static void UnlockNextGeneration()
+        public static void UnlockNextGeneration()
         {
             theInstance.highestUnlockedGeneration++;
             theInstance.generations[theInstance.highestUnlockedGeneration].unlocked = true;
+        }
+
+        public static int CheckDoubles(int generation)
+        {
+            int numberOfDoubles = 0;
+            Dictionary<int, Dictionary<string, PossibleCard>> ownedNPNs = GetGeneration(generation).cards;
+            foreach (Dictionary<string, PossibleCard> ownedCardsOfNpn in ownedNPNs.Values)
+            {
+                foreach (PossibleCard ownedCard in ownedCardsOfNpn.Values)
+                {
+                    if (ownedCard.numberOwned > 1)
+                        numberOfDoubles += (ownedCard.numberOwned - 1);
+                }
+            }
+            return numberOfDoubles;
+        }
+
+        public static int GetClickPower()
+        {
+            return theInstance.clickPower;
+        }
+
+        public static void TradeInDoubles(int generation)
+        {
+            int numberOfDoubles = 0;
+            Dictionary<int, Dictionary<string, PossibleCard>> ownedNPNs = GetGeneration(generation).cards;
+            foreach (Dictionary<string, PossibleCard> ownedCardsOfNpn in ownedNPNs.Values)
+            {
+                foreach (PossibleCard ownedCard in ownedCardsOfNpn.Values)
+                {
+                    if (ownedCard.numberOwned > 1)
+                    {
+                        numberOfDoubles += (ownedCard.numberOwned - 1);
+                        ownedCard.numberOwned = 1;
+                    }
+                }
+            }
+            theInstance.clickPower += numberOfDoubles;
+            SaveData();
         }
     }
 }
