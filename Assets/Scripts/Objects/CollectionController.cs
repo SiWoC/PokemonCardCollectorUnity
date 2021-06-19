@@ -286,7 +286,7 @@ public class CollectionController : MonoBehaviour
             singleCardImage.sprite = image.sprite;
             currentSingle = ownedCard;
             singleCard.SetActive(true);
-            if (PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber).Equals(ownedCard.id))
+            if (ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)))
             {
                 favoriteButtonImage.color = new Color(1f, 1f, 1f);
             } else
