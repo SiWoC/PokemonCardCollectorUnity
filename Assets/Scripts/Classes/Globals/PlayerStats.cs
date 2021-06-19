@@ -171,5 +171,17 @@ namespace Globals
             theInstance.clickPower += numberOfDoubles;
             SaveData();
         }
+
+        public static string GetFavorite(int nationalPokedexNumber)
+        {
+            theInstance.favorites.TryGetValue(nationalPokedexNumber, out string returnValue);
+            return returnValue;
+        }
+
+        public static void SetFavorite(PossibleCard newFavorite)
+        {
+            theInstance.favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
+            SaveData();
+        }
     }
 }

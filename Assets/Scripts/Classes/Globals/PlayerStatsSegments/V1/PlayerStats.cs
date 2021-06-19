@@ -3,6 +3,7 @@ using Factories.Config;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
@@ -23,6 +24,9 @@ namespace Globals.PlayerStatsSegments.V1
         public int highestUnlockedGeneration = 1;
         public int clickPower = GameManager.coinFactor;
         public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
+        [OptionalField(VersionAdded = 2)]
+        public Dictionary<int, string> favorites = new Dictionary<int, string>();
+
         private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
         static BinaryFormatter formatter = new BinaryFormatter();
@@ -161,6 +165,10 @@ namespace Globals.PlayerStatsSegments.V1
             if (clickPower < GameManager.coinFactor)
             {
                 clickPower = GameManager.coinFactor;
+            }
+            if (favorites == null)
+            {
+                favorites = new Dictionary<int, string>();
             }
         }
 

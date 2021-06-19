@@ -7,14 +7,22 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ChoreController : MonoBehaviour, IDragHandler, IEndDragHandler
+public class ChoreController : MonoBehaviour
 {
 
     public GameObject randomPackEarnedPanel;
     public TextMeshProUGUI randomPackEarnedText;
     public Image randomPackImage;
-    public Vector3 endPosition = new Vector3(-14.0f, 28.0f, 0f);
-    private float easing = 0.7f;
+    public GameObject bagImage;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (GameManager.earnType == EarnType.Coins)
+        {
+            bagImage.SetActive(false);
+        }
+    }
 
     private void Awake()
     {
@@ -34,26 +42,4 @@ public class ChoreController : MonoBehaviour, IDragHandler, IEndDragHandler
         randomPackEarnedPanel.SetActive(true);
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        randomPackImage.transform.position += (Vector3)eventData.delta / 10; // deze 10 moet iets met         Screen.currentResolution.height
-    }
-
-    public void OnEndDrag(PointerEventData data)
-    {
-        StartCoroutine(SmoothMove(randomPackImage.transform.position, randomPackImage.transform.localScale));
-    }
-
-    IEnumerator SmoothMove(Vector3 startpos, Vector3 startScale)
-    {
-        float t = 0f;
-        while (t <= 1.0)
-        {
-            t += Time.deltaTime / easing;
-            randomPackImage.transform.position = Vector3.Lerp(startpos, endPosition, Mathf.SmoothStep(0f, 1f, t));
-            randomPackImage.transform.localScale = Vector3.Lerp(startScale, Vector3.zero, Mathf.SmoothStep(0f, 1f, t));
-            yield return null;
-        }
-        randomPackEarnedPanel.SetActive(false);
-    }
 }

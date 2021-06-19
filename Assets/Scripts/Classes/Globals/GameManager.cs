@@ -65,10 +65,10 @@ namespace Globals
 
         private static int AddRandomPack()
         {
-            // TODO add random pack
             int generation = UnityEngine.Random.Range(1,PlayerStats.GetHighestUnlockedGeneration() + 1);
             PlayerStats.SetPacks(generation, 1); // SetPacks saves always
-            PlayerStats.ResetRandomPackPercentage();
+            // TODO DEBUG NOT RESETTING
+            // PlayerStats.ResetRandomPackPercentage();
             return generation;
         }
 
@@ -78,7 +78,7 @@ namespace Globals
             {
                 UnityEngine.Object initializerPrefab = Resources.Load("Initializer");
                 //GameObject initializer = (GameObject)
-                    GameObject.Instantiate(initializerPrefab);
+                GameObject.Instantiate(initializerPrefab);
                 selectedGeneration = Math.Max(1,PlayerPrefs.GetInt("SelectedGeneration"));
                 selectedMultiplier = Math.Max(1, PlayerPrefs.GetInt("SelectedMultiplier"));
                 initialized = true;

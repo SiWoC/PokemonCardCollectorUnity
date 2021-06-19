@@ -211,7 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c4c72e0809ca44fba74f27156d9432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomPackEarnedPanel: {fileID: 1175640286}
+  deactivateOnDone: {fileID: 1175640286}
+  target: {fileID: 1240000579}
+  offset: {x: -45, y: -13, z: 0}
 --- !u!1 &151886265
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +438,7 @@ MonoBehaviour:
   randomPackEarnedPanel: {fileID: 1175640286}
   randomPackEarnedText: {fileID: 694361324}
   randomPackImage: {fileID: 150583100}
-  endPosition: {x: -14, y: 28, z: 0}
+  bagImage: {fileID: 1240000579}
 --- !u!4 &373644392
 Transform:
   m_ObjectHideFlags: 0

@@ -25,6 +25,8 @@ public class CollectionController : MonoBehaviour
     public GameObject turnInDoublesPanel;
     public TextMeshProUGUI doublesText;
     public TextMeshProUGUI finalClickPowerText;
+    public GameObject favoriteButton;
+    private Image favoriteButtonImage;
 
     private Generation generation;
     private int pageSize = 9;
@@ -33,9 +35,11 @@ public class CollectionController : MonoBehaviour
     PageSwiper pageSwiper;
     private Dictionary<int, GameObject> pages = new Dictionary<int, GameObject>();
     private int maxPageFilled = 0;
+    private Dictionary<int, Image> smallImages = new Dictionary<int, Image>();
 
     PageSwiper singleNPNPageSwiper;
     private Image singleCardImage;
+    private PossibleCard currentSingle;
     private Dictionary<int, GameObject> singleNPNPages = new Dictionary<int, GameObject>();
     Dictionary<string, PossibleCard> cardsOfNumber;
     private int maxSingleNPNPageFilled = 0;
@@ -51,6 +55,7 @@ public class CollectionController : MonoBehaviour
         pageSwiper = pageHolder.GetComponent<PageSwiper>();
         singleNPNPageSwiper = singleNPNPageHolder.GetComponent<PageSwiper>();
         singleCardImage = singleCard.GetComponent<Image>();
+        favoriteButtonImage = favoriteButton.GetComponent<Image>();
         generationDropdown.ClearOptions();
         for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
         {
@@ -110,8 +115,17 @@ public class CollectionController : MonoBehaviour
                 if (generation.cards.ContainsKey(nationalPokedexNumber))
                 { // we own cards of this NationalPokedexNumber
                     Dictionary<string, PossibleCard> cardsOfNumber = generation.cards[nationalPokedexNumber];
-                    PossibleCard lastFound = cardsOfNumber.Values.OrderBy(p => p.foundOn).Last();
-                    PlaceSmallCard(lastFound, page);
+                    string favorite = PlayerStats.GetFavorite(nationalPokedexNumber);
+                    PossibleCard lastFoundOrFavorite = null;
+                    if (favorite != null)
+                    {
+                        lastFoundOrFavorite = cardsOfNumber[favorite];
+                    }
+                    if (lastFoundOrFavorite == null)
+                    {
+                        lastFoundOrFavorite = cardsOfNumber.Values.OrderBy(p => p.foundOn).Last();
+                    }
+                    PlaceSmallCard(lastFoundOrFavorite, page);
                 }
                 else if (CardFactory.GetNumberOfAvailableCards(GameManager.SelectedGeneration, nationalPokedexNumber) > 0)
                 { // leave empty placeholder? show greyed-out back?
@@ -173,6 +187,10 @@ public class CollectionController : MonoBehaviour
         panel.name = ownedCard.id;
 
         Image image = panel.GetComponent<Image>();
+        if (imageType == ImageType.Small)
+        {
+            smallImages[ownedCard.nationalPokedexNumber] = image;
+        }
         Color color = image.color;
         color.a = 1.0f;
         image.color = color;
@@ -266,7 +284,16 @@ public class CollectionController : MonoBehaviour
         {
             // from NPN to singleCard
             singleCardImage.sprite = image.sprite;
+            currentSingle = ownedCard;
             singleCard.SetActive(true);
+            if (PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber).Equals(ownedCard.id))
+            {
+                favoriteButtonImage.color = new Color(1f, 1f, 1f);
+            } else
+            {
+                favoriteButtonImage.color = new Color(0f, 0f, 1f);
+            }
+            favoriteButton.SetActive(true);
             singleNPNPageHolder.SetActive(false);
             npnProgressText.gameObject.SetActive(false);
         }
@@ -283,6 +310,7 @@ public class CollectionController : MonoBehaviour
         {
             // from singleCard to NPN
             singleCard.SetActive(false);
+            favoriteButton.SetActive(false);
             singleNPNPageHolder.SetActive(true);
             npnProgressText.gameObject.SetActive(true);
         }
@@ -312,6 +340,7 @@ public class CollectionController : MonoBehaviour
     public void OnSingleCardClick()
     {
         singleCard.SetActive(false);
+        favoriteButton.SetActive(false);
         singleNPNPageHolder.SetActive(true);
         npnProgressText.gameObject.SetActive(true);
     }
@@ -337,6 +366,14 @@ public class CollectionController : MonoBehaviour
     public void OnNoTradeClick()
     {
         turnInDoublesPanel.SetActive(false);
+    }
+
+    public void OnFavoriteClick()
+    {
+        PlayerStats.SetFavorite(currentSingle);
+        // yes, now smallImage contains a largeImage, but it's already loaded so I don't care
+        smallImages[currentSingle.nationalPokedexNumber].sprite = singleCardImage.sprite;
+        favoriteButtonImage.color = new Color(1f,1f,1f);
     }
 
 }
