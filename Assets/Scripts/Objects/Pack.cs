@@ -20,6 +20,12 @@ public class Pack : MonoBehaviour
     private bool openedFired = false;
     public List<PossibleCard> cardInThisPack;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        wrapper.GetComponent<BoxCollider>().enabled = false;
+    }
+    
     private void Awake()
     {
         GameManager.Initialize();
@@ -44,7 +50,7 @@ public class Pack : MonoBehaviour
     public void OnPackReady()
     {
         stillLoading.SetActive(false);
-        wrapper.GetComponent<BoxCollider2D>().enabled = true;
+        wrapper.GetComponent<BoxCollider>().enabled = true;
     }
 
     internal void Opened()

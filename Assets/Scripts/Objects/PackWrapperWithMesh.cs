@@ -4,14 +4,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
+public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
-    public Sprite[] sprites;
-    
+    public GameObject[] frames;
+    public GameObject swipeDownFrame; // with tearoff completely out of view
+
     private int generation;
     private float easing = 1.5f;
-    private SpriteRenderer spriteRenderer;
+    private MeshFilter meshFilter;
     private bool opened = false;
     private int frame = 0;
     private int framesHandled = 0;
@@ -23,9 +24,22 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         Pack pack = GetComponentInParent<Pack>();
         generation = pack.generation;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        sprites = Resources.LoadAll<Sprite>("Images/Packs/BaseSet2_3_649x1080x7"); // zonder png !!!
-        stepWidth = (int)((Screen.width / sprites.Length) * stepWidthCoverage * -1);
+        meshFilter = GetComponent<MeshFilter>();
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material = GenerateMaterial();
+        
+        // Getting meshRendering in front of sprite rendering of cards
+        renderer.sortingLayerName = "Default";
+        renderer.sortingOrder = 25;
+
+        stepWidth = (int)((Screen.width / frames.Length) * stepWidthCoverage * -1);
+    }
+
+    private Material GenerateMaterial()
+    {
+        Material material = new Material(Shader.Find("Sprites/Default"));
+        material.mainTexture = Resources.Load<Texture>("Images/Packs/" + PlayerStats.GetNextPack(generation)); // zonder png !!!
+        return material;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -41,17 +55,19 @@ public class PackWrapper : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (numberOfFrames > framesHandled)
         {
-            frame = Math.Min(frame + numberOfFrames - framesHandled, sprites.Length - 1);
+            frame = Math.Min(frame + numberOfFrames - framesHandled, frames.Length - 1);
             framesHandled = numberOfFrames;
-            spriteRenderer.sprite = sprites[frame];
+            meshFilter.mesh = frames[frame].GetComponentInChildren<MeshFilter>().sharedMesh;
         }
     }
 
     public void OnEndDrag(PointerEventData data)
     {
-        if (frame == sprites.Length - 1)
+        if (frame == frames.Length - 1)
         {
             opened = true;
+            // getting tearoff completely out of view
+            meshFilter.mesh = swipeDownFrame.GetComponentInChildren<MeshFilter>().sharedMesh;
             StartCoroutine(SmoothMove(transform.position, new Vector3(transform.position.x, -100, transform.position.z)));
             GetComponentInParent<Pack>().Opened();
         }

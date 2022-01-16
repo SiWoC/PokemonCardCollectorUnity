@@ -69,9 +69,6 @@ namespace Factories
             GameObject packInstance = GameObject.Instantiate(packPrefab);
             Pack pack = packInstance.GetComponent<Pack>();
             pack.generation = generation;
-            GameObject wrapper = packInstance.transform.Find("PackWrapper").gameObject;
-            wrapper.GetComponent<PackWrapper>().generation = generation;
-            wrapper.GetComponent<BoxCollider2D>().enabled = false;
             Transform normalCardsHolder = packInstance.transform.Find("PackContent").Find("NormalCards");
             for (int i = 1; i < 9; i++)
             {
