@@ -60,7 +60,7 @@ namespace Globals.PlayerStatsSegments.V1
         public string GetNextPack(int generation)
         {
             CheckPackStack(generation);
-            return packStacks[generation][currentStackIndex[generation] - 1];
+            return packStacks[generation][currentStackIndex[generation] - 1].Replace("small", "basic").Replace("big", "stage2");
         }
 
         public void PopPack(int generation)
