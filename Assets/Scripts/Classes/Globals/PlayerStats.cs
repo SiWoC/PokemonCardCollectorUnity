@@ -1,4 +1,5 @@
-﻿using Factories;
+﻿using Assets.Scripts.Classes.Globals;
+using Factories;
 using Factories.Config;
 using Globals.PlayerStatsSegments.V1;
 using System;
@@ -181,6 +182,21 @@ namespace Globals
         public static void SetFavorite(PossibleCard newFavorite)
         {
             theInstance.favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
+            SaveData();
+        }
+
+        public static bool GetTutorialCompleted (TutorialStep step)
+        {
+            return true;
+            /*
+            theInstance.tutorialStepsCompleted.TryGetValue(step, out bool completed);
+            return completed;
+            */
+        }
+
+        public static void SetTutorialCompleted(TutorialStep step)
+        {
+            theInstance.tutorialStepsCompleted[step] = true;
             SaveData();
         }
     }

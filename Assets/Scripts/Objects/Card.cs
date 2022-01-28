@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 using Factories;
 using System.Collections;
 using System;
+using Globals;
+using Assets.Scripts.Classes.Globals;
 
 public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -89,6 +91,10 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData data)
     {
+        if (!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook))
+        {
+            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeToBook);
+        }
         StartCoroutine(SmoothMove(transform.position, transform.localScale));
     }
 

@@ -1,4 +1,5 @@
-﻿using Factories;
+﻿using Assets.Scripts.Classes.Globals;
+using Factories;
 using Factories.Config;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace Globals.PlayerStatsSegments.V1
         public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
         [OptionalField(VersionAdded = 2)]
         public Dictionary<int, string> favorites = new Dictionary<int, string>();
+        public Dictionary<TutorialStep, bool> tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
 
         private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
@@ -170,6 +172,11 @@ namespace Globals.PlayerStatsSegments.V1
             {
                 favorites = new Dictionary<int, string>();
             }
+            if (tutorialStepsCompleted == null || true) // debug
+            {
+                tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
+            }
+
         }
 
     } // playerStats

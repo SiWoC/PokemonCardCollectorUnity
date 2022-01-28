@@ -1,3 +1,4 @@
+using Assets.Scripts.Classes.Globals;
 using Factories;
 using Factories.Config;
 using Globals;
@@ -26,6 +27,11 @@ public class CollectionController : MonoBehaviour
     public TextMeshProUGUI doublesText;
     public TextMeshProUGUI finalClickPowerText;
     public GameObject favoriteButton;
+
+    public GameObject tutorialSwipeCollectionPanel;
+    public GameObject tutorialZoomCardPanel;
+    public GameObject tutorialMakeFavoritePanel;
+
     private Image favoriteButtonImage;
 
     private Generation generation;
@@ -52,6 +58,9 @@ public class CollectionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerStats.SetTutorialCompleted(TutorialStep.GoToCollection);
+        // pageSwiper will force a pageChanged, which will complete SwipeCollection, so SetActive should be above pageSwiper filling
+        tutorialSwipeCollectionPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeCollection));
         pageSwiper = pageHolder.GetComponent<PageSwiper>();
         singleNPNPageSwiper = singleNPNPageHolder.GetComponent<PageSwiper>();
         singleCardImage = singleCard.GetComponent<Image>();
@@ -216,6 +225,7 @@ public class CollectionController : MonoBehaviour
 
     private void SingleNPNStart(int nationalPokedexNumber)
     {
+        tutorialZoomCardPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.ZoomCard));
         GameManager.selectedNPN = nationalPokedexNumber;
         generation = PlayerStats.GetGeneration(GameManager.SelectedGeneration);
         cardsOfNumber = generation.cards[nationalPokedexNumber];
@@ -264,6 +274,11 @@ public class CollectionController : MonoBehaviour
             FillPage(pageNumber, pages[pageNumber]);
         }
         maxPageFilled = Mathf.Max(maxPageFilled, newMax);
+        if (currentPage > 0)
+        {
+            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+            tutorialSwipeCollectionPanel.SetActive(false);
+        }
     }
 
     public void OnSingleNPNPageChanged()
@@ -283,6 +298,8 @@ public class CollectionController : MonoBehaviour
         if (singleNPNPageHolder.activeSelf)
         {
             // from NPN to singleCard
+            PlayerStats.SetTutorialCompleted(TutorialStep.ZoomCard);
+            tutorialZoomCardPanel.SetActive(false);
             singleCardImage.sprite = image.sprite;
             currentSingle = ownedCard;
             singleCard.SetActive(true);
@@ -299,6 +316,9 @@ public class CollectionController : MonoBehaviour
         }
         else
         {
+            // for people clicking before swiping
+            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+            tutorialSwipeCollectionPanel.SetActive(false);
             // from generation to NPN
             SingleNPNStart(ownedCard.nationalPokedexNumber);
         }

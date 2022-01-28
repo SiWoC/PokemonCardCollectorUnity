@@ -1,3 +1,4 @@
+using Assets.Scripts.Classes.Globals;
 using Globals;
 using System;
 using System.Collections;
@@ -48,6 +49,10 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             int numberOfFrames = (int)((eventData.pressPosition.x - eventData.position.x) / stepWidth);
             AddFrame(numberOfFrames);
+            if (!PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack))
+            {
+                PlayerStats.SetTutorialCompleted(TutorialStep.OpenPack);
+            }
         }
     }
 

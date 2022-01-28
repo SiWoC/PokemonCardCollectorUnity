@@ -1,3 +1,5 @@
+using Assets.Scripts.Classes.Globals;
+using Globals;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +13,8 @@ public class PackContent : MonoBehaviour
 
     public GameObject normalCardsHolder;
     public GameObject specialCardsHolder;
+    public GameObject tutorialSpriteSwipeToBook;
+    public GameObject tutorialTextSwipeToBook;
 
     private Animator animator;
     private SpriteRenderer[] normalCardsSR;
@@ -19,6 +23,7 @@ public class PackContent : MonoBehaviour
     private BoxCollider2D[] cardsColliders;
     private float swapDelay = 0.25f;
     private int numberOfCards = 10;
+    private bool cardsEnabled;
 
     private void Awake()
     {
@@ -47,8 +52,18 @@ public class PackContent : MonoBehaviour
         normalCardsTF = normalCardsHolder.GetComponentsInChildren<Transform>(true);
         specialCardsSR = specialCardsHolder.GetComponentsInChildren<SpriteRenderer>(true);
         cardsColliders = GetComponentsInChildren<BoxCollider2D>(true);
+        tutorialSpriteSwipeToBook.SetActive(false);
+        tutorialTextSwipeToBook.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (cardsEnabled)
+        {
+            tutorialSpriteSwipeToBook.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook));
+            tutorialTextSwipeToBook.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook));
+        }
+    }
     public void Opened()
     {
         int i = 1;
@@ -69,6 +84,7 @@ public class PackContent : MonoBehaviour
         {
             bc.enabled = true;
         }
+        cardsEnabled = true;
     }
 
     //Animation Event

@@ -1,3 +1,4 @@
+using Assets.Scripts.Classes.Globals;
 using Factories;
 using Globals;
 using System;
@@ -15,6 +16,9 @@ public class OpeningController : MonoBehaviour
     public GameObject generationUnlockedPanel;
     public TextMeshProUGUI generationUnlockedText;
     public GameObject backButton;
+    public GameObject tutorialSelectPackPanel;
+    public GameObject tutorialOpenPackPanel;
+    public GameObject tutorialSwipeToBookPanel;
 
     private GameObject packInstance;
     private bool showGenerationUnlockedOnBack = false;
@@ -38,10 +42,20 @@ public class OpeningController : MonoBehaviour
     void Start()
     {
         packCanvas.gameObject.SetActive(false);
+        tutorialSelectPackPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SelectPack));
+        tutorialOpenPackPanel.SetActive(false);
         for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
         {
             GenerateOpenPackButton(i);
         }
+    }
+
+    private void Update()
+    {
+        tutorialSelectPackPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SelectPack));
+        // this might be responsibility of the Pack/Wrapper, but it is easier here on a 2D canvas
+        tutorialOpenPackPanel.SetActive(packCanvas.gameObject.activeSelf && 
+                                        !PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack));
     }
 
     private void GenerateOpenPackButton(int generation)
@@ -56,6 +70,7 @@ public class OpeningController : MonoBehaviour
 
     public void OnGenerationClick(int generation) 
     {
+        PlayerStats.SetTutorialCompleted(TutorialStep.SelectPack);
         generationsHolder.SetActive(false);
         packCanvas.gameObject.SetActive(true);
         if (packInstance != null)
