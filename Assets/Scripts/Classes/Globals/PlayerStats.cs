@@ -179,19 +179,27 @@ namespace Globals
             return returnValue;
         }
 
-        public static void SetFavorite(PossibleCard newFavorite)
+        public static bool ToggleFavorite(PossibleCard newFavorite)
         {
-            theInstance.favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
-            SaveData();
+            theInstance.favorites.TryGetValue(newFavorite.nationalPokedexNumber, out string favoriteId);
+            if (newFavorite.id == favoriteId) // un-favorite
+            {
+                theInstance.favorites.Remove(newFavorite.nationalPokedexNumber);
+                SaveData();
+                return false;
+            }
+            else {
+                theInstance.favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
+                SaveData();
+                return true;
+            }
         }
 
         public static bool GetTutorialCompleted (TutorialStep step)
         {
-            return true;
-            /*
+            //return true;
             theInstance.tutorialStepsCompleted.TryGetValue(step, out bool completed);
             return completed;
-            */
         }
 
         public static void SetTutorialCompleted(TutorialStep step)

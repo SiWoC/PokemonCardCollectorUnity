@@ -1,12 +1,20 @@
+using Assets.Scripts.Classes.Globals;
 using Globals;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WorkCoinPackController : MonoBehaviour
 {
+    public GameObject tutorialCoinsPacksPanel;
+
+    void Start()
+    {
+        tutorialCoinsPacksPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.CoinsPacks));
+    }
+
     public void OnCoinsClicked()
     {
+        PlayerStats.SetTutorialCompleted(TutorialStep.CoinsPacks);
+        tutorialCoinsPacksPanel.SetActive(false);
         GameManager.earnType = EarnType.Coins;
         GameManager.Forward("Assets/Scenes/WorkPickChore.unity");
     }
@@ -17,4 +25,13 @@ public class WorkCoinPackController : MonoBehaviour
         GameManager.Forward("Assets/Scenes/WorkPickChore.unity");
     }
 
+    public void OnBack()
+    {
+        // you must have earned enough to buy your first package
+        if (PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
+        {
+            PlayerStats.SetTutorialCompleted(TutorialStep.GoToWork);
+        }
+        GameManager.Back();
+    }
 }

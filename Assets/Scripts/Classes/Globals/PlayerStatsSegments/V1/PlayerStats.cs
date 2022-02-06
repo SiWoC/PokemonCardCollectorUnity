@@ -27,7 +27,7 @@ namespace Globals.PlayerStatsSegments.V1
         public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
         [OptionalField(VersionAdded = 2)]
         public Dictionary<int, string> favorites = new Dictionary<int, string>();
-        public Dictionary<TutorialStep, bool> tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
+        public Dictionary<TutorialStep, bool> tutorialStepsCompleted;
 
         private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
@@ -172,9 +172,12 @@ namespace Globals.PlayerStatsSegments.V1
             {
                 favorites = new Dictionary<int, string>();
             }
-            if (tutorialStepsCompleted == null || true) // debug
+            if (tutorialStepsCompleted == null)
             {
                 tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
+                // First free pack
+                generations[1].numberOfPacks += 1;
+                PushPack(1);
             }
 
         }

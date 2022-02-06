@@ -6,16 +6,20 @@ namespace Assets.Scripts.Classes.Globals
     public enum TutorialStep
     {
         GoToCollection,
-        SetFavorite,
+        SwipeCollection,
+        ZoomCard,
+        MakeFavorite,
         TurnInDoubles,
         GoToWork,
+        CoinsPacks,
+        PickChore,
+        WorkRotom,
         GoToShop,
         GoToOpening,
         SelectPack,
         OpenPack,
         SwipeToBook,
-        SwipeCollection,
-        ZoomCard
+        EarnCoins
     }
 
 }

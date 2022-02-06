@@ -1,10 +1,8 @@
+using Assets.Scripts.Classes.Globals;
 using Globals;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ChoreController : MonoBehaviour
@@ -14,10 +12,20 @@ public class ChoreController : MonoBehaviour
     public TextMeshProUGUI randomPackEarnedText;
     public Image randomPackImage;
     public GameObject bagImage;
+    public GameObject tutorialEarnCoinsPanel;
+    public TextMeshProUGUI tutorialTargetCoinsText;
 
     // Start is called before the first frame update
     void Start()
     {
+        tutorialEarnCoinsPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.EarnCoins));
+        tutorialTargetCoinsText.text = "Earn " + (GameManager.GetPriceInCents(1) / GameManager.coinFactor).ToString() + " Coins.";
+        /*
+        if (PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
+        {
+            PlayerStats.SetTutorialCompleted(TutorialStep.GoToWork);
+        }
+         */
         if (GameManager.earnType == EarnType.Coins)
         {
             bagImage.SetActive(false);

@@ -1,6 +1,5 @@
+using Assets.Scripts.Classes.Globals;
 using Globals;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopController : MonoBehaviour
@@ -13,6 +12,7 @@ public class ShopController : MonoBehaviour
 
     public void Buy(int generation)
     {
+        PlayerStats.SetTutorialCompleted(TutorialStep.GoToShop);
         GameManager.BuyPacks(generation);
     }
 

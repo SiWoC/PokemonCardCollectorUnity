@@ -1,6 +1,8 @@
+using Assets.Scripts.Classes.Globals;
 using Globals;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +10,7 @@ public class ChoreHolderButton : MonoBehaviour
 {
     public GameObject animatedImage;
     public Sprite[] frames;
+    public TextMeshProUGUI tutorialTargetCoinsText;
 
     private Image animatedSprite;
     private int frameNumber = 0;
@@ -33,6 +36,13 @@ public class ChoreHolderButton : MonoBehaviour
         frameNumber += direction;
         animatedSprite.sprite = frames[frameNumber];
         GameManager.ChoreClick();
+
+        if (!PlayerStats.GetTutorialCompleted(TutorialStep.EarnCoins) && PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
+        {
+            PlayerStats.SetTutorialCompleted(TutorialStep.EarnCoins);
+            tutorialTargetCoinsText.text = "Go to the Shop to spend those Coins.";
+        }
+
     }
 
 }

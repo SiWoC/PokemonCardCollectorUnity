@@ -67,8 +67,8 @@ namespace Globals
         {
             int generation = UnityEngine.Random.Range(1,PlayerStats.GetHighestUnlockedGeneration() + 1);
             PlayerStats.SetPacks(generation, 1); // SetPacks saves always
-            // TODO DEBUG NOT RESETTING
-            // PlayerStats.ResetRandomPackPercentage();
+            // FOR TESTMODUS COMMENT RESETTING
+            PlayerStats.ResetRandomPackPercentage();
             return generation;
         }
 

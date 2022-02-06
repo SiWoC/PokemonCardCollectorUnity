@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using PlayerStats = Globals.PlayerStats;
 
@@ -31,6 +30,7 @@ public class CollectionController : MonoBehaviour
     public GameObject tutorialSwipeCollectionPanel;
     public GameObject tutorialZoomCardPanel;
     public GameObject tutorialMakeFavoritePanel;
+    public GameObject tutorialTurnInDoublesPanel;
 
     private Image favoriteButtonImage;
 
@@ -110,6 +110,8 @@ public class CollectionController : MonoBehaviour
         }
         numberOfDoubles = PlayerStats.CheckDoubles(GameManager.SelectedGeneration);
         doublesButton.SetActive(numberOfDoubles > 0);
+        // 8 in 15000 chance that you get a double in your first pack
+        tutorialTurnInDoublesPanel.SetActive(numberOfDoubles > 0 && !PlayerStats.GetTutorialCompleted(TutorialStep.TurnInDoubles));
         // pageSwiper will publish event pageChanged which will fill some pages
         pageSwiper.BackToPage1();
     }
@@ -302,30 +304,46 @@ public class CollectionController : MonoBehaviour
             tutorialZoomCardPanel.SetActive(false);
             singleCardImage.sprite = image.sprite;
             currentSingle = ownedCard;
-            singleCard.SetActive(true);
-            if (ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)))
+            if(cardsOfNumber.Keys.Count > 1)
             {
-                favoriteButtonImage.color = new Color(1f, 1f, 1f);
-            } else
-            {
-                favoriteButtonImage.color = new Color(0f, 0f, 1f);
+                SetFavoriteButtonColor(ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)));
+                favoriteButton.SetActive(true);
+                tutorialMakeFavoritePanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.MakeFavorite));
             }
-            favoriteButton.SetActive(true);
             singleNPNPageHolder.SetActive(false);
             npnProgressText.gameObject.SetActive(false);
+            singleCard.SetActive(true);
         }
         else
         {
             // for people clicking before swiping
             PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
             tutorialSwipeCollectionPanel.SetActive(false);
+            // for people with the 8 in 15000 chance AND clicking before swiping
+            tutorialTurnInDoublesPanel.SetActive(false);
             // from generation to NPN
             SingleNPNStart(ownedCard.nationalPokedexNumber);
         }
     }
 
+    private void SetFavoriteButtonColor(bool red)
+    {
+        if (red)
+        {
+            favoriteButtonImage.color = new Color(1f, 1f, 1f);
+        }
+        else
+        {
+            favoriteButtonImage.color = new Color(0f, 0f, 1f);
+        }
+    }
+
     public void OnBack()
     {
+        tutorialZoomCardPanel.SetActive(false);
+        tutorialMakeFavoritePanel.SetActive(false);
+        tutorialTurnInDoublesPanel.SetActive(false);
+
         if (singleCard.activeSelf)
         {
             // from singleCard to NPN
@@ -367,6 +385,11 @@ public class CollectionController : MonoBehaviour
 
     public void OnDoublesClick()
     {
+        PlayerStats.SetTutorialCompleted(TutorialStep.TurnInDoubles);
+        tutorialTurnInDoublesPanel.SetActive(false);
+        // small chance AND trade doubles before click or swipe
+        PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+        tutorialSwipeCollectionPanel.SetActive(false);
         doublesText.text = string.Format("You have\r\n{0} double card(s)\r\nof this generation.\r\n\r\nDo you want to\r\ntrade them for\r\nClick - Power?", numberOfDoubles);
 
         finalClickPowerText.text = string.Format("Your Click-Power\r\nwill go from\r\n{0:0.00} to {1:0.00}",
@@ -390,10 +413,11 @@ public class CollectionController : MonoBehaviour
 
     public void OnFavoriteClick()
     {
-        PlayerStats.SetFavorite(currentSingle);
+        PlayerStats.SetTutorialCompleted(TutorialStep.MakeFavorite);
+        tutorialMakeFavoritePanel.SetActive(false);
+        SetFavoriteButtonColor(PlayerStats.ToggleFavorite(currentSingle));
         // yes, now smallImage contains a largeImage, but it's already loaded so I don't care
         smallImages[currentSingle.nationalPokedexNumber].sprite = singleCardImage.sprite;
-        favoriteButtonImage.color = new Color(1f,1f,1f);
     }
 
 }
