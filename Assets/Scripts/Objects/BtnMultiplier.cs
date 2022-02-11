@@ -38,6 +38,6 @@ public class BtnMultiplier : MonoBehaviour
         }
         GameManager.SelectedMultiplier = values[index];
         // FOR TESTMODUS, EASY EARNING
-        // PlayerStats.AddCoins(36912);
+        PlayerStats.AddCoins(36912);
     }
 }

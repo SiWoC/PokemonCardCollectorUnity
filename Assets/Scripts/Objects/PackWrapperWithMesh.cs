@@ -13,7 +13,8 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private int generation;
     private float easing = 1.5f;
-    private MeshFilter meshFilter;
+    //private MeshFilter meshFilter;
+    private SkinnedMeshRenderer skinedMeshRenderer;
     private bool opened = false;
     private int frame = 0;
     private int framesHandled = 0;
@@ -25,20 +26,21 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         Pack pack = GetComponentInParent<Pack>();
         generation = pack.generation;
-        meshFilter = GetComponent<MeshFilter>();
-        Renderer renderer = GetComponent<Renderer>();
-        renderer.material = GenerateMaterial();
-        
+        //meshFilter = GetComponent<MeshFilter>();
+        skinedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+        skinedMeshRenderer.material = GenerateMaterial();
+
         // Getting meshRendering in front of sprite rendering of cards
-        renderer.sortingLayerName = "Default";
-        renderer.sortingOrder = 25;
+        skinedMeshRenderer.sortingLayerName = "Default";
+        skinedMeshRenderer.sortingOrder = 25;
 
         stepWidth = (int)((Screen.width / frames.Length) * stepWidthCoverage * -1);
     }
 
     private Material GenerateMaterial()
     {
-        Material material = new Material(Shader.Find("Sprites/Default"));
+        //Material material = new Material(Shader.Find("Sprites/Default"));
+        Material material = new Material(Shader.Find("Unlit/Transparent Cutout"));
         material.mainTexture = Resources.Load<Texture>("Images/Packs/" + PlayerStats.GetNextPack(generation)); // zonder png !!!
         return material;
     }
@@ -62,7 +64,7 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             frame = Math.Min(frame + numberOfFrames - framesHandled, frames.Length - 1);
             framesHandled = numberOfFrames;
-            meshFilter.mesh = frames[frame].GetComponentInChildren<MeshFilter>().sharedMesh;
+            skinedMeshRenderer.sharedMesh = frames[frame].GetComponentInChildren<MeshFilter>().sharedMesh;
         }
     }
 
@@ -72,7 +74,7 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             opened = true;
             // getting tearoff completely out of view
-            meshFilter.mesh = swipeDownFrame.GetComponentInChildren<MeshFilter>().sharedMesh;
+            skinedMeshRenderer.sharedMesh = swipeDownFrame.GetComponentInChildren<MeshFilter>().sharedMesh;
             StartCoroutine(SmoothMove(transform.position, new Vector3(transform.position.x, -100, transform.position.z)));
             GetComponentInParent<Pack>().Opened();
         }
