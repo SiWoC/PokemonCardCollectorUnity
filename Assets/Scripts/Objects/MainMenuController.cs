@@ -56,4 +56,14 @@ public class MainMenuController : MonoBehaviour
         GameManager.Forward("Assets/Scenes/Opening.unity");
     }
 
+    public void OnStatisticsClicked()
+    {
+        GameManager.Forward("Assets/Scenes/Statistics.unity");
+    }
+
+    public void OnSettingsClicked()
+    {
+        GameManager.Forward("Assets/Scenes/Settings.unity");
+    }
+
 }
