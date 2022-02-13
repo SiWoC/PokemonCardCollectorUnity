@@ -119,6 +119,21 @@ namespace Globals.PlayerStatsSegments.V1
             return playerStats;
         }
 
+        public int GetAvailablePacks()
+        {
+            int numberOfPacks = 0;
+            foreach (Generation generation in generations.Values)
+            {
+                numberOfPacks += generation.numberOfPacks;
+            }
+            return numberOfPacks;
+        }
+
+        public int GetAvailablePacks(int generation)
+        {
+            return generations[generation].numberOfPacks;
+        }
+
         private void Initialize()
         {
 
@@ -204,6 +219,16 @@ namespace Globals.PlayerStatsSegments.V1
                 favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
                 return true;
             }
+        }
+
+        internal int GetNumberOfOwnedCards(int generation)
+        {
+            int numberOfOwnedCards = 0;
+            foreach (Dictionary<string, PossibleCard> npnCards in generations[generation].cards.Values)
+            {
+                numberOfOwnedCards += npnCards.Count;
+            }
+            return numberOfOwnedCards;
         }
 
         public bool GetTutorialStepCompleted(TutorialStep step)

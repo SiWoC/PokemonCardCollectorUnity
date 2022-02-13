@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SettingsController : MonoBehaviour
 {
     public Slider showTutorial;
+    public Button restarTutorialButton;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,7 @@ public class SettingsController : MonoBehaviour
         {
             showTutorial.value = 0;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        restarTutorialButton.interactable = (PlayerStats.GetAvailablePacks() > 0);
     }
 
     public void OnShowTutorialChanged()

@@ -207,5 +207,20 @@ namespace Factories
             }
         }
 
+        public static int GetTotalNumberOfCards()
+        {
+            int totalNumber = 0;
+            foreach (PossibleCardList pcl in cardSets.Values)
+            {
+                totalNumber += pcl.possibleCard.Length;
+            }
+            return totalNumber;
+        }
+
+        public static int GetTotalNumberOfCards(int generation)
+        {
+            return cardSets["gen" + generation + "-special"].possibleCard.Length + cardSets["gen" + generation + "-normal"].possibleCard.Length;
+        }
+
     }
 }

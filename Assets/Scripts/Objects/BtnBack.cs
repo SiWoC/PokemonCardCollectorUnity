@@ -8,4 +8,11 @@ public class BtnBack : MonoBehaviour
         GameManager.Back();
     }
 
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GameManager.Back();
+        }
+    }
 }

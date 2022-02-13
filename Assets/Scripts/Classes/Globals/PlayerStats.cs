@@ -113,9 +113,14 @@ namespace Globals
             PlayerStatsSegments.V1.PlayerStats.SaveData(theInstance);
         }
 
+        public static int GetAvailablePacks()
+        {
+            return theInstance.GetAvailablePacks();
+        }
+
         public static int GetAvailablePacks(int generation)
         {
-            return theInstance.generations[generation].numberOfPacks;
+            return theInstance.GetAvailablePacks(generation);
         }
 
         public static bool IsGenerationUnlocked(int generation)
@@ -211,6 +216,11 @@ namespace Globals
         {
             theInstance.RestartTutorial();
             SaveData();
+        }
+
+        public static int GetNumberOfOwnedCards(int generation)
+        {
+            return theInstance.GetNumberOfOwnedCards(generation);
         }
 
     } // playerStats
