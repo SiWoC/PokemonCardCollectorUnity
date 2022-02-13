@@ -12,7 +12,7 @@ public class ShopController : MonoBehaviour
 
     public void Buy(int generation)
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.GoToShop);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.GoToShop);
         GameManager.BuyPacks(generation);
     }
 

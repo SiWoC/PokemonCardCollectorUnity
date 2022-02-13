@@ -91,9 +91,9 @@ public class Card : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public void OnEndDrag(PointerEventData data)
     {
-        if (!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook))
+        if (PlayerStats.GetShowTutorialStep(TutorialStep.SwipeToBook))
         {
-            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeToBook);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.SwipeToBook);
         }
         StartCoroutine(SmoothMove(transform.position, transform.localScale));
     }

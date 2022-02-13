@@ -8,12 +8,12 @@ public class WorkCoinPackController : MonoBehaviour
 
     void Start()
     {
-        tutorialCoinsPacksPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.CoinsPacks));
+        tutorialCoinsPacksPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.CoinsPacks));
     }
 
     public void OnCoinsClicked()
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.CoinsPacks);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.CoinsPacks);
         tutorialCoinsPacksPanel.SetActive(false);
         GameManager.earnType = EarnType.Coins;
         GameManager.Forward("Assets/Scenes/WorkPickChore.unity");
@@ -30,7 +30,7 @@ public class WorkCoinPackController : MonoBehaviour
         // you must have earned enough to buy your first package
         if (PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
         {
-            PlayerStats.SetTutorialCompleted(TutorialStep.GoToWork);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.GoToWork);
         }
         GameManager.Back();
     }

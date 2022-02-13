@@ -51,9 +51,9 @@ public class PackWrapperWithMesh : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             int numberOfFrames = (int)((eventData.pressPosition.x - eventData.position.x) / stepWidth);
             AddFrame(numberOfFrames);
-            if (!PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack))
+            if (PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack))
             {
-                PlayerStats.SetTutorialCompleted(TutorialStep.OpenPack);
+                PlayerStats.SetTutorialStepCompleted(TutorialStep.OpenPack);
             }
         }
     }

@@ -18,7 +18,7 @@ public class ChoreController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tutorialEarnCoinsPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.EarnCoins));
+        tutorialEarnCoinsPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.EarnCoins));
         tutorialTargetCoinsText.text = "Earn " + (GameManager.GetPriceInCents(1) / GameManager.coinFactor).ToString() + " Coins.";
         /*
         if (PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))

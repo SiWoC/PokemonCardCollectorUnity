@@ -42,7 +42,7 @@ public class OpeningController : MonoBehaviour
     void Start()
     {
         packCanvas.gameObject.SetActive(false);
-        tutorialSelectPackPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SelectPack));
+        tutorialSelectPackPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SelectPack));
         tutorialOpenPackPanel.SetActive(false);
         for (int i = 1; i <= CardFactory.numberOfGenerations; i++)
         {
@@ -52,10 +52,10 @@ public class OpeningController : MonoBehaviour
 
     private void Update()
     {
-        tutorialSelectPackPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SelectPack));
+        tutorialSelectPackPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SelectPack));
         // this might be responsibility of the Pack/Wrapper, but it is easier here on a 2D canvas
         tutorialOpenPackPanel.SetActive(packCanvas.gameObject.activeSelf && 
-                                        !PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack));
+                                        PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack));
     }
 
     private void GenerateOpenPackButton(int generation)
@@ -70,7 +70,7 @@ public class OpeningController : MonoBehaviour
 
     public void OnGenerationClick(int generation) 
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.SelectPack);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.SelectPack);
         generationsHolder.SetActive(false);
         packCanvas.gameObject.SetActive(true);
         if (packInstance != null)

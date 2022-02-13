@@ -175,37 +175,43 @@ namespace Globals
 
         public static string GetFavorite(int nationalPokedexNumber)
         {
-            theInstance.favorites.TryGetValue(nationalPokedexNumber, out string returnValue);
-            return returnValue;
+            return theInstance.GetFavorite(nationalPokedexNumber);
         }
 
         public static bool ToggleFavorite(PossibleCard newFavorite)
         {
-            theInstance.favorites.TryGetValue(newFavorite.nationalPokedexNumber, out string favoriteId);
-            if (newFavorite.id == favoriteId) // un-favorite
-            {
-                theInstance.favorites.Remove(newFavorite.nationalPokedexNumber);
-                SaveData();
-                return false;
-            }
-            else {
-                theInstance.favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
-                SaveData();
-                return true;
-            }
+            bool newValue = theInstance.ToggleFavorite(newFavorite);
+            SaveData();
+            return newValue;
         }
 
-        public static bool GetTutorialCompleted (TutorialStep step)
+        public static bool GetShowTutorialStep (TutorialStep step)
         {
-            //return true;
-            theInstance.tutorialStepsCompleted.TryGetValue(step, out bool completed);
-            return completed;
+            return theInstance.GetShowTutorial() && !theInstance.GetTutorialStepCompleted(step);
         }
 
-        public static void SetTutorialCompleted(TutorialStep step)
+        public static void SetTutorialStepCompleted(TutorialStep step)
         {
-            theInstance.tutorialStepsCompleted[step] = true;
+            theInstance.SetTutorialStepCompleted(step);
             SaveData();
         }
-    }
-}
+
+        public static void SetShowTutorial(bool showTutorial)
+        {
+            theInstance.SetShowTutorial(showTutorial);
+            SaveData();
+        }
+
+        public static bool GetShowTutorial()
+        {
+            return theInstance.GetShowTutorial();
+        }
+
+        public static void RestartTutorial()
+        {
+            theInstance.RestartTutorial();
+            SaveData();
+        }
+
+    } // playerStats
+} // namespace

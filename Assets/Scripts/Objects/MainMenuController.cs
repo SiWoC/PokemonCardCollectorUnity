@@ -22,18 +22,26 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
-        tutorialGoToOpeningPanels.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack));
-        tutorialGoToCollectionPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToCollection));
-        tutorialGoToWorkPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.GoToCollection) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToWork));
-        tutorialGoToShopPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.GoToWork) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToShop));
+        SetPanelVisibility();
     }
 
     private void Update()
     {
-        tutorialGoToOpeningPanels.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack));
-        tutorialGoToCollectionPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.OpenPack) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToCollection));
-        tutorialGoToWorkPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.GoToCollection) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToWork));
-        tutorialGoToShopPanels.SetActive(PlayerStats.GetTutorialCompleted(TutorialStep.GoToWork) && !PlayerStats.GetTutorialCompleted(TutorialStep.GoToShop));
+        SetPanelVisibility();
+    }
+
+    private void SetPanelVisibility()
+    {
+        tutorialGoToOpeningPanels.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack));
+        tutorialGoToCollectionPanels.SetActive(!PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack)
+                                            && PlayerStats.GetShowTutorialStep(TutorialStep.GoToCollection));
+        tutorialGoToWorkPanels.SetActive(!PlayerStats.GetShowTutorialStep(TutorialStep.GoToCollection)
+                                            && !PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack)
+                                            && PlayerStats.GetShowTutorialStep(TutorialStep.GoToWork));
+        tutorialGoToShopPanels.SetActive(!PlayerStats.GetShowTutorialStep(TutorialStep.GoToCollection)
+                                            && !PlayerStats.GetShowTutorialStep(TutorialStep.OpenPack)
+                                            && !PlayerStats.GetShowTutorialStep(TutorialStep.GoToWork)
+                                            && PlayerStats.GetShowTutorialStep(TutorialStep.GoToShop));
     }
 
     public void OnCollectionClicked()

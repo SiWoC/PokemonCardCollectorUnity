@@ -10,12 +10,12 @@ public class WorkPickChoreController : MonoBehaviour
 
     void Start()
     {
-        tutorialPickChorePanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.PickChore));
+        tutorialPickChorePanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.PickChore));
     }
 
     public void OnRotomClicked()
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.PickChore);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.PickChore);
         tutorialPickChorePanel.SetActive(false);
         GameManager.Forward("Assets/Scenes/WorkChargingRotom.unity");
     }

@@ -20,14 +20,16 @@ namespace Globals.PlayerStatsSegments.V1
         public int version;
         private int coins = 0;
         private int randomPackagePercentage = 0;
-        private static DateTime lastSave = DateTime.UtcNow;
+        private DateTime lastSave = DateTime.UtcNow;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
         public int highestUnlockedGeneration = 1;
         public int clickPower = GameManager.coinFactor;
         public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
+        
         [OptionalField(VersionAdded = 2)]
-        public Dictionary<int, string> favorites = new Dictionary<int, string>();
-        public Dictionary<TutorialStep, bool> tutorialStepsCompleted;
+        private Dictionary<int, string> favorites = new Dictionary<int, string>();
+        private bool showTutorial = true;
+        private Dictionary<TutorialStep, bool> tutorialStepsCompleted;
 
         private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
@@ -90,7 +92,7 @@ namespace Globals.PlayerStatsSegments.V1
             Initialize();
         }
 
-        public static void SaveDataTimed(PlayerStats playerStats)
+        public void SaveDataTimed(PlayerStats playerStats)
         {
             if (lastSave.AddSeconds(5) < DateTime.UtcNow)
             {
@@ -174,6 +176,7 @@ namespace Globals.PlayerStatsSegments.V1
             }
             if (tutorialStepsCompleted == null)
             {
+                showTutorial = true;
                 tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
                 // First free pack
                 generations[1].numberOfPacks += 1;
@@ -182,5 +185,52 @@ namespace Globals.PlayerStatsSegments.V1
 
         }
 
+        public string GetFavorite(int nationalPokedexNumber)
+        {
+            favorites.TryGetValue(nationalPokedexNumber, out string returnValue);
+            return returnValue;
+        }
+
+        public bool ToggleFavorite(PossibleCard newFavorite)
+        {
+            favorites.TryGetValue(newFavorite.nationalPokedexNumber, out string favoriteId);
+            if (newFavorite.id == favoriteId) // un-favorite
+            {
+                favorites.Remove(newFavorite.nationalPokedexNumber);
+                return false;
+            }
+            else
+            {
+                favorites[newFavorite.nationalPokedexNumber] = newFavorite.id;
+                return true;
+            }
+        }
+
+        public bool GetTutorialStepCompleted(TutorialStep step)
+        {
+            tutorialStepsCompleted.TryGetValue(step, out bool completed);
+            return completed;
+        }
+
+        public void SetTutorialStepCompleted(TutorialStep step)
+        {
+            tutorialStepsCompleted[step] = true;
+        }
+
+        public void SetShowTutorial(bool value)
+        {
+            this.showTutorial = value;
+        }
+
+        public bool GetShowTutorial()
+        {
+            return this.showTutorial;
+        }
+
+        public void RestartTutorial()
+        {
+            showTutorial = true;
+            tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
+        }
     } // playerStats
 } // namespace

@@ -60,8 +60,8 @@ public class PackContent : MonoBehaviour
     {
         if (cardsEnabled)
         {
-            tutorialSpriteSwipeToBook.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook));
-            tutorialTextSwipeToBook.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeToBook));
+            tutorialSpriteSwipeToBook.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SwipeToBook));
+            tutorialTextSwipeToBook.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SwipeToBook));
         }
     }
     public void Opened()

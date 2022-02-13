@@ -58,9 +58,9 @@ public class CollectionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.GoToCollection);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.GoToCollection);
         // pageSwiper will force a pageChanged, which will complete SwipeCollection, so SetActive should be above pageSwiper filling
-        tutorialSwipeCollectionPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.SwipeCollection));
+        tutorialSwipeCollectionPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SwipeCollection));
         pageSwiper = pageHolder.GetComponent<PageSwiper>();
         singleNPNPageSwiper = singleNPNPageHolder.GetComponent<PageSwiper>();
         singleCardImage = singleCard.GetComponent<Image>();
@@ -111,7 +111,7 @@ public class CollectionController : MonoBehaviour
         numberOfDoubles = PlayerStats.CheckDoubles(GameManager.SelectedGeneration);
         doublesButton.SetActive(numberOfDoubles > 0);
         // 8 in 15000 chance that you get a double in your first pack
-        tutorialTurnInDoublesPanel.SetActive(numberOfDoubles > 0 && !PlayerStats.GetTutorialCompleted(TutorialStep.TurnInDoubles));
+        tutorialTurnInDoublesPanel.SetActive(numberOfDoubles > 0 && PlayerStats.GetShowTutorialStep(TutorialStep.TurnInDoubles));
         // pageSwiper will publish event pageChanged which will fill some pages
         pageSwiper.BackToPage1();
     }
@@ -227,7 +227,7 @@ public class CollectionController : MonoBehaviour
 
     private void SingleNPNStart(int nationalPokedexNumber)
     {
-        tutorialZoomCardPanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.ZoomCard));
+        tutorialZoomCardPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.ZoomCard));
         GameManager.selectedNPN = nationalPokedexNumber;
         generation = PlayerStats.GetGeneration(GameManager.SelectedGeneration);
         cardsOfNumber = generation.cards[nationalPokedexNumber];
@@ -278,7 +278,7 @@ public class CollectionController : MonoBehaviour
         maxPageFilled = Mathf.Max(maxPageFilled, newMax);
         if (currentPage > 0)
         {
-            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.SwipeCollection);
             tutorialSwipeCollectionPanel.SetActive(false);
         }
     }
@@ -300,7 +300,7 @@ public class CollectionController : MonoBehaviour
         if (singleNPNPageHolder.activeSelf)
         {
             // from NPN to singleCard
-            PlayerStats.SetTutorialCompleted(TutorialStep.ZoomCard);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.ZoomCard);
             tutorialZoomCardPanel.SetActive(false);
             singleCardImage.sprite = image.sprite;
             currentSingle = ownedCard;
@@ -308,7 +308,7 @@ public class CollectionController : MonoBehaviour
             {
                 SetFavoriteButtonColor(ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)));
                 favoriteButton.SetActive(true);
-                tutorialMakeFavoritePanel.SetActive(!PlayerStats.GetTutorialCompleted(TutorialStep.MakeFavorite));
+                tutorialMakeFavoritePanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.MakeFavorite));
             }
             singleNPNPageHolder.SetActive(false);
             npnProgressText.gameObject.SetActive(false);
@@ -317,7 +317,7 @@ public class CollectionController : MonoBehaviour
         else
         {
             // for people clicking before swiping
-            PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.SwipeCollection);
             tutorialSwipeCollectionPanel.SetActive(false);
             // for people with the 8 in 15000 chance AND clicking before swiping
             tutorialTurnInDoublesPanel.SetActive(false);
@@ -385,10 +385,10 @@ public class CollectionController : MonoBehaviour
 
     public void OnDoublesClick()
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.TurnInDoubles);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.TurnInDoubles);
         tutorialTurnInDoublesPanel.SetActive(false);
         // small chance AND trade doubles before click or swipe
-        PlayerStats.SetTutorialCompleted(TutorialStep.SwipeCollection);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.SwipeCollection);
         tutorialSwipeCollectionPanel.SetActive(false);
         doublesText.text = string.Format("You have\r\n{0} double card(s)\r\nof this generation.\r\n\r\nDo you want to\r\ntrade them for\r\nClick - Power?", numberOfDoubles);
 
@@ -413,7 +413,7 @@ public class CollectionController : MonoBehaviour
 
     public void OnFavoriteClick()
     {
-        PlayerStats.SetTutorialCompleted(TutorialStep.MakeFavorite);
+        PlayerStats.SetTutorialStepCompleted(TutorialStep.MakeFavorite);
         tutorialMakeFavoritePanel.SetActive(false);
         SetFavoriteButtonColor(PlayerStats.ToggleFavorite(currentSingle));
         // yes, now smallImage contains a largeImage, but it's already loaded so I don't care

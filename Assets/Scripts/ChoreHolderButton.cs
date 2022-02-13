@@ -37,9 +37,9 @@ public class ChoreHolderButton : MonoBehaviour
         animatedSprite.sprite = frames[frameNumber];
         GameManager.ChoreClick();
 
-        if (!PlayerStats.GetTutorialCompleted(TutorialStep.EarnCoins) && PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
+        if (PlayerStats.GetShowTutorialStep(TutorialStep.EarnCoins) && PlayerStats.GetCoins() >= GameManager.GetPriceInCents(1))
         {
-            PlayerStats.SetTutorialCompleted(TutorialStep.EarnCoins);
+            PlayerStats.SetTutorialStepCompleted(TutorialStep.EarnCoins);
             tutorialTargetCoinsText.text = "Go to the Shop to spend those Coins.";
         }
 
