@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class SwipeToTarget : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    public GameObject deactivateOnDone;
+    public GameObject[] deactivateOnDone;
     public GameObject target;
     public Vector3 offset;
     private float easing = 0.7f;
@@ -44,7 +44,10 @@ public class SwipeToTarget : MonoBehaviour, IDragHandler, IEndDragHandler
         }
         if (deactivateOnDone != null)
         {
-            deactivateOnDone.SetActive(false);
+            foreach (GameObject toDeactivate in deactivateOnDone)
+            {
+                toDeactivate.SetActive(false);
+            }
         }
         transform.localPosition = startPosition;
         transform.localScale = startingScale;

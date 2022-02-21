@@ -38,6 +38,9 @@ public class BtnMultiplier : MonoBehaviour
         }
         GameManager.SelectedMultiplier = values[index];
         // FOR TESTMODUS, EASY EARNING
-        PlayerStats.AddCoins(36912);
+        if (SystemInfo.deviceModel.Contains("U11") || SystemInfo.deviceName.Equals("NIEK-LEVEL40") )
+        {
+            PlayerStats.AddCoins(36912);
+        }
     }
 }

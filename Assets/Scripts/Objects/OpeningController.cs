@@ -18,7 +18,7 @@ public class OpeningController : MonoBehaviour
     public GameObject backButton;
     public GameObject tutorialSelectPackPanel;
     public GameObject tutorialOpenPackPanel;
-    public GameObject tutorialSwipeToBookPanel;
+    public GameObject book;
 
     private GameObject packInstance;
     private bool showGenerationUnlockedOnBack = false;
@@ -41,6 +41,7 @@ public class OpeningController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        book.SetActive(false);
         packCanvas.gameObject.SetActive(false);
         tutorialSelectPackPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SelectPack));
         tutorialOpenPackPanel.SetActive(false);
@@ -103,11 +104,13 @@ public class OpeningController : MonoBehaviour
     private void PackOpened(int generation)
     {
         backButton.SetActive(false);
+        book.SetActive(true);
     }
 
     private void AllCardsSwipedEvent()
     {
         backButton.SetActive(true);
+        book.SetActive(false);
         OnBack();
     }
 

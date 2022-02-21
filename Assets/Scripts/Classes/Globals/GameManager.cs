@@ -66,9 +66,7 @@ namespace Globals
         private static int AddRandomPack()
         {
             int generation = UnityEngine.Random.Range(1,PlayerStats.GetHighestUnlockedGeneration() + 1);
-            PlayerStats.SetPacks(generation, 1); // SetPacks saves always
-            // FOR TESTMODUS COMMENT RESETTING
-            PlayerStats.ResetRandomPackPercentage();
+            PlayerStats.AddRandomPack(generation);
             return generation;
         }
 
@@ -90,7 +88,7 @@ namespace Globals
         {
             if (earnType == EarnType.Coins)
             {
-                PlayerStats.AddClick();
+                PlayerStats.AddCoinClick();
             } else
             {
                 PlayerStats.AddRandomPackPercentage(CalculateRandomPackclick());
@@ -120,23 +118,24 @@ namespace Globals
              *  click = percentageFactor / 370
              */
             //Debug.Log("randomPackClick: " + percentageFactor / average);
-            return percentageFactor / average;
+            //Debug.Log("clickpower: " + PlayerStats.GetClickPower());
+            return (PlayerStats.GetClickPower() / 100) * percentageFactor / average;
         }
 
         public static void BuyPacks(int generation)
         {
             if (PlayerStats.GetCoins() < (selectedMultiplier * GetPriceInCents(generation))) return; // not enough money?? Bug? Hack?
             PlayerStats.AddCoins(-1 * selectedMultiplier * GetPriceInCents(generation));  // Coins setter saves timed
-            PlayerStats.SetPacks(generation, selectedMultiplier); // SetPacks saves always
+            PlayerStats.AddPacks(generation, selectedMultiplier); // AddPacks saves always
         }
 
         public static void OpenedPack(int generation, System.Collections.Generic.List<PossibleCard> cardInThisPack)
         {
-            PlayerStats.SetPacks(generation, -1); // SetPacks saves always
             foreach (PossibleCard card in cardInThisPack)
             {
                 AddCardToCollection(card);
             }
+            PlayerStats.OpenPack(generation); // AddPacks saves always
             if (generation == PlayerStats.GetHighestUnlockedGeneration())
             {
                 if (PlayerStats.GetGeneration(generation).cards.Count > (CardFactory.numberOfNPNsInGeneration[generation] * 2/3))

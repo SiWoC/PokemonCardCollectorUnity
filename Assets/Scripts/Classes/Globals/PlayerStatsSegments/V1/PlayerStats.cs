@@ -19,39 +19,86 @@ namespace Globals.PlayerStatsSegments.V1
 
         public int version;
         private int coins = 0;
-        private int randomPackagePercentage = 0;
+        private int randomPackPercentage = 0;
         private DateTime lastSave = DateTime.UtcNow;
         public Dictionary<int, Generation> generations = new Dictionary<int, Generation>();
-        public int highestUnlockedGeneration = 1;
+        private int highestUnlockedGeneration = 1;
         public int clickPower = GameManager.coinFactor;
         public Dictionary<int, string[]> packStacks = new Dictionary<int, string[]>();
-        
+
         [OptionalField(VersionAdded = 2)]
         private Dictionary<int, string> favorites = new Dictionary<int, string>();
         private bool showTutorial = true;
         private Dictionary<TutorialStep, bool> tutorialStepsCompleted;
+        // Statistics
+        private int statsTotalCoins = 0;
+        private int statsRandomPacks = 0;
+        private int statsTotalClicks = 0;
+        private int statsPacksOpenend = 0;
+        private int statsDoublesTradedIn = 0;
+
 
         private int[] currentStackIndex = new int[CardFactory.numberOfGenerations + 1];
 
         static BinaryFormatter formatter = new BinaryFormatter();
 
-        public int Coins
+        public int GetCoins()
         {
-            get => coins;
-            set
-            {
-                coins = value;
-                SaveDataTimed(this);
-            }
+            return this.coins;
         }
 
-        public int RandomPackagePercentage
+        public void AddCoins(int coins)
         {
-            get => randomPackagePercentage;
-            set
+            this.coins += coins;
+            SaveDataTimed(this);
+        }
+
+        public void AddCoinClick()
+        {
+            this.coins += this.clickPower;
+            this.statsTotalCoins += this.clickPower;
+            this.statsTotalClicks += 1;
+            SaveDataTimed(this);
+        }
+
+        public int GetRandomPackPercentage()
+        {
+            return this.randomPackPercentage;
+        }
+
+        public void AddRandomPackPercentage(int percentage)
+        {
+            this.randomPackPercentage += percentage;
+            this.statsTotalClicks += 1;
+            SaveDataTimed(this);
+        }
+
+        public void ResetRandomPackPercentage()
+        {
+            this.randomPackPercentage = 0;
+        }
+
+        public void AddRandomPack(int generation)
+        {
+            SetPacks(generation, 1);
+            this.statsRandomPacks += 1;
+            // FOR TESTMODUS COMMENT RESETTING
+            ResetRandomPackPercentage();
+        }
+
+        public void SetPacks(int generation, int numberOfPacks)
+        {
+            this.generations[generation].numberOfPacks += numberOfPacks;
+            for (int i = 0; i < Math.Abs(numberOfPacks); i++)
             {
-                randomPackagePercentage = value;
-                SaveDataTimed(this);
+                if (numberOfPacks > 0)
+                {
+                    PushPack(generation);
+                }
+                else
+                {
+                    PopPack(generation);
+                }
             }
         }
 
@@ -65,6 +112,18 @@ namespace Globals.PlayerStatsSegments.V1
         {
             CheckPackStack(generation);
             return packStacks[generation][currentStackIndex[generation] - 1].Replace("small", "basic").Replace("big", "stage2");
+        }
+
+        public void UnlockNextGeneration()
+        {
+            this.highestUnlockedGeneration++;
+            this.generations[this.highestUnlockedGeneration].unlocked = true;
+        }
+
+
+        internal int GetHighestUnlockedGeneration()
+        {
+            return this.highestUnlockedGeneration;
         }
 
         public void PopPack(int generation)
@@ -109,6 +168,25 @@ namespace Globals.PlayerStatsSegments.V1
 
         }
 
+        public void TradeInDoubles(int generation)
+        {
+            int numberOfDoubles = 0;
+            Dictionary<int, Dictionary<string, PossibleCard>> ownedNPNs = this.generations[generation].cards;
+            foreach (Dictionary<string, PossibleCard> ownedCardsOfNpn in ownedNPNs.Values)
+            {
+                foreach (PossibleCard ownedCard in ownedCardsOfNpn.Values)
+                {
+                    if (ownedCard.numberOwned > 1)
+                    {
+                        numberOfDoubles += (ownedCard.numberOwned - 1);
+                        ownedCard.numberOwned = 1;
+                    }
+                }
+            }
+            this.clickPower += numberOfDoubles;
+            this.statsDoublesTradedIn += numberOfDoubles;
+        }
+
         public static PlayerStats LoadData()
         {
             
@@ -117,6 +195,12 @@ namespace Globals.PlayerStatsSegments.V1
             saveFile.Close();
             playerStats.Initialize();
             return playerStats;
+        }
+
+        public void OpenPack(int generation)
+        {
+            SetPacks(generation, -1);
+            this.statsPacksOpenend += 1;
         }
 
         public int GetAvailablePacks()
@@ -197,6 +281,19 @@ namespace Globals.PlayerStatsSegments.V1
                 generations[1].numberOfPacks += 1;
                 PushPack(1);
             }
+            // estimating starting stats
+            if (statsTotalCoins < coins)
+            {
+                statsTotalCoins = coins;
+                statsTotalClicks = coins / clickPower;
+                statsDoublesTradedIn = clickPower - 100;
+                int totalNumberOwned = 0;
+                for (int generation = 1; generation <= GetHighestUnlockedGeneration(); generation++)
+                {
+                    totalNumberOwned += GetNumberOfOwnedCards(generation); 
+                }
+                statsPacksOpenend = (totalNumberOwned + 9) / 10;
+            }
 
         }
 
@@ -257,5 +354,32 @@ namespace Globals.PlayerStatsSegments.V1
             showTutorial = true;
             tutorialStepsCompleted = new Dictionary<TutorialStep, bool>();
         }
+
+        // Statistics
+        public int GetStatsTotalCoins()
+        {
+            return this.statsTotalCoins;
+        }
+
+        public int GetStatsRandomPacks()
+        {
+            return this.statsRandomPacks;
+        }
+
+        public int GetStatsTotalClicks()
+        {
+            return this.statsTotalClicks;
+        }
+
+        public int GetStatsPacksOpened()
+        {
+            return this.statsPacksOpenend;
+        }
+
+        public int GetStatsDoublesTradedIn()
+        {
+            return this.statsDoublesTradedIn;
+        }
+
     } // playerStats
 } // namespace

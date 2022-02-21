@@ -26,10 +26,7 @@ public class ChoreController : MonoBehaviour
             PlayerStats.SetTutorialCompleted(TutorialStep.GoToWork);
         }
          */
-        if (GameManager.earnType == EarnType.Coins)
-        {
-            bagImage.SetActive(false);
-        }
+        bagImage.SetActive(false);
     }
 
     private void Awake()
@@ -48,6 +45,7 @@ public class ChoreController : MonoBehaviour
         randomPackImage.sprite = Resources.Load<Sprite>("Images/Packs/" + PlayerStats.GetNextPack(generation)); // zonder png !!!
         randomPackEarnedText.text = "You earned\r\na pack of\r\ngeneration " + generation + "!!!";
         randomPackEarnedPanel.SetActive(true);
+        bagImage.SetActive(true);
     }
 
 }

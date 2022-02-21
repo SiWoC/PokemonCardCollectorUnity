@@ -302,6 +302,8 @@ MonoBehaviour:
     type: 3}
   statisticsGroupDividerPrefab: {fileID: 3743570084821994611, guid: c34316c99cfc1894a8bae9f01bb3cd00,
     type: 3}
+  statisticsGroupNumberPrefab: {fileID: 1097307756485593780, guid: ea66b17cee3f81045a82142397be5870,
+    type: 3}
 --- !u!4 &373644392
 Transform:
   m_ObjectHideFlags: 0
@@ -349,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 464.91382}
+  m_AnchoredPosition: {x: 0, y: -0.000037749327}
   m_SizeDelta: {x: 0, y: 1000}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &513863696
@@ -461,7 +463,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 802731186}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.18032777
+  m_Size: 0.9999969
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

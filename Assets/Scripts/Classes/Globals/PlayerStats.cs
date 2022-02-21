@@ -18,22 +18,22 @@ namespace Globals
 
         public static void AddCoins(int coins)
         {
-            theInstance.Coins += coins;
+            theInstance.AddCoins(coins);
         }
 
-        public static void AddClick()
+        public static void AddCoinClick()
         {
-            theInstance.Coins += theInstance.clickPower;
+            theInstance.AddCoinClick();
         }
 
         public static void AddRandomPackPercentage(int percentage)
         {
-            theInstance.RandomPackagePercentage += percentage;
+            theInstance.AddRandomPackPercentage(percentage);
         }
 
         public static int GetCoins()
         {
-            return theInstance.Coins; 
+            return theInstance.GetCoins(); 
         }
 
         internal static string GetNextPack(int generation)
@@ -43,7 +43,7 @@ namespace Globals
 
         public static int GetRandomPackPercentage()
         {
-            return theInstance.RandomPackagePercentage;
+            return theInstance.GetRandomPackPercentage();
         }
 
         static PlayerStats()
@@ -81,9 +81,15 @@ namespace Globals
 
         }
 
+        public static void AddRandomPack(int generation)
+        {
+            theInstance.AddRandomPack(generation);
+            SaveData();
+        }
+
         public static void ResetRandomPackPercentage()
         {
-            theInstance.RandomPackagePercentage = 0;
+            theInstance.ResetRandomPackPercentage();
             SaveData();
         }
 
@@ -92,19 +98,9 @@ namespace Globals
             return theInstance.generations[generation];
         }
 
-        public static void SetPacks(int generation, int numberOfPacks)
+        public static void AddPacks(int generation, int numberOfPacks)
         {
-            theInstance.generations[generation].numberOfPacks += numberOfPacks;
-            for (int i = 0; i < Math.Abs(numberOfPacks); i++)
-            {
-                if (numberOfPacks > 0)
-                {
-                    theInstance.PushPack(generation);
-                } else
-                {
-                    theInstance.PopPack(generation);
-                }
-            }
+            theInstance.SetPacks(generation, numberOfPacks);
             SaveData();
         }
 
@@ -130,13 +126,12 @@ namespace Globals
 
         public static int GetHighestUnlockedGeneration()
         {
-            return theInstance.highestUnlockedGeneration;
+            return theInstance.GetHighestUnlockedGeneration();
         }
 
         public static void UnlockNextGeneration()
         {
-            theInstance.highestUnlockedGeneration++;
-            theInstance.generations[theInstance.highestUnlockedGeneration].unlocked = true;
+            theInstance.UnlockNextGeneration();
         }
 
         public static int CheckDoubles(int generation)
@@ -161,20 +156,13 @@ namespace Globals
 
         public static void TradeInDoubles(int generation)
         {
-            int numberOfDoubles = 0;
-            Dictionary<int, Dictionary<string, PossibleCard>> ownedNPNs = GetGeneration(generation).cards;
-            foreach (Dictionary<string, PossibleCard> ownedCardsOfNpn in ownedNPNs.Values)
-            {
-                foreach (PossibleCard ownedCard in ownedCardsOfNpn.Values)
-                {
-                    if (ownedCard.numberOwned > 1)
-                    {
-                        numberOfDoubles += (ownedCard.numberOwned - 1);
-                        ownedCard.numberOwned = 1;
-                    }
-                }
-            }
-            theInstance.clickPower += numberOfDoubles;
+            theInstance.TradeInDoubles(generation);
+            SaveData();
+        }
+
+        public static void OpenPack(int generation)
+        {
+            theInstance.OpenPack(generation);
             SaveData();
         }
 
@@ -221,6 +209,32 @@ namespace Globals
         public static int GetNumberOfOwnedCards(int generation)
         {
             return theInstance.GetNumberOfOwnedCards(generation);
+        }
+
+        // Statistics
+        public static int GetStatsTotalCoins()
+        {
+            return theInstance.GetStatsTotalCoins();
+        }
+
+        public static int GetStatsRandomPacks()
+        {
+            return theInstance.GetStatsRandomPacks();
+        }
+
+        public static int GetStatsTotalClicks()
+        {
+            return theInstance.GetStatsTotalClicks();
+        }
+
+        public static int GetStatsPacksOpened()
+        {
+            return theInstance.GetStatsPacksOpened();
+        }
+
+        public static int GetStatsDoublesTradedIn()
+        {
+            return theInstance.GetStatsDoublesTradedIn();
         }
 
     } // playerStats

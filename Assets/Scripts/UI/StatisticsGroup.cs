@@ -18,8 +18,14 @@ public class StatisticsGroup : MonoBehaviour
     {
         titleText.text = title;
         progressText.text = progress;
-        ProgressBar progressBar = progressBarObject.GetComponent<ProgressBar>();
-        progressBar.fillPercentage = fillPercentage;
+        if (fillPercentage == -1f)
+        {
+            progressBarObject.SetActive(false);
+        } else if (progressBarObject != null)
+        {
+            ProgressBar progressBar = progressBarObject.GetComponent<ProgressBar>();
+            progressBar.fillPercentage = fillPercentage;
+        }
     }
 
 }

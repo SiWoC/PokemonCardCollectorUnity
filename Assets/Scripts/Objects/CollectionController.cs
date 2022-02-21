@@ -12,15 +12,15 @@ using PlayerStats = Globals.PlayerStats;
 
 public class CollectionController : MonoBehaviour
 {
-    public Dropdown generationDropdown;
+    public TMP_Dropdown generationDropdown;
     public GameObject pageHolder;
     public GameObject singleNPNPageHolder;
     public GameObject singleCard;
     public GameObject pagePrefab;
     public GameObject unknownCardPrefab;
     public GameObject unavailableCardPrefab;
-    public Text generationProgressText;
-    public Text npnProgressText;
+    public TextMeshProUGUI generationProgressText;
+    public TextMeshProUGUI npnProgressText;
     public GameObject doublesButton;
     public GameObject turnInDoublesPanel;
     public TextMeshProUGUI doublesText;
@@ -58,6 +58,9 @@ public class CollectionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        generationProgressText.gameObject.SetActive(true);
+        npnProgressText.gameObject.SetActive(false);
+        
         PlayerStats.SetTutorialStepCompleted(TutorialStep.GoToCollection);
         // pageSwiper will force a pageChanged, which will complete SwipeCollection, so SetActive should be above pageSwiper filling
         tutorialSwipeCollectionPanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.SwipeCollection));
@@ -70,7 +73,7 @@ public class CollectionController : MonoBehaviour
         {
             if (PlayerStats.IsGenerationUnlocked(i))
             {
-                generationDropdown.options.Add(new Dropdown.OptionData("gen" + i));
+                generationDropdown.options.Add(new TMP_Dropdown.OptionData("Gen " + i));
             }
         }
         generationDropdown.value = GameManager.SelectedGeneration - 1;
@@ -81,7 +84,7 @@ public class CollectionController : MonoBehaviour
         }
     }
 
-    public void OnGenerationChanged(Dropdown dd)
+    public void OnGenerationChanged(TMP_Dropdown dd)
     {
         // Destroy stuff of old generation
         foreach (GameObject page in pages.Values)
