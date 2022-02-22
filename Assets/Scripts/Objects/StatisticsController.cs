@@ -71,8 +71,8 @@ public class StatisticsController : MonoBehaviour
         statisticsGroupObject.transform.SetParent(contentPanel.transform);
         statisticsGroupObject.transform.localScale = new Vector3(1f, 1f, 1f);
         RectTransform phRectTransform = contentPanel.GetComponent<RectTransform>();
-        phRectTransform.sizeDelta = new Vector2(phRectTransform.sizeDelta.x, contentPanelHeigth);
         contentPanelHeigth += statisticsGroupHeight;
+        phRectTransform.sizeDelta = new Vector2(phRectTransform.sizeDelta.x, contentPanelHeigth);
     }
 
     private void AddDivider()
@@ -81,7 +81,7 @@ public class StatisticsController : MonoBehaviour
         divider.transform.SetParent(contentPanel.transform);
         divider.transform.localScale = new Vector3(1f, 1f, 1f);
         RectTransform phRectTransform = contentPanel.GetComponent<RectTransform>();
-        phRectTransform.sizeDelta = new Vector2(phRectTransform.sizeDelta.x, contentPanelHeigth);
         contentPanelHeigth += dividerHeight;
+        phRectTransform.sizeDelta = new Vector2(phRectTransform.sizeDelta.x, contentPanelHeigth);
     }
 }
