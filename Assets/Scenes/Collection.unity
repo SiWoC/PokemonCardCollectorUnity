@@ -810,8 +810,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click on the Favorite button\nto put this Card on display\nin your book.\nIn
-    stead of the one \nyou last found"
+  m_text: 'Click on the Favorite button
+
+    to hold this Card on display
+
+    in
+    your book.
+
+    In stead of the variation
+
+    you found last.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

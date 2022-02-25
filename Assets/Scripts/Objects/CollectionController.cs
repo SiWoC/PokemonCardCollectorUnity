@@ -307,12 +307,9 @@ public class CollectionController : MonoBehaviour
             tutorialZoomCardPanel.SetActive(false);
             singleCardImage.sprite = image.sprite;
             currentSingle = ownedCard;
-            if(cardsOfNumber.Keys.Count > 1)
-            {
-                SetFavoriteButtonColor(ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)));
-                favoriteButton.SetActive(true);
-                tutorialMakeFavoritePanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.MakeFavorite));
-            }
+            SetFavoriteButtonColor(ownedCard.id.Equals(PlayerStats.GetFavorite(ownedCard.nationalPokedexNumber)));
+            favoriteButton.SetActive(true);
+            tutorialMakeFavoritePanel.SetActive(PlayerStats.GetShowTutorialStep(TutorialStep.MakeFavorite));
             singleNPNPageHolder.SetActive(false);
             npnProgressText.gameObject.SetActive(false);
             singleCard.SetActive(true);
