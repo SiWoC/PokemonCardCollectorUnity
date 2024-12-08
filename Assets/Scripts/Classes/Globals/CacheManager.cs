@@ -49,7 +49,7 @@ namespace Globals
             var f = new FileInfo(path);
             if (f.Exists)
             {
-                Texture2D texture = new Texture2D(0, 0, TextureFormat.RGBA32, false);
+                Texture2D texture = new Texture2D(1, 1, TextureFormat.RGBA32, false);
                 texture.LoadImage(File.ReadAllBytes(path));
                 return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                 
